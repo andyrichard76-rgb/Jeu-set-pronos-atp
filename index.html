@@ -49,6 +49,9 @@
 .pl .psc{margin-left:auto;display:inline-flex;gap:10px;font-family:var(--display);font-weight:600;font-size:1.05rem;font-variant-numeric:tabular-nums;color:var(--muted)}
 .pl .psc .w{color:var(--fg)}
 .pl .flag{margin-right:2px}
+.atplinks{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.atplinks a{font-size:.8rem;font-weight:600;color:var(--court);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.atplinks a:hover{text-decoration:underline}
 .clrow{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:center;padding:8px 12px;border-top:1px solid var(--line)}
 .clrow:first-child{border-top:0}
 .clrow .rk{font-family:var(--display);font-weight:700;font-size:1.25rem;font-variant-numeric:tabular-nums;text-align:right;color:var(--muted)}
@@ -576,7 +579,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T17:20:00+02:00",note:"scores en direct automatiques"};
+const SITE_VERSION={date:"2026-10-23T17:45:00+02:00",note:"liens vers le site officiel ATP"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -666,7 +669,8 @@ function renderTournoi(){
   const ms=tMatchs(t);const nPronos=pronos.filter(p=>p.matchId&&ms.some(m=>m.id===p.matchId)).length;
   $("thero").innerHTML=`<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="font-family:var(--display);font-weight:600;letter-spacing:.06em;color:var(--court)">${esc(t.categorie)}</span><span class="surf s-${t.surface}"><i></i>${SURF[t.surface]||""}</span></div>
     <h3>${esc(t.nom)}</h3>${t.nomComplet?`<span class="muted" style="font-size:.88rem">${esc(t.nomComplet)}</span>`:""}
-    <div class="facts"><span>${t.debut?fmtLong(t.debut)+" → "+fmtLong(t.fin):""}</span><span>Tour actuel : <b>${esc(currentRound(t))}</b></span><span>Mes prédictions : <b>${nPronos}</b></span></div>`;
+    <div class="facts"><span>${t.debut?fmtLong(t.debut)+" → "+fmtLong(t.fin):""}</span><span>Tour actuel : <b>${esc(currentRound(t))}</b></span><span>Mes prédictions : <b>${nPronos}</b></span></div>
+    <div class="atplinks"><a href="https://www.atptour.com/en/scores/current" target="_blank" rel="noopener">Résultats officiels ATP</a><a href="https://www.atptour.com/en/tournaments" target="_blank" rel="noopener">Programme et tableau ATP</a></div>`;
   document.querySelectorAll(".subtabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.sub===sub?"true":"false"));
   $("sub-programme").hidden=sub!=="programme";$("sub-tableau").hidden=sub!=="tableau";
   renderProgramme(t,ms);renderTableau(t);
