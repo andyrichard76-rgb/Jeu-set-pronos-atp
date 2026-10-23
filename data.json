@@ -301,7 +301,7 @@
     ]
    },
    "date": "2026-10-23",
-   "heure": "20:15",
+   "heure": "20:50",
    "j1": "Zizou Bergs",
    "j1Pays": "BEL",
    "j1Tds": "6",
@@ -412,13 +412,13 @@
    "j2Pays": "USA",
    "j2Tds": "5",
    "ordre": 3,
-   "score": "6-4 5-3",
-   "statut": "en_cours",
+   "score": "6-4 7-6",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Bruxelles",
    "tournoiId": "2026-bruxelles",
-   "vainqueur": null,
+   "vainqueur": 1,
    "live": {
     "sets": [
      [
@@ -426,12 +426,12 @@
       4
      ],
      [
-      5,
-      3
+      7,
+      6
      ]
     ],
-    "service": 2,
-    "maj": "2026-10-23T20:03:15+02:00"
+    "maj": "2026-10-23T20:39:50+02:00",
+    "fini": true
    }
   },
   {
@@ -531,7 +531,7 @@
    "j2Pays": "USA",
    "j2Tds": "5",
    "ordre": 3,
-   "score": "4-6 2-0",
+   "score": "4-6 6-4 0-0",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -545,11 +545,15 @@
       6
      ],
      [
-      2,
+      6,
+      4
+     ],
+     [
+      0,
       0
      ]
     ],
-    "maj": "2026-10-23T20:03:15+02:00",
+    "maj": "2026-10-23T20:39:50+02:00",
     "service": 2
    }
   },
@@ -687,7 +691,7 @@
    },
    "date": "2026-10-23",
    "diffuseur": "beIN SPORTS MAX 9 · Tennis TV",
-   "heure": "20:30",
+   "heure": "21:00",
    "j1": "Lorenzo Musetti",
    "j1Pays": "ITA",
    "j1Tds": "6",
@@ -1604,8 +1608,8 @@
         "pays": "USA",
         "tds": "5"
        },
-       "score": "",
-       "vainqueur": null
+       "score": "6-4 7-6",
+       "vainqueur": 1
       },
       {
        "j1": {
@@ -1652,7 +1656,11 @@
      ],
      [
       {
-       "j1": null,
+       "j1": {
+        "nom": "A. Fils",
+        "pays": "FRA",
+        "tds": "1"
+       },
        "j2": null,
        "score": "",
        "vainqueur": null
@@ -2157,7 +2165,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T20:03:15+02:00",
+  "misAJour": "2026-10-23T20:39:50+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
