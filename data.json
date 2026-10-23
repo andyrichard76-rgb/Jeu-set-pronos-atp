@@ -309,13 +309,23 @@
    "j2Pays": "GER",
    "j2Tds": "",
    "ordre": 4,
-   "score": "",
-   "statut": "a_venir",
+   "score": "2-2",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Bruxelles",
    "tournoiId": "2026-bruxelles",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "sets": [
+     [
+      2,
+      2
+     ]
+    ],
+    "service": 2,
+    "maj": "2026-10-23T21:16:15+02:00"
+   }
   },
   {
    "id": "2026-10-23-bruxelles-chidekh-cerundolo",
@@ -531,7 +541,7 @@
    "j2Pays": "USA",
    "j2Tds": "5",
    "ordre": 3,
-   "score": "4-6 6-4 0-0",
+   "score": "4-6 6-4 4-3",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -549,12 +559,12 @@
       4
      ],
      [
-      0,
-      0
+      4,
+      3
      ]
     ],
-    "maj": "2026-10-23T20:39:50+02:00",
-    "service": 2
+    "maj": "2026-10-23T21:16:15+02:00",
+    "service": 1
    }
   },
   {
@@ -691,7 +701,7 @@
    },
    "date": "2026-10-23",
    "diffuseur": "beIN SPORTS MAX 9 · Tennis TV",
-   "heure": "21:00",
+   "heure": "21:30",
    "j1": "Lorenzo Musetti",
    "j1Pays": "ITA",
    "j1Tds": "6",
@@ -2165,7 +2175,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T20:39:50+02:00",
+  "misAJour": "2026-10-23T21:16:15+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
