@@ -110,7 +110,7 @@
     ]
    },
    "date": "2026-10-23",
-   "heure": "11:10",
+   "heure": "11:30",
    "j1": "Daniil Medvedev",
    "j1Pays": "",
    "j1Tds": "1",
@@ -150,53 +150,56 @@
    "j2Pays": "AUS",
    "j2Tds": "",
    "live": {
-    "jeu": "0-15",
-    "maj": "2026-10-23T10:23:00+02:00",
-    "service": 2,
+    "fini": true,
+    "maj": "2026-10-23T11:21:00+02:00",
     "sets": [
      [
-      4,
-      1
+      6,
+      3
+     ],
+     [
+      6,
+      4
      ]
     ],
     "srId": "sr:sport_event:75620038",
     "stats": {
      "j1": {
-      "aces": 5,
-      "bpTot": 1,
-      "bpWon": 1,
+      "aces": 15,
+      "bpTot": 8,
+      "bpWon": 2,
       "df": 0,
       "maxPts": 7,
-      "pts": 17,
-      "s1in": 10,
-      "s1won": 10,
-      "s2won": 2,
-      "svGames": 3,
-      "svpts": 13
+      "pts": 71,
+      "s1in": 37,
+      "s1won": 34,
+      "s2won": 6,
+      "svGames": 10,
+      "svpts": 46
      },
      "j2": {
-      "aces": 0,
+      "aces": 5,
       "bpTot": 0,
       "bpWon": 0,
-      "df": 0,
-      "maxPts": 3,
-      "pts": 7,
-      "s1in": 6,
-      "s1won": 3,
-      "s2won": 3,
-      "svGames": 1,
-      "svpts": 11
+      "df": 1,
+      "maxPts": 6,
+      "pts": 49,
+      "s1in": 42,
+      "s1won": 27,
+      "s2won": 16,
+      "svGames": 7,
+      "svpts": 74
      }
     }
    },
    "ordre": 2,
-   "score": "4-1",
-   "statut": "en_cours",
+   "score": "6-3 6-4",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null
+   "vainqueur": 1
   },
   {
    "id": "2026-10-23-bruxelles-bergs-struff",
@@ -830,8 +833,8 @@
         "pays": "AUS",
         "tds": ""
        },
-       "score": "",
-       "vainqueur": null
+       "score": "6-3 6-4",
+       "vainqueur": 1
       }
      ],
      [
@@ -847,7 +850,11 @@
         "pays": "GEO",
         "tds": "Q"
        },
-       "j2": null,
+       "j2": {
+        "nom": "S. Tsitsipas",
+        "pays": "GRE",
+        "tds": "7"
+       },
        "score": "",
        "vainqueur": null
       }
@@ -1773,7 +1780,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T10:22:00+02:00",
+  "misAJour": "2026-10-23T11:31:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
