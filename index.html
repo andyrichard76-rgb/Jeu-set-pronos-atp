@@ -46,7 +46,7 @@
 .clhead b{color:var(--on-bg)}
 .clsearch input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--fg);font-size:15px}
 .cllist{color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.clrow{display:grid;grid-template-columns:40px 34px 1fr auto;gap:10px;align-items:center;padding:8px 12px;border-top:1px solid var(--line)}
+.clrow{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:center;padding:8px 12px;border-top:1px solid var(--line)}
 .clrow:first-child{border-top:0}
 .clrow .rk{font-family:var(--display);font-weight:700;font-size:1.25rem;font-variant-numeric:tabular-nums;text-align:right;color:var(--muted)}
 .clrow.top10 .rk{color:var(--court)}
@@ -60,6 +60,7 @@
 .bp .flag{margin-left:4px}
 .flag.neutral{display:inline-block;background:repeating-linear-gradient(135deg,#c9ced6 0 4px,#e6e9ee 4px 8px)}
 .clrow .ctry{padding-left:30px}
+.av{display:none!important}
 .clrow .pt{font-family:var(--display);font-weight:600;font-size:1.05rem;font-variant-numeric:tabular-nums;white-space:nowrap}
 .clrow .pt small{font-family:var(--body);font-size:.7rem;color:var(--muted);font-weight:400;margin-left:3px}
 .clrow.turin{background:color-mix(in srgb,var(--ball) 14%,transparent)}
@@ -572,7 +573,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T16:00:00+02:00",note:"drapeaux dans les classements"};
+const SITE_VERSION={date:"2026-10-23T16:05:00+02:00",note:"sans initiales"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
