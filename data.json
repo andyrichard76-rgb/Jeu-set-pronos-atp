@@ -263,8 +263,8 @@
    "j2Pays": "ARG",
    "j2Tds": "3",
    "live": {
-    "jeu": "0-0",
-    "maj": "2026-10-23T14:52:00+02:00",
+    "jeu": "0-15",
+    "maj": "2026-10-23T15:23:00+02:00",
     "service": 2,
     "sets": [
      [
@@ -272,8 +272,8 @@
       6
      ],
      [
-      1,
-      2
+      4,
+      5
      ]
     ],
     "srId": "sr:sport_event:75621158",
@@ -284,30 +284,30 @@
       "bpWon": 0,
       "df": 0,
       "maxPts": 4,
-      "pts": 20,
-      "s1in": 21,
-      "s1won": 11,
-      "s2won": 3,
-      "svGames": 3,
-      "svpts": 30
+      "pts": 43,
+      "s1in": 44,
+      "s1won": 26,
+      "s2won": 6,
+      "svGames": 6,
+      "svpts": 59
      },
      "j2": {
-      "aces": 3,
-      "bpTot": 3,
+      "aces": 7,
+      "bpTot": 8,
       "bpWon": 3,
-      "df": 0,
+      "df": 1,
       "maxPts": 8,
-      "pts": 36,
-      "s1in": 15,
-      "s1won": 14,
-      "s2won": 6,
-      "svGames": 5,
-      "svpts": 26
+      "pts": 61,
+      "s1in": 29,
+      "s1won": 27,
+      "s2won": 7,
+      "svGames": 8,
+      "svpts": 45
      }
     }
    },
    "ordre": 1,
-   "score": "2-6 1-2",
+   "score": "2-6 4-5",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -415,7 +415,7 @@
     ]
    },
    "date": "2026-10-23",
-   "heure": "15:10",
+   "heure": "15:30",
    "j1": "Taylor Fritz",
    "j1Pays": "USA",
    "j1Tds": "2",
@@ -453,47 +453,51 @@
    "j2Pays": "USA",
    "j2Tds": "4",
    "live": {
-    "jeu": "0-0",
-    "maj": "2026-10-23T14:52:00+02:00",
-    "service": 1,
+    "jeu": "30-30",
+    "maj": "2026-10-23T15:23:00+02:00",
+    "service": 2,
     "sets": [
      [
       4,
-      5
+      6
+     ],
+     [
+      3,
+      1
      ]
     ],
     "srId": "sr:sport_event:75620254",
     "stats": {
      "j1": {
       "aces": 1,
-      "bpTot": 3,
-      "bpWon": 0,
+      "bpTot": 8,
+      "bpWon": 2,
       "df": 0,
       "maxPts": 6,
-      "pts": 30,
-      "s1in": 16,
-      "s1won": 14,
-      "s2won": 2,
-      "svGames": 4,
-      "svpts": 21
+      "pts": 50,
+      "s1in": 33,
+      "s1won": 21,
+      "s2won": 3,
+      "svGames": 5,
+      "svpts": 40
      },
      "j2": {
       "aces": 1,
-      "bpTot": 0,
-      "bpWon": 0,
+      "bpTot": 4,
+      "bpWon": 2,
       "df": 1,
-      "maxPts": 4,
-      "pts": 29,
-      "s1in": 23,
-      "s1won": 15,
-      "s2won": 9,
+      "maxPts": 6,
+      "pts": 48,
+      "s1in": 34,
+      "s1won": 19,
+      "s2won": 13,
       "svGames": 5,
-      "svpts": 38
+      "svpts": 58
      }
     }
    },
    "ordre": 1,
-   "score": "4-5",
+   "score": "4-6 3-1",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -1885,7 +1889,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T14:52:00+02:00",
+  "misAJour": "2026-10-23T15:23:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
