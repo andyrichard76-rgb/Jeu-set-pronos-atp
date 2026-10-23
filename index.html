@@ -65,7 +65,10 @@
 .court-bg svg{width:100%;height:100%;display:block}
 .card,.panel,.tcard,.thero,.tabs,.bm,.empty{color:var(--fg)}
 .empty{background:var(--surface)}
-.brand{display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;justify-content:center;gap:12px;text-align:center}
+.brand .bgbtns{flex-basis:100%;justify-content:center;margin-left:0}
+.bottominfo{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.bottominfo .fresh{align-self:center}
 .ballico{width:34px;height:34px;flex:none}
 @media (prefers-reduced-motion:no-preference){.ballico{animation:bounce 1.6s cubic-bezier(.3,0,.6,1) infinite}}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
@@ -319,15 +322,13 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 <div class="wrap">
   <header class="brand">
     <svg class="ballico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--ball)"/><path d="M4 13 Q20 22 36 13 M4 27 Q20 18 36 27" fill="none" stroke="#ffffff" stroke-width="2.4"/></svg>
-    <div><h1>Jeu, Set et Prono</h1>
-    <p class="sub" id="maj">Circuit ATP · mis à jour chaque jour</p></div>
+    <h1>Jeu, Set et Prono</h1>
     <div class="bgbtns" id="bgBtns" hidden>
       <button class="bgbtn" id="bgPick" type="button">Changer le fond</button>
       <button class="bgbtn" id="bgReset" type="button" hidden>Fond par défaut</button>
       <input type="file" id="bgFile" accept="image/jpeg,image/png,image/webp" hidden>
     </div>
   </header>
-  <div class="fresh" id="fresh" role="status"><span class="fdot" aria-hidden="true"></span><span id="freshTxt">Vérification de la mise à jour…</span></div>
 
   <section class="board" aria-label="Duel de réussite">
     <div class="duel"><span class="who">Moi</span><div class="big" id="pctMe">–<small>%</small></div><span class="det" id="detMe">0 gagné · 0 perdu</span></div>
@@ -421,6 +422,10 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
     <div class="panel"><h2>Ma réussite par surface</h2><div class="bars" id="bars"></div></div>
   </section>
 
+  <div class="bottominfo">
+    <div class="fresh" id="fresh" role="status"><span class="fdot" aria-hidden="true"></span><span id="freshTxt">Vérification de la mise à jour…</span></div>
+    <p class="sub" id="maj">Circuit ATP · mis à jour chaque jour</p>
+  </div>
   <p class="note" id="storeNote" style="text-align:center"></p>
   <footer class="legal" id="legal">
     <p><b>Jeu, Set et Prono</b> est un site d'analyses de tennis, pas un site de paris. Les analyses sont fournies à titre informatif. Aucun résultat n'est garanti.</p>
@@ -430,7 +435,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T09:55:00+02:00",note:"rubrique Classements ATP et Race (top 100)"};
+const SITE_VERSION={date:"2026-10-23T10:08:00+02:00",note:"titre centré, date de mise à jour en bas de page"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -712,7 +717,7 @@ async function importFromHash(){const h=location.hash||"";if(!h.startsWith("#imp
 function storageOK(){try{const k="__jsp_test";localStorage.setItem(k,"1");const ok=localStorage.getItem(k)==="1";localStorage.removeItem(k);return ok}catch{return false}}
 function warnStorage(){if(storageOK())return;const w=document.createElement("div");w.className="storewarn";w.setAttribute("role","alert");
   w.innerHTML="<b>Tes pronos ne peuvent pas être enregistrés sur ce navigateur.</b> Tu es sans doute en navigation privée, ou Safari bloque les données des sites. Ouvre le site dans un onglet Safari normal, et vérifie Réglages → Safari → « Bloquer tous les cookies » (à désactiver).";
-  const f=$("fresh");f.parentNode.insertBefore(w,f.nextSibling)}
+  const f=document.querySelector("header.brand");f.parentNode.insertBefore(w,f.nextSibling)}
 function localStore(){const KEY="pronos-tennis-v1";try{pronos=JSON.parse(localStorage.getItem(KEY)||"[]")}catch{pronos=[]}
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(pronos))}catch{}};renderAll();
   return{add:async p=>{pronos.push({...p,id:"l"+Date.now()+Math.random().toString(36).slice(2,7)});save();renderAll()},update:async(id,patch)=>{pronos=pronos.map(p=>p.id===id?{...p,...patch}:p);save();renderAll()},remove:async id=>{pronos=pronos.filter(p=>p.id!==id);save();renderAll()}}}
