@@ -309,13 +309,13 @@
    "j2Pays": "GER",
    "j2Tds": "",
    "ordre": 4,
-   "score": "3-6 4-4",
-   "statut": "en_cours",
+   "score": "3-6 6-7",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Bruxelles",
    "tournoiId": "2026-bruxelles",
-   "vainqueur": null,
+   "vainqueur": 2,
    "live": {
     "sets": [
      [
@@ -323,12 +323,12 @@
       6
      ],
      [
-      4,
-      4
+      6,
+      7
      ]
     ],
-    "service": 2,
-    "maj": "2026-10-23T22:09:47+02:00"
+    "maj": "2026-10-23T22:40:58+02:00",
+    "fini": true
    }
   },
   {
@@ -713,7 +713,7 @@
    "j2Pays": "FRA",
    "j2Tds": "",
    "ordre": 4,
-   "score": "2-2",
+   "score": "5-5",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -723,11 +723,11 @@
    "live": {
     "sets": [
      [
-      2,
-      2
+      5,
+      5
      ]
     ],
-    "maj": "2026-10-23T22:09:47+02:00",
+    "maj": "2026-10-23T22:40:58+02:00",
     "service": 1
    }
   },
@@ -810,6 +810,26 @@
    "score": "",
    "vainqueur": null,
    "id": "2026-10-24-almaty-medvedev-bublik"
+  },
+  {
+   "tournoiId": "2026-bruxelles",
+   "tournoi": "Bruxelles",
+   "categorie": "ATP 250",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "date": "2026-10-24",
+   "heure": "18:30",
+   "ordre": 2,
+   "j1": "Arthur Fils",
+   "j1Pays": "FRA",
+   "j1Tds": "1",
+   "j2": "Jan-Lennard Struff",
+   "j2Pays": "GER",
+   "j2Tds": "",
+   "statut": "a_venir",
+   "score": "",
+   "vainqueur": null,
+   "id": "2026-10-24-bruxelles-fils-struff"
   }
  ],
  "tournois": [
@@ -1646,8 +1666,8 @@
         "pays": "BEL",
         "tds": "6"
        },
-       "score": "",
-       "vainqueur": null
+       "score": "6-3 7-6",
+       "vainqueur": 1
       },
       {
        "j1": {
@@ -1685,7 +1705,11 @@
         "pays": "FRA",
         "tds": "1"
        },
-       "j2": null,
+       "j2": {
+        "nom": "J. Struff",
+        "pays": "GER",
+        "tds": ""
+       },
        "score": "",
        "vainqueur": null
       },
@@ -2193,7 +2217,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T22:09:47+02:00",
+  "misAJour": "2026-10-23T22:40:58+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
