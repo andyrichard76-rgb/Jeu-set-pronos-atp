@@ -1,20 +1,23 @@
 {
- "name": "Jeu, Set et Match",
+ "name": "Jeu Set Match",
  "short_name": "Jeu Set Match",
- "start_url": "./",
+ "start_url": "https://andyrichard76-rgb.github.io/jeu-set-match/",
+ "scope": "https://andyrichard76-rgb.github.io/jeu-set-match/",
  "display": "browser",
  "background_color": "#123426",
  "theme_color": "#123426",
  "icons": [
   {
-   "src": "apple-touch-icon.png",
+   "src": "https://andyrichard76-rgb.github.io/jeu-set-match/jsm-180.png",
    "sizes": "180x180",
-   "type": "image/png"
+   "type": "image/png",
+   "purpose": "any"
   },
   {
-   "src": "icone-512.png",
+   "src": "https://andyrichard76-rgb.github.io/jeu-set-match/jsm-512.png",
    "sizes": "512x512",
-   "type": "image/png"
+   "type": "image/png",
+   "purpose": "any"
   }
  ]
 }
