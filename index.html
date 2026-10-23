@@ -201,6 +201,8 @@ button{cursor:pointer}
 .big{font-family:var(--display);font-weight:700;font-size:3.2rem;line-height:.95;font-variant-numeric:tabular-nums}
 .big small{font-size:1.4rem}
 .duel .det{font-size:.8rem;opacity:.85;font-variant-numeric:tabular-nums}
+.board.solo{grid-template-columns:1fr;text-align:center}
+.board.solo .duel{align-items:center}
 .duel + .duel{border-left:2px solid rgba(23,32,29,.2);padding-left:16px}
 
 /* Onglets */
@@ -531,12 +533,12 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
   <!-- Bilan -->
   <section id="v-bilan" class="view" hidden>
-  <section class="board" aria-label="Duel de réussite">
-    <div class="duel"><span class="who">Moi</span><div class="big" id="pctMe">–<small>%</small></div><span class="det" id="detMe">0 gagné · 0 perdu</span></div>
-    <div class="duel"><span class="who">Le site</span><div class="big" id="pctAi">–<small>%</small></div><span class="det" id="detAi">0 gagné · 0 perdu</span></div>
+  <section class="board solo" aria-label="Réussite de nos analyses">
+    <span id="pctMe" hidden></span><span id="detMe" hidden></span>
+    <div class="duel"><span class="who">Réussite de nos analyses</span><div class="big" id="pctAi">–<small>%</small></div><span class="det" id="detAi">0 gagné · 0 perdu</span></div>
   </section>
-    <div class="panel"><h2>Moi contre le site</h2><div class="kv" id="kv"></div></div>
-    <div class="panel"><h2>Ma réussite par surface</h2><div class="bars" id="bars"></div></div>
+    <div class="panel"><h2>Bilan de nos analyses</h2><div class="kv" id="kv"></div></div>
+    <div class="panel"><h2>Réussite par surface</h2><div class="bars" id="bars"></div></div>
   </section>
 
   <div class="bottominfo">
@@ -552,7 +554,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T12:30:00+02:00",note:"diffusion sans logo"};
+const SITE_VERSION={date:"2026-10-23T15:02:00+02:00",note:"bilan de nos analyses"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -718,13 +720,11 @@ function renderList(){
 
 /* ---------- Bilan ---------- */
 function renderBilan(){
-  const me=tally(pronos,status),ai=tally(matchs.filter(m=>m.claude&&m.claude.choix),aiStatus);
-  let same=0,diff=0,diffWon=0;
-  for(const p of pronos){const m=p.matchId&&matchById(p.matchId);if(!m||!m.claude||!m.claude.choix||!m.vainqueur)continue;
-    if(String(m.claude.choix)===String(p.choix))same++;else{diff++;if(status(p)==="won")diffWon++}}
-  $("kv").innerHTML=`<div><b>${me.pct??"–"} %</b><span>Ma réussite</span></div><div><b>${ai.pct??"–"} %</b><span>Réussite du site</span></div>
-    <div><b>${same}</b><span>Matchs où on était d'accord</span></div><div><b>${diff?diffWon+"/"+diff:"–"}</b><span>Désaccords gagnés par moi</span></div>`;
-  $("bars").innerHTML=Object.keys(SURF).map(k=>{const s=tally(pronos.filter(p=>p.surface===k),status);const done=s.won+s.lost;
+  const an=matchs.filter(m=>m.claude&&m.claude.choix),ai=tally(an,aiStatus);
+  const strong=tally(an.filter(m=>(m.claude.confiance||2)>=3),aiStatus);
+  $("kv").innerHTML=`<div><b>${ai.pct??"–"} %</b><span>Réussite</span></div><div><b>${ai.won+ai.lost}</b><span>Matchs terminés analysés</span></div>
+    <div><b>${ai.wait}</b><span>Analyses en attente</span></div><div><b>${strong.pct??"–"}${strong.pct==null?"":" %"}</b><span>Réussite en confiance forte ●●●</span></div>`;
+  $("bars").innerHTML=Object.keys(SURF).map(k=>{const s=tally(an.filter(m=>m.surface===k),aiStatus);const done=s.won+s.lost;
     return `<div class="bar"><span class="surf s-${k}"><i></i>${SURF[k]}</span><div class="track" role="img" aria-label="${SURF[k]} : ${done?s.pct+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${done?s.pct:0}%;background:var(--${SURFVAR[k]})"></div></div><span class="n">${done?s.pct+" % · "+s.won+"/"+done:"—"}</span></div>`}).join("");
 }
 
