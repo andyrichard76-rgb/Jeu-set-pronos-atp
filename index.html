@@ -330,10 +330,6 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
     </div>
   </header>
 
-  <section class="board" aria-label="Duel de réussite">
-    <div class="duel"><span class="who">Moi</span><div class="big" id="pctMe">–<small>%</small></div><span class="det" id="detMe">0 gagné · 0 perdu</span></div>
-    <div class="duel"><span class="who">Le site</span><div class="big" id="pctAi">–<small>%</small></div><span class="det" id="detAi">0 gagné · 0 perdu</span></div>
-  </section>
 
   <nav class="tabs" role="tablist">
     <button role="tab" aria-selected="true" data-tab="tournois">Tournois</button>
@@ -418,6 +414,10 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
   <!-- Bilan -->
   <section id="v-bilan" class="view" hidden>
+  <section class="board" aria-label="Duel de réussite">
+    <div class="duel"><span class="who">Moi</span><div class="big" id="pctMe">–<small>%</small></div><span class="det" id="detMe">0 gagné · 0 perdu</span></div>
+    <div class="duel"><span class="who">Le site</span><div class="big" id="pctAi">–<small>%</small></div><span class="det" id="detAi">0 gagné · 0 perdu</span></div>
+  </section>
     <div class="panel"><h2>Moi contre le site</h2><div class="kv" id="kv"></div></div>
     <div class="panel"><h2>Ma réussite par surface</h2><div class="bars" id="bars"></div></div>
   </section>
@@ -435,7 +435,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T10:12:00+02:00",note:"le site se recharge tout seul quand une nouvelle version existe"};
+const SITE_VERSION={date:"2026-10-23T10:14:00+02:00",note:"duel Moi contre le site déplacé dans le Bilan"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
