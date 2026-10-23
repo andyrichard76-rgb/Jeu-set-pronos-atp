@@ -301,7 +301,7 @@
     ]
    },
    "date": "2026-10-23",
-   "heure": "20:00",
+   "heure": "20:15",
    "j1": "Zizou Bergs",
    "j1Pays": "BEL",
    "j1Tds": "6",
@@ -412,7 +412,7 @@
    "j2Pays": "USA",
    "j2Tds": "5",
    "ordre": 3,
-   "score": "6-4 0-0",
+   "score": "6-4 5-3",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -426,12 +426,12 @@
       4
      ],
      [
-      0,
-      0
+      5,
+      3
      ]
     ],
     "service": 2,
-    "maj": "2026-10-23T19:34:16+02:00"
+    "maj": "2026-10-23T20:03:15+02:00"
    }
   },
   {
@@ -531,7 +531,7 @@
    "j2Pays": "USA",
    "j2Tds": "5",
    "ordre": 3,
-   "score": "3-3",
+   "score": "4-6 2-0",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -541,11 +541,16 @@
    "live": {
     "sets": [
      [
-      3,
-      3
+      4,
+      6
+     ],
+     [
+      2,
+      0
      ]
     ],
-    "maj": "2026-10-23T19:34:16+02:00"
+    "maj": "2026-10-23T20:03:15+02:00",
+    "service": 2
    }
   },
   {
@@ -2152,7 +2157,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T19:34:16+02:00",
+  "misAJour": "2026-10-23T20:03:15+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
