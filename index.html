@@ -52,6 +52,40 @@
 .clsep{padding:6px 12px;font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);background:var(--bg);border-top:1px solid var(--line)}
 .playing{font-size:.64rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--win);background:var(--win-soft);border-radius:4px;padding:1px 6px;margin-left:6px;white-space:nowrap}
 .fr{font-size:.64rem;font-weight:700;color:var(--court);background:var(--court-soft);border-radius:4px;padding:1px 5px;margin-left:6px}
+
+/* Fiche match */
+.statbtn{border:1px solid var(--line);background:var(--surface);color:var(--court);border-radius:999px;padding:5px 11px;font-size:.8rem;font-weight:600}
+.sheet-bg{position:fixed;inset:0;z-index:50;background:rgba(3,5,12,.6);display:flex;align-items:flex-end;justify-content:center;padding:0 max(0px,env(safe-area-inset-right,0px)) 0 max(0px,env(safe-area-inset-left,0px))}
+.sheet{background:var(--surface);color:var(--fg);width:100%;max-width:560px;max-height:88vh;overflow:auto;border-radius:18px 18px 0 0;padding:18px 18px calc(18px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:14px;box-shadow:0 -10px 40px rgba(0,0,0,.35)}
+@media (min-width:640px){.sheet-bg{align-items:center}.sheet{border-radius:18px}}
+.sheet-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.sheet-top .t{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+.xbtn{border:0;background:var(--bg);color:var(--fg);width:34px;height:34px;border-radius:50%;font-size:1.1rem;line-height:1}
+.sb{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.sbrow{display:grid;grid-template-columns:1fr repeat(var(--n),34px) 40px;align-items:center;gap:4px;padding:9px 12px}
+.sbrow+.sbrow{border-top:1px solid var(--line)}
+.sbrow .who{display:flex;align-items:center;gap:8px;min-width:0}
+.sbrow .who span.nm{overflow-wrap:anywhere;font-weight:500}
+.sbrow.w .who span.nm{font-weight:700}
+.sbrow .st{font-family:var(--display);font-weight:600;font-size:1.25rem;text-align:center;font-variant-numeric:tabular-nums;color:var(--muted)}
+.sbrow .st.win{color:var(--fg)}
+.sbrow .gm{font-family:var(--display);font-weight:700;font-size:1.1rem;text-align:center;background:var(--court-soft);color:var(--court);border-radius:6px;padding:2px 0}
+.srv{width:8px;height:8px;border-radius:50%;background:var(--ball);border:1px solid rgba(0,0,0,.3);flex:none}
+.srv.off{visibility:hidden}
+.stats{display:flex;flex-direction:column;gap:10px}
+.srow{display:grid;grid-template-columns:64px 1fr 64px;gap:8px;align-items:center;font-variant-numeric:tabular-nums}
+.srow .v{font-weight:600;font-size:.92rem}
+.srow .v.r{text-align:right}
+.srow .mid{display:flex;flex-direction:column;gap:4px;align-items:center}
+.srow .lab{font-size:.74rem;color:var(--muted);text-align:center}
+.srow .bars{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:100%}
+.srow .bars i{display:block;height:6px;border-radius:3px;background:var(--bg)}
+.srow .bars i b{display:block;height:100%;border-radius:3px}
+.srow .bars i:first-child{direction:rtl}
+.srow .bars i:first-child b{background:var(--court)}
+.srow .bars i:last-child b{background:var(--clay)}
+.sheet .foot{font-size:.78rem;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
+.sheet .na{font-size:.84rem;color:var(--muted);text-align:center;padding:14px;border:1px dashed var(--line);border-radius:10px}
 .legal p{margin:0}.legal p+p{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.15);font-variant-numeric:tabular-nums}.legal b{color:var(--on-bg)}
 .court-bg canvas{width:100%;height:100%;display:block}
 .photo-bg{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center}
@@ -433,9 +467,10 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   </footer>
 </div>
 
+  <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T10:24:00+02:00",note:"pronos triés par jour et heure du match"};
+const SITE_VERSION={date:"2026-10-23T10:34:00+02:00",note:"fiche match avec score et statistiques"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -550,7 +585,8 @@ function card(m){
   else if(live)state=`<span class="badge live">En cours</span>`;
   else state=mine?`<span class="muted">Ton prono : <b style="color:var(--fg)">${esc(mine.choix==1?m.j1:m.j2)}</b></span>`:`<span class="muted">Pas encore de prono</span>`;
   const liveLink=(!done&&m.date===today())?`<a class="livelink" href="https://www.atptour.com/en/scores/current" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Score en direct</a>`:"";
-  const foot=liveLink+((!done&&!live&&mine)?`<button class="ghost" data-act="del" data-id="${mine.id}">Retirer mon prono</button>`:"");
+  const statB=`<button class="statbtn" data-stats="${m.id}">${done||live?"Score et stats":"Fiche du match"}</button>`;
+  const foot=statB+liveLink+((!done&&!live&&mine)?`<button class="ghost" data-act="del" data-id="${mine.id}">Retirer mon prono</button>`:"");
   const c=m.claude;
   return `<article class="card"><div class="chead"><span class="round">${esc(m.tour||"")}</span><span>${m.heure?esc(m.heure):"Horaire à confirmer"}</span></div>
     ${pb(1)}${pb(2)}
@@ -609,7 +645,7 @@ function renderBilan(){
     return `<div class="bar"><span class="surf s-${k}"><i></i>${SURF[k]}</span><div class="track" role="img" aria-label="${SURF[k]} : ${done?s.pct+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${done?s.pct:0}%;background:var(--${SURFVAR[k]})"></div></div><span class="n">${done?s.pct+" % · "+s.won+"/"+done:"—"}</span></div>`}).join("");
 }
 
-function renderAll(){renderBoard();renderTList();if(openT)renderTournoi();renderList();renderBilan();renderClassements()}
+function renderAll(){if(openMatch)renderSheet();renderBoard();renderTList();if(openT)renderTournoi();renderList();renderBilan();renderClassements()}
 
 
 /* ---------- Classements ---------- */
@@ -643,6 +679,54 @@ $("clTabs").addEventListener("click",e=>{const b=e.target.closest("button[data-c
   $("clTabs").querySelectorAll("button").forEach(x=>x.setAttribute("aria-selected",x===b?"true":"false"));renderClassements()});
 $("clSearch").addEventListener("input",e=>{clQuery=e.target.value;renderClassements()});
 
+
+/* ---------- Fiche match : score et statistiques ---------- */
+let openMatch=null;
+function pct(a,b){return b?Math.round(a*100/b):null}
+function statRows(s1,s2){
+  const A=s1||{},B=s2||{};
+  const rows=[
+    ["Aces",A.aces,B.aces],
+    ["Doubles fautes",A.df,B.df],
+    ["1re balle de service",pct(A.s1in,A.svpts),pct(B.s1in,B.svpts),"%"],
+    ["Points gagnés sur 1re balle",pct(A.s1won,A.s1in),pct(B.s1won,B.s1in),"%"],
+    ["Points gagnés sur 2e balle",pct(A.s2won,(A.svpts||0)-(A.s1in||0)),pct(B.s2won,(B.svpts||0)-(B.s1in||0)),"%"],
+    ["Balles de break converties",A.bpWon,B.bpWon,"",A.bpTot,B.bpTot],
+    ["Jeux de service gagnés",A.svGames,B.svGames],
+    ["Coups gagnants",A.winners,B.winners],
+    ["Fautes directes",A.ue,B.ue],
+    ["Points gagnés",A.pts,B.pts],
+    ["Plus longue série de points",A.maxPts,B.maxPts]];
+  return rows.filter(r=>r[1]!=null||r[2]!=null).map(([lab,a,b,u="",ta,tb])=>{
+    const va=a??0,vb=b??0,tot=u==="%"?100:Math.max(va+vb,1);
+    const fa=u==="%"?va:va*100/tot,fb=u==="%"?vb:vb*100/tot;
+    const fmt=(v,t)=>v==null?"–":(t!=null?`${v}/${t}`:v+u);
+    return `<div class="srow"><span class="v">${fmt(a,ta)}</span><span class="mid"><span class="lab">${esc(lab)}</span><span class="bars"><i><b style="width:${fa}%"></b></i><i><b style="width:${fb}%"></b></i></span></span><span class="v r">${fmt(b,tb)}</span></div>`}).join("");
+}
+function renderSheet(){
+  const m=openMatch&&matchById(openMatch);if(!m){$("sheetBg").hidden=true;return}
+  const L=m.live||{};const sets=L.sets&&L.sets.length?L.sets:(m.score||"").split(" ").filter(s=>/^\d+-\d+$/.test(s)).map(s=>s.split("-").map(Number));
+  const live=m.statut==="en_cours",done=m.statut==="termine";
+  const row=n=>{const name=n===1?m.j1:m.j2,pays=n===1?m.j1Pays:m.j2Pays;
+    const cells=sets.map(s=>`<span class="st ${s[n-1]>s[2-n]?"win":""}">${s[n-1]}</span>`).join("");
+    const gm=live&&L.jeu?`<span class="gm">${esc(L.jeu.split("-")[n-1]||"")}</span>`:`<span></span>`;
+    return `<div class="sbrow ${String(m.vainqueur)===String(n)?"w":""}" style="--n:${Math.max(sets.length,1)}"><span class="who"><span class="srv ${live&&L.service===n?"":"off"}" title="Au service"></span>${avatar(name,1)}<span class="nm">${esc(name)}</span><span class="ctry">${esc(pays||"")}</span></span>${cells||'<span class="st">–</span>'}${gm}</div>`};
+  const status=done?`<span class="badge won" style="background:var(--win-soft)">Terminé</span>`:live?`<span class="badge live">En cours</span>`:`<span class="badge wait">${m.heure?"Début à "+esc(m.heure):"À venir"}</span>`;
+  const st=L.stats?statRows(L.stats.j1,L.stats.j2):"";
+  const maj=L.maj?new Date(L.maj).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"}):"";
+  $("sheet").innerHTML=`<div class="sheet-top"><span class="t">${esc(m.tournoi)} · ${esc(m.tour||"")}</span><button class="xbtn" id="sheetClose" aria-label="Fermer">✕</button></div>
+    <div>${status}</div>
+    <div class="sb">${row(1)}${row(2)}</div>
+    ${st?`<div class="stats">${st}</div>`:`<div class="na">${done||live?"Les statistiques de ce match ne sont pas encore disponibles.":"Les statistiques apparaîtront dès le début du match."}</div>`}
+    <div class="foot"><span>${maj?"Stats mises à jour à "+maj+" · actualisées chaque heure":"Actualisées chaque heure pendant le match"}</span><a class="livelink" style="margin-left:0" href="https://www.atptour.com/en/scores/current" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Point par point</a></div>`;
+  $("sheetBg").hidden=false;
+  $("sheetClose").onclick=closeSheet;
+}
+function openSheet(id){openMatch=id;renderSheet();document.body.style.overflow="hidden"}
+function closeSheet(){openMatch=null;$("sheetBg").hidden=true;document.body.style.overflow=""}
+$("sheetBg").addEventListener("click",e=>{if(e.target===$("sheetBg"))closeSheet()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&openMatch)closeSheet()});
+
 /* ---------- Navigation ---------- */
 function showTab(t){tab=t;
   document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x.dataset.tab===t?"true":"false"));
@@ -655,6 +739,7 @@ document.querySelector(".subtabs").addEventListener("click",e=>{const b=e.target
 
 /* ---------- Prono depuis un match ---------- */
 $("sub-programme").addEventListener("click",async e=>{
+  const sb=e.target.closest("button[data-stats]");if(sb){openSheet(sb.dataset.stats);return}
   const del=e.target.closest("button[data-act=del]");
   if(del){try{await store.remove(del.dataset.id)}catch{$("storeNote").textContent="Impossible de retirer le prono. Réessaie."}return}
   const b=e.target.closest("button.pbtn");if(!b||b.disabled)return;const m=matchById(b.dataset.match);if(!m)return;

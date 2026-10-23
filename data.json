@@ -23,7 +23,50 @@
    "tour": "Quart de finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": 1
+   "vainqueur": 1,
+   "live": {
+    "srId": "sr:sport_event:75620036",
+    "maj": "2026-10-23T10:21:00+02:00",
+    "sets": [
+     [
+      6,
+      3
+     ],
+     [
+      6,
+      1
+     ]
+    ],
+    "fini": true,
+    "stats": {
+     "j1": {
+      "aces": 11,
+      "df": 2,
+      "s1in": 34,
+      "s1won": 27,
+      "s2won": 11,
+      "svpts": 56,
+      "bpWon": 4,
+      "bpTot": 8,
+      "svGames": 8,
+      "pts": 60,
+      "maxPts": 7
+     },
+     "j2": {
+      "aces": 6,
+      "df": 1,
+      "s1in": 30,
+      "s1won": 18,
+      "s2won": 9,
+      "svpts": 49,
+      "bpWon": 0,
+      "bpTot": 3,
+      "svGames": 4,
+      "pts": 45,
+      "maxPts": 4
+     }
+    }
+   }
   },
   {
    "id": "2026-10-23-almaty-bublik-khachanov",
@@ -73,7 +116,10 @@
    "tour": "Quart de finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "srId": "sr:sport_event:75620048"
+   }
   },
   {
    "id": "2026-10-23-almaty-tsitsipas-duckworth",
@@ -92,13 +138,53 @@
    "j2Pays": "AUS",
    "j2Tds": "",
    "ordre": 2,
-   "score": "3-0",
+   "score": "4-1",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "srId": "sr:sport_event:75620038",
+    "maj": "2026-10-23T10:23:00+02:00",
+    "sets": [
+     [
+      4,
+      1
+     ]
+    ],
+    "jeu": "0-15",
+    "service": 2,
+    "stats": {
+     "j1": {
+      "aces": 5,
+      "df": 0,
+      "s1in": 10,
+      "s1won": 10,
+      "s2won": 2,
+      "svpts": 13,
+      "bpWon": 1,
+      "bpTot": 1,
+      "svGames": 3,
+      "pts": 17,
+      "maxPts": 7
+     },
+     "j2": {
+      "aces": 0,
+      "df": 0,
+      "s1in": 6,
+      "s1won": 3,
+      "s2won": 3,
+      "svpts": 11,
+      "bpWon": 0,
+      "bpTot": 0,
+      "svGames": 1,
+      "pts": 7,
+      "maxPts": 3
+     }
+    }
+   }
   },
   {
    "id": "2026-10-23-bruxelles-bergs-struff",
