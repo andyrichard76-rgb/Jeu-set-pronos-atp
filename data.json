@@ -89,7 +89,7 @@
    "j2Pays": "",
    "j2Tds": "5",
    "ordre": 4,
-   "score": "4-6 1-0",
+   "score": "4-6 3-3",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -98,19 +98,18 @@
    "vainqueur": null,
    "live": {
     "srId": "sr:sport_event:75620034",
-    "maj": "2026-10-23T17:24:00+02:00",
+    "maj": "2026-10-23T17:42:15+02:00",
     "sets": [
      [
       4,
       6
      ],
      [
-      1,
-      0
+      3,
+      3
      ]
     ],
-    "jeu": "40-A",
-    "service": 2,
+    "service": 1,
     "stats": {
      "j1": {
       "aces": 6,
@@ -439,19 +438,22 @@
    "j2Tds": "",
    "live": {
     "srId": "sr:sport_event:75621144",
-    "maj": "2026-10-23T17:24:00+02:00",
+    "maj": "2026-10-23T17:42:15+02:00",
     "sets": [
      [
       6,
       4
      ],
      [
-      3,
-      4
+      4,
+      6
+     ],
+     [
+      0,
+      0
      ]
     ],
-    "jeu": "40-30",
-    "service": 1,
+    "service": 2,
     "stats": {
      "j1": {
       "aces": 8,
@@ -482,7 +484,7 @@
     }
    },
    "ordre": 2,
-   "score": "6-4 3-4",
+   "score": "6-4 4-6 0-0",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -540,13 +542,23 @@
    "j2Pays": "GER",
    "j2Tds": "",
    "ordre": 2,
-   "score": "",
-   "statut": "a_venir",
+   "score": "3-2",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Lyon",
    "tournoiId": "2026-lyon",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "sets": [
+     [
+      3,
+      2
+     ]
+    ],
+    "service": 2,
+    "maj": "2026-10-23T17:42:15+02:00"
+   }
   },
   {
    "id": "2026-10-23-lyon-moutet-paul",
@@ -2037,7 +2049,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T17:24:00+02:00",
+  "misAJour": "2026-10-23T17:42:15+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
