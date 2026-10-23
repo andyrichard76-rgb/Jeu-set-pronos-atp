@@ -576,7 +576,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T16:38:00+02:00",note:"affichage plus robuste"};
+const SITE_VERSION={date:"2026-10-23T17:20:00+02:00",note:"scores en direct automatiques"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -1002,21 +1002,47 @@ function warnStorage(){if(storageOK())return;const w=document.createElement("div
 function localStore(){const KEY="pronos-tennis-v1";try{pronos=JSON.parse(localStorage.getItem(KEY)||"[]")}catch{pronos=[]}
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(pronos))}catch{}};renderAll();
   return{add:async p=>{pronos.push({...p,id:"l"+Date.now()+Math.random().toString(36).slice(2,7)});save();renderAll()},update:async(id,patch)=>{pronos=pronos.map(p=>p.id===id?{...p,...patch}:p);save();renderAll()},remove:async id=>{pronos=pronos.filter(p=>p.id!==id);save();renderAll()}}}
+
+/* ---------- Scores en direct (tableau public ESPN, rafraîchi chaque minute dans le navigateur) ---------- */
+let ESPN=null;
+function espnSame(a,b){const k=n=>{const w=norm(n).replace(/[.\-]/g," ").split(/\s+/).filter(Boolean);return w.length?[w[0][0],w[w.length-1]]:["",""]};const x=k(a),y=k(b);return x[1]===y[1]&&x[0]===y[0]}
+function espnApply(){if(!ESPN||!Array.isArray(ESPN.events))return false;
+  const comps=[];for(const e of ESPN.events)for(const g of e.groupings||[]){if(((g.grouping||{}).slug)!=="mens-singles")continue;
+    for(const c of g.competitions||[]){const cs=c.competitors||[];if(cs.length===2&&cs.every(x=>(x.athlete||{}).displayName&&x.athlete.displayName!=="TBD"))comps.push(c)}}
+  const t=today(),y=new Date(Date.now()-864e5).toISOString().slice(0,10);let changed=false;
+  for(const m of matchs){if(m.date!==t&&m.date!==y)continue;const L=m.live||{};if(m.statut==="termine"&&L.fini)continue;
+    let f=null;for(const c of comps){const [a,b]=c.competitors;const na=a.athlete.displayName,nb=b.athlete.displayName;
+      if(espnSame(na,m.j1)&&espnSame(nb,m.j2)){f=[c,a,b];break}if(espnSame(nb,m.j1)&&espnSame(na,m.j2)){f=[c,b,a];break}}
+    if(!f)continue;const [c,c1,c2]=f;const st=(c.status||{}).type||{};const state=st.state,detail=String(st.detail||"").toLowerCase();
+    const l1=(c1.linescores||[]).map(x=>Math.round(+x.value||0)),l2=(c2.linescores||[]).map(x=>Math.round(+x.value||0));
+    const sets=l1.map((v,i)=>[v,l2[i]??0]);const score=sets.map(s=>s[0]+"-"+s[1]).join(" ");
+    if(state==="pre"){if(c.timeValid&&c.date){const d=new Date(c.date);if(!isNaN(d)){const loc=d.toLocaleDateString("sv-SE",{timeZone:"Europe/Paris"});
+        if(loc===m.date){const h=d.toLocaleTimeString("fr-FR",{timeZone:"Europe/Paris",hour:"2-digit",minute:"2-digit"});if(h!==m.heure){m.heure=h;changed=true}}}}}
+    else if(state==="in"){const srv=c1.possession?1:c2.possession?2:L.service;
+      if(m.statut!=="en_cours"||m.score!==score||L.service!==srv){m.statut="en_cours";m.score=score||"0-0";m.live={...L,sets:sets.length?sets:[[0,0]],service:srv,maj:new Date().toISOString()};delete m.live.jeu;changed=true}}
+    else if(state==="post"){const w=c1.winner?1:c2.winner?2:null;if(!w)continue;
+      let sc=score;if(/walkover|w\/o/.test(detail))sc="forfait";else if(/ret/.test(detail)&&sc)sc+=" ab.";
+      m.statut="termine";m.vainqueur=w;m.score=sc;m.live={...L,sets,fini:true,maj:new Date().toISOString()};delete m.live.jeu;delete m.live.service;changed=true}}
+  return changed}
+async function espnFetch(){if(document.hidden)return;try{const r=await fetch("https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard",{cache:"no-store"});
+  if(!r.ok)return;ESPN=await r.json();if(espnApply())renderAll()}catch{}}
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)espnFetch()});
+setInterval(espnFetch,60000);
 async function init(){
   renderBoard();
   let db=null;try{db=window.claude&&window.claude.use?await window.claude.use("db"):null}catch{db=null}
   if(!db){store=localStore();
     const load=async()=>{try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});const S=await r.json();
-      matchs=S.matchs||[];tournois=S.tournois||[];meta=S.meta||null;classements=S.classements||{};
+      matchs=S.matchs||[];tournois=S.tournois||[];meta=S.meta||null;classements=S.classements||{};espnApply();
       if(S.fond){$("photoBg").style.backgroundImage=`url("${S.fond}")`;$("photoBg").hidden=false}
       renderAll();$("storeNote").textContent="Tes prédictions sont gardées dans ce navigateur.";}
       catch(e){console.error(e);$("storeNote").textContent="Chargement en cours… nouvel essai dans quelques secondes.";setTimeout(load,5000)}};
-    warnStorage();await load();await importFromHash();setInterval(load,10*60*1000);return}
+    warnStorage();await load();espnFetch();await importFromHash();setInterval(load,5*60*1000);return}
   const col=db.collection("pronos");
   store={add:p=>col.add(p),update:(id,patch)=>col.doc(id).update(patch),remove:id=>col.doc(id).delete()};
   const onErr=()=>{$("storeNote").textContent="Connexion perdue. Recharge la page."};
   col.onSnapshot(s=>{pronos=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},onErr);
-  db.collection("matchs").onSnapshot(s=>{matchs=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},onErr);
+  db.collection("matchs").onSnapshot(s=>{matchs=s.docs.map(d=>({id:d.id,...d.data()}));espnApply();renderAll()},onErr);espnFetch();
   db.collection("tournois").onSnapshot(s=>{tournois=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},onErr);
   db.collection("classements").onSnapshot(s=>{classements={};s.docs.forEach(d=>classements[d.id]=d.data());renderClassements()},onErr);
   db.doc("meta/maj").onSnapshot(s=>{meta=s.exists?s.data():null;renderBoard()},onErr);
