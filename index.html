@@ -29,7 +29,7 @@
 
 *{box-sizing:border-box}
 .legal{margin-top:8px;padding:14px 16px;border-radius:12px;background:rgba(0,0,0,.35);color:var(--on-bg-muted);font-size:.78rem;line-height:1.5;backdrop-filter:blur(6px)}
-.legal p{margin:0}.legal b{color:var(--on-bg)}
+.legal p{margin:0}.legal p+p{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.15);font-variant-numeric:tabular-nums}.legal b{color:var(--on-bg)}
 .court-bg canvas{width:100%;height:100%;display:block}
 .photo-bg{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center}
 .photo-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,5,12,.55),rgba(3,5,12,.35) 40%,rgba(3,5,12,.7))}
@@ -379,10 +379,13 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <p class="note" id="storeNote" style="text-align:center"></p>
   <footer class="legal" id="legal">
     <p><b>Jeu, Set et Prono</b> est un site d'analyses de tennis, pas un site de paris. Les analyses sont fournies à titre informatif. Aucun résultat n'est garanti.</p>
+    <p class="majline" id="majLine"></p>
   </footer>
 </div>
 
 <script>
+/* À mettre à jour à chaque modification du site */
+const SITE_VERSION={date:"2026-10-23T02:36:00+02:00",note:"date des mises à jour affichée en bas de page"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -417,7 +420,12 @@ function tally(list,fn){let won=0,lost=0,wait=0;for(const x of list){const s=fn(
 function aiStatus(m){if(!m.claude||!m.claude.choix)return"none";if(!m.vainqueur)return"wait";return String(m.vainqueur)===String(m.claude.choix)?"won":"lost"}
 const pl=n=>`${n} ${n>1?"s":""}`;
 
-function renderBoard(){
+function renderMaj(){
+  const f=d=>{const x=new Date(d);return x.toLocaleDateString("fr-FR",{day:"numeric",month:"long"})+" à "+x.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})};
+  const el=$("majLine");if(!el)return;
+  el.innerHTML=(meta&&meta.misAJour?`Matchs et scores mis à jour le <b>${esc(f(meta.misAJour))}</b><br>`:"")+`Dernière modification du site : <b>${esc(f(SITE_VERSION.date))}</b> (${esc(SITE_VERSION.note)})`;
+}
+function renderBoard(){renderMaj();
   const me=tally(pronos,status),ai=tally(matchs.filter(m=>m.claude&&m.claude.choix),aiStatus);
   $("pctMe").innerHTML=(me.pct??"–")+"<small>%</small>";$("pctAi").innerHTML=(ai.pct??"–")+"<small>%</small>";
   $("detMe").textContent=`${me.won} gagné${me.won>1?"s":""} · ${me.lost} perdu${me.lost>1?"s":""}`;
