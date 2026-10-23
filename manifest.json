@@ -1,0 +1,20 @@
+{
+ "name": "Jeu, Set et Match",
+ "short_name": "Jeu Set Match",
+ "start_url": "./",
+ "display": "browser",
+ "background_color": "#123426",
+ "theme_color": "#123426",
+ "icons": [
+  {
+   "src": "apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "icone-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
