@@ -131,6 +131,18 @@
 .lvcard{display:flex;flex-direction:column;gap:8px}
 .lvhit{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;width:100%;text-align:left;background:transparent;border:0;padding:0;color:inherit}
 .lvlink{align-self:center;margin:2px 0 0!important}
+
+/* Chances de victoire */
+.proba{display:flex;flex-direction:column;gap:5px;padding:10px 12px;border-top:1px solid var(--line);text-align:left}
+.proba .pl{display:flex;justify-content:space-between;gap:8px;font-size:.82rem;font-variant-numeric:tabular-nums}
+.proba .pl b{font-family:var(--display);font-size:1.15rem;font-weight:700}
+.proba .pl .fav{color:var(--court)}
+.proba .bar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--bg)}
+.proba .bar i{display:block;height:100%}
+.proba .bar i{background:color-mix(in srgb,var(--muted) 35%,transparent)}
+.proba .bar i.f{background:var(--court)}
+.proba .cap{font-size:.7rem;color:var(--muted);text-align:center}
+.nextc .proba,.sheet .proba{border:1px solid var(--line);border-radius:10px}
 .legal p{margin:0}.legal p+p{font-variant-numeric:tabular-nums}.legal b{color:var(--on-bg)}
 .court-bg canvas{width:100%;height:100%;display:block}
 .photo-bg{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center}
@@ -525,7 +537,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T11:22:00+02:00",note:"En direct allégé"};
+const SITE_VERSION={date:"2026-10-23T11:28:00+02:00",note:"chances de victoire sur chaque match"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -646,6 +658,7 @@ function card(m){
   return `<article class="card"><div class="chead"><span class="round">${esc(m.tour||"")}</span><span>${m.heure?esc(m.heure):"Horaire à confirmer"}</span></div>
     ${pb(1)}${pb(2)}
     ${c&&c.choix?`<div class="ai"><p><b>Notre analyse :</b> ${esc(c.choix==1?m.j1:m.j2)} <span class="conf" title="Confiance">${"●".repeat(c.confiance||2)}${"○".repeat(3-(c.confiance||2))}</span>${c.analyse?" · "+esc(c.analyse):""}</p></div>`:""}
+    ${probaHTML(m)}
     <div class="cfoot">${state}${foot}</div></article>`;
 }
 function renderTableau(t){
@@ -702,6 +715,16 @@ function renderBilan(){
 
 function renderAll(){if(openMatch)renderSheet();renderBoard();renderHome();renderTList();if(openT)renderTournoi();renderList();renderBilan();renderClassements()}
 
+
+
+/* ---------- Chances de victoire (estimation) ---------- */
+function probaOf(m){const c=m.claude||{};if(Array.isArray(c.proba)&&c.proba.length===2)return c.proba;
+  const at=(classements.atp||{}).joueurs||[];const pt=n=>{const j=at.find(x=>pkey(x.nom)===pkey(n));return j?j.points:null};
+  const a=pt(m.j1),b=pt(m.j2);if(a==null||b==null)return null;let p=Math.round(100*a**.8/(a**.8+b**.8));p=Math.max(15,Math.min(85,p));return [p,100-p]}
+function probaHTML(m){const p=probaOf(m);if(!p||m.statut==="termine")return"";const f=p[0]>=p[1]?1:2;
+  return `<div class="proba" aria-label="Chances de victoire estimées"><div class="pl"><span class="${f===1?"fav":""}"><b>${p[0]}%</b> ${esc(lastWord(m.j1))}</span><span class="${f===2?"fav":""}">${esc(lastWord(m.j2))} <b>${p[1]}%</b></span></div>
+    <div class="bar"><i class="${f===1?"f":""}" style="width:${p[0]}%"></i><i class="${f===2?"f":""}" style="width:${p[1]}%"></i></div><span class="cap">Chances de victoire · estimation selon le classement</span></div>`}
+const lastWord=n=>{const w=String(n||"").split(" ");return w.length>1?w.slice(1).join(" "):n};
 
 /* ---------- Classements ---------- */
 let classements={},clSub="atp",clQuery="";
@@ -772,6 +795,7 @@ function renderSheet(){
   $("sheet").innerHTML=`<div class="sheet-top"><span class="t">${esc(m.tournoi)} · ${esc(m.tour||"")}</span><button class="xbtn" id="sheetClose" aria-label="Fermer">✕</button></div>
     <div>${status}</div>
     <div class="sb">${row(1)}${row(2)}</div>
+    ${probaHTML(m)}
     ${st?`<div class="stats">${st}</div>`:`<div class="na">${done||live?"Les statistiques de ce match ne sont pas encore disponibles.":"Les statistiques apparaîtront dès le début du match."}</div>`}
     <div class="foot"><span>${maj?"Stats mises à jour à "+maj+" · actualisées chaque heure":"Actualisées chaque heure pendant le match"}</span><a class="livelink" style="margin-left:0" href="https://www.atptour.com/en/scores/current" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Point par point</a></div>`;
   $("sheetBg").hidden=false;
@@ -816,6 +840,7 @@ function nextCard(nx){
     <span class="when">${esc(nx.heure)}</span>
     <div class="nvs">${side(1)}<span class="x">VS</span>${side(2)}</div>
     ${c.choix?`<div class="ai"><p><b>Notre analyse :</b> ${esc(c.choix==1?nx.j1:nx.j2)} <span class="conf">${"●".repeat(c.confiance||2)}${"○".repeat(3-(c.confiance||2))}</span>${c.analyse?" · "+esc(c.analyse):""}</p></div>`:""}
+    ${probaHTML(nx)}
     <div class="row2"><button class="statbtn" data-stats="${nx.id}">Fiche du match</button></div></div>`;
 }
 $("v-suivre").addEventListener("click",async e=>{

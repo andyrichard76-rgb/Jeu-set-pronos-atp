@@ -74,7 +74,11 @@
    "claude": {
     "analyse": "Tête de série n°3 et joueur local, Bublik arrive en quarts sans avoir joué au 2e tour (forfait de Marozsan). Khachanov, tête de série n°5, a dû batailler face à Machac (6-2, 4-6, 7-6) : match très ouvert.",
     "choix": 1,
-    "confiance": 1
+    "confiance": 1,
+    "proba": [
+     53,
+     47
+    ]
    },
    "date": "2026-10-23",
    "heure": "16:30",
@@ -99,7 +103,11 @@
    "claude": {
     "analyse": "Tenant du titre, tête de série n°1, il a écrasé Shimabukuro (6-2, 6-1). Atmane sort de trois tie-breaks, la fraîcheur sera de son côté à Medvedev.",
     "choix": 1,
-    "confiance": 3
+    "confiance": 3,
+    "proba": [
+     81,
+     19
+    ]
    },
    "date": "2026-10-23",
    "heure": "11:10",
@@ -127,7 +135,11 @@
    "claude": {
     "analyse": "Tête de série n°7, expéditif contre Kukushkin (6-1, 6-2). Duckworth a sorti Darderi (tête de série n°2) et sert bien en indoor, il faut s'en méfier.",
     "choix": 1,
-    "confiance": 2
+    "confiance": 2,
+    "proba": [
+     61,
+     39
+    ]
    },
    "date": "2026-10-23",
    "heure": "10:00",
@@ -192,7 +204,11 @@
    "claude": {
     "analyse": "Bergs joue devant son public et a dominé Dzumhur (6-2, 6-4). Struff a l'expérience et un gros service : prono fragile.",
     "choix": 1,
-    "confiance": 1
+    "confiance": 1,
+    "proba": [
+     55,
+     45
+    ]
    },
    "date": "2026-10-23",
    "heure": "",
@@ -217,7 +233,11 @@
    "claude": {
     "analyse": "Tête de série n°3, solide contre Damm (6-4, 7-6). Chidekh, sorti des qualifs, gagne tout en deux sets cette semaine, mais l'écart de niveau reste net.",
     "choix": 2,
-    "confiance": 2
+    "confiance": 2,
+    "proba": [
+     22,
+     78
+    ]
    },
    "date": "2026-10-23",
    "heure": "14:00",
@@ -242,7 +262,11 @@
    "claude": {
     "analyse": "Tête de série n°1 et plus de puissance du fond. Petit doute : il passe par forfait (Munar) donc peu de rythme, alors que Michelsen vient de battre Goffin en deux sets.",
     "choix": 1,
-    "confiance": 2
+    "confiance": 2,
+    "proba": [
+     67,
+     33
+    ]
    },
    "date": "2026-10-23",
    "heure": "18:30",
@@ -267,7 +291,11 @@
    "claude": {
     "analyse": "Tête de série n°2, propre contre Collignon (6-4, 6-2). Griekspoor est dangereux au service en indoor, match serré possible.",
     "choix": 1,
-    "confiance": 2
+    "confiance": 2,
+    "proba": [
+     68,
+     32
+    ]
    },
    "date": "2026-10-23",
    "heure": "16:00",
@@ -292,7 +320,11 @@
    "claude": {
     "analyse": "Tête de série n°1, expéditif contre Wawrinka (6-2, 6-4) et en course pour Turin. Nakashima sert bien en indoor, ça peut se jouer aux tie-breaks.",
     "choix": 1,
-    "confiance": 2
+    "confiance": 2,
+    "proba": [
+     58,
+     42
+    ]
    },
    "date": "2026-10-23",
    "heure": "19:00",
@@ -317,7 +349,11 @@
    "claude": {
     "analyse": "Tête de série n°2, solide face à Herbert (6-2, 7-5). Son service et son jeu à plat sont taillés pour l'indoor rapide, Altmaier est plus à l'aise sur terre.",
     "choix": 1,
-    "confiance": 3
+    "confiance": 3,
+    "proba": [
+     73,
+     27
+    ]
    },
    "date": "2026-10-23",
    "heure": "",
@@ -342,7 +378,11 @@
    "claude": {
     "analyse": "Tête de série n°4, il a dû batailler contre Bonzi (4-6, 7-6, 6-3). Moutet est en confiance après avoir sorti Humbert et jouera avec le public, mais Paul a plus de régularité.",
     "choix": 2,
-    "confiance": 2
+    "confiance": 2,
+    "proba": [
+     25,
+     75
+    ]
    },
    "date": "2026-10-23",
    "heure": "14:00",
@@ -367,7 +407,11 @@
    "claude": {
     "analyse": "Écart de classement net en faveur de Musetti (tête de série n°6). Van Assche joue à domicile et sort d'un match en trois sets, il peut accrocher un set.",
     "choix": 1,
-    "confiance": 2
+    "confiance": 2,
+    "proba": [
+     61,
+     39
+    ]
    },
    "date": "2026-10-23",
    "heure": "",
