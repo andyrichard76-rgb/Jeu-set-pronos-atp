@@ -2395,14 +2395,14 @@
   "race": {
    "titre": "ATP Race to Turin",
    "date": "2026-10-23",
-   "source": "ATP Tour",
+   "source": "ATP Tour (Race en direct)",
    "live": true,
    "joueurs": [
     {
      "rang": 1,
      "nom": "Alexander Zverev",
      "pays": "GER",
-     "points": 8850
+     "points": 9150
     },
     {
      "rang": 2,
@@ -2430,57 +2430,57 @@
     },
     {
      "rang": 6,
+     "nom": "Daniil Medvedev",
+     "pays": "",
+     "points": 3470
+    },
+    {
+     "rang": 7,
      "nom": "Frances Tiafoe",
      "pays": "USA",
      "points": 3380
     },
     {
-     "rang": 7,
+     "rang": 8,
      "nom": "Arthur Fils",
      "pays": "FRA",
-     "points": 3325
-    },
-    {
-     "rang": 8,
-     "nom": "Daniil Medvedev",
-     "pays": "",
-     "points": 3120
+     "points": 3375
     },
     {
      "rang": 9,
+     "nom": "Rafael Jodar",
+     "pays": "ESP",
+     "points": 3159
+    },
+    {
+     "rang": 10,
      "nom": "Alex de Minaur",
      "pays": "AUS",
      "points": 2880
     },
     {
-     "rang": 10,
+     "rang": 11,
      "nom": "Novak Djokovic",
      "pays": "SRB",
      "points": 2840
     },
     {
-     "rang": 11,
-     "nom": "Rafael Jodar",
-     "pays": "ESP",
-     "points": 2609
+     "rang": 12,
+     "nom": "Tommy Paul",
+     "pays": "USA",
+     "points": 2635
     },
     {
-     "rang": 12,
+     "rang": 13,
      "nom": "Taylor Fritz",
      "pays": "USA",
      "points": 2530
     },
     {
-     "rang": 13,
+     "rang": 14,
      "nom": "Jakub Mensik",
      "pays": "CZE",
      "points": 2495
-    },
-    {
-     "rang": 14,
-     "nom": "Tommy Paul",
-     "pays": "USA",
-     "points": 2485
     },
     {
      "rang": 15,
@@ -2490,75 +2490,75 @@
     },
     {
      "rang": 16,
-     "nom": "Brandon Nakashima",
-     "pays": "USA",
-     "points": 2325
+     "nom": "Alejandro Davidovich Fokina",
+     "pays": "ESP",
+     "points": 2450
     },
     {
      "rang": 17,
-     "nom": "Jiri Lehecka",
-     "pays": "CZE",
-     "points": 2225
+     "nom": "Brandon Nakashima",
+     "pays": "USA",
+     "points": 2350
     },
     {
      "rang": 18,
-     "nom": "Luciano Darderi",
-     "pays": "ITA",
-     "points": 2150
+     "nom": "Jiri Lehecka",
+     "pays": "CZE",
+     "points": 2275
     },
     {
      "rang": 19,
      "nom": "Francisco Cerundolo",
      "pays": "ARG",
-     "points": 2120
+     "points": 2170
     },
     {
      "rang": 20,
+     "nom": "Luciano Darderi",
+     "pays": "ITA",
+     "points": 2150
+    },
+    {
+     "rang": 21,
      "nom": "Andrey Rublev",
      "pays": "",
      "points": 2075
     },
     {
-     "rang": 21,
+     "rang": 22,
      "nom": "Learner Tien",
      "pays": "USA",
      "points": 2045
     },
     {
-     "rang": 22,
-     "nom": "Karen Khachanov",
-     "pays": "",
-     "points": 1890
-    },
-    {
      "rang": 23,
      "nom": "Casper Ruud",
      "pays": "NOR",
-     "points": 1885
+     "points": 1985
     },
     {
      "rang": 24,
-     "nom": "Alexander Bublik",
-     "pays": "KAZ",
-     "points": 1785
+     "nom": "Karen Khachanov",
+     "pays": "",
+     "points": 1940
     },
     {
      "rang": 25,
+     "nom": "Alexander Bublik",
+     "pays": "KAZ",
+     "points": 1835
+    },
+    {
+     "rang": 26,
      "nom": "Alexander Blockx",
      "pays": "BEL",
      "points": 1640
     },
     {
-     "rang": 26,
+     "rang": 27,
      "nom": "Hubert Hurkacz",
      "pays": "POL",
      "points": 1575
-    },
-    {
-     "rang": 27,
-     "nom": "Alejandro Davidovich Fokina",
-     "pays": "ESP",
-     "points": 1550
     },
     {
      "rang": 28,
@@ -2588,25 +2588,25 @@
      "rang": 32,
      "nom": "Alex Michelsen",
      "pays": "USA",
-     "points": 1345
+     "points": 1395
     },
     {
      "rang": 33,
      "nom": "Stefanos Tsitsipas",
      "pays": "GRE",
-     "points": 1340
+     "points": 1390
     },
     {
      "rang": 34,
-     "nom": "Matteo Arnaldi",
+     "nom": "Lorenzo Musetti",
      "pays": "ITA",
-     "points": 1311
+     "points": 1345
     },
     {
      "rang": 35,
-     "nom": "Lorenzo Musetti",
+     "nom": "Matteo Arnaldi",
      "pays": "ITA",
-     "points": 1295
+     "points": 1311
     },
     {
      "rang": 36,
@@ -2634,39 +2634,39 @@
     },
     {
      "rang": 40,
+     "nom": "Zizou Bergs",
+     "pays": "BEL",
+     "points": 1195
+    },
+    {
+     "rang": 41,
      "nom": "Daniel Merida",
      "pays": "ESP",
      "points": 1187
     },
     {
-     "rang": 41,
-     "nom": "Zizou Bergs",
-     "pays": "BEL",
-     "points": 1170
+     "rang": 42,
+     "nom": "Arthur Gea",
+     "pays": "FRA",
+     "points": 1146
     },
     {
-     "rang": 42,
+     "rang": 43,
      "nom": "Quentin Halys",
      "pays": "FRA",
      "points": 1114
     },
     {
-     "rang": 43,
-     "nom": "Mariano Navone",
-     "pays": "ARG",
-     "points": 1074
-    },
-    {
      "rang": 44,
      "nom": "Luca Van Assche",
      "pays": "FRA",
-     "points": 1052
+     "points": 1102
     },
     {
      "rang": 45,
-     "nom": "Arthur Gea",
-     "pays": "FRA",
-     "points": 1046
+     "nom": "Mariano Navone",
+     "pays": "ARG",
+     "points": 1099
     },
     {
      "rang": 46,
@@ -2682,321 +2682,321 @@
     },
     {
      "rang": 48,
-     "nom": "Denis Shapovalov",
-     "pays": "CAN",
-     "points": 1015
-    },
-    {
-     "rang": 49,
      "nom": "Sebastian Baez",
      "pays": "ARG",
      "points": 1014
     },
     {
+     "rang": 49,
+     "nom": "Denis Shapovalov",
+     "pays": "CAN",
+     "points": 1005
+    },
+    {
      "rang": 50,
+     "nom": "Jan-Lennard Struff",
+     "pays": "GER",
+     "points": 966
+    },
+    {
+     "rang": 51,
      "nom": "Nuno Borges",
      "pays": "POR",
      "points": 950
     },
     {
-     "rang": 51,
+     "rang": 52,
      "nom": "Juan Manuel Cerundolo",
      "pays": "ARG",
      "points": 950
     },
     {
-     "rang": 52,
+     "rang": 53,
      "nom": "Raphael Collignon",
      "pays": "BEL",
      "points": 943
     },
     {
-     "rang": 53,
+     "rang": 54,
      "nom": "Cameron Norrie",
      "pays": "GBR",
      "points": 940
     },
     {
-     "rang": 54,
+     "rang": 55,
      "nom": "Adolfo Daniel Vallejo",
      "pays": "PAR",
      "points": 933
     },
     {
-     "rang": 55,
+     "rang": 56,
      "nom": "Jaime Faria",
      "pays": "POR",
      "points": 929
     },
     {
-     "rang": 56,
-     "nom": "Jan-Lennard Struff",
-     "pays": "GER",
-     "points": 916
-    },
-    {
      "rang": 57,
      "nom": "Fabian Marozsan",
      "pays": "HUN",
-     "points": 850
+     "points": 875
     },
     {
      "rang": 58,
-     "nom": "Ethan Quinn",
-     "pays": "USA",
-     "points": 847
-    },
-    {
-     "rang": 59,
      "nom": "Miomir Kecmanovic",
      "pays": "SRB",
      "points": 843
     },
     {
+     "rang": 59,
+     "nom": "Jaume Munar",
+     "pays": "ESP",
+     "points": 825
+    },
+    {
      "rang": 60,
+     "nom": "Tallon Griekspoor",
+     "pays": "NED",
+     "points": 825
+    },
+    {
+     "rang": 61,
+     "nom": "Mattia Bellucci",
+     "pays": "ITA",
+     "points": 824
+    },
+    {
+     "rang": 62,
+     "nom": "Ethan Quinn",
+     "pays": "USA",
+     "points": 821
+    },
+    {
+     "rang": 63,
      "nom": "Arthur Rinderknech",
      "pays": "FRA",
      "points": 820
     },
     {
-     "rang": 61,
+     "rang": 64,
+     "nom": "Martin Landaluce",
+     "pays": "ESP",
+     "points": 816
+    },
+    {
+     "rang": 65,
      "nom": "Vit Kopriva",
      "pays": "CZE",
      "points": 812
     },
     {
-     "rang": 62,
+     "rang": 66,
      "nom": "Yannick Hanfmann",
      "pays": "GER",
      "points": 810
     },
     {
-     "rang": 63,
-     "nom": "Jaume Munar",
-     "pays": "ESP",
-     "points": 800
-    },
-    {
-     "rang": 64,
+     "rang": 67,
      "nom": "Roman Safiullin",
      "pays": "",
+     "points": 807
+    },
+    {
+     "rang": 68,
+     "nom": "Facundo Diaz Acosta",
+     "pays": "ARG",
+     "points": 807
+    },
+    {
+     "rang": 69,
+     "nom": "Tomas Machac",
+     "pays": "CZE",
      "points": 794
     },
     {
-     "rang": 65,
-     "nom": "Facundo Diaz Acosta",
-     "pays": "ARG",
-     "points": 782
+     "rang": 70,
+     "nom": "Adrian Mannarino",
+     "pays": "FRA",
+     "points": 783
     },
     {
-     "rang": 66,
-     "nom": "Tallon Griekspoor",
-     "pays": "NED",
-     "points": 775
+     "rang": 71,
+     "nom": "James Duckworth",
+     "pays": "AUS",
+     "points": 774
     },
     {
-     "rang": 67,
+     "rang": 72,
+     "nom": "Daniel Altmaier",
+     "pays": "GER",
+     "points": 774
+    },
+    {
+     "rang": 73,
      "nom": "Pablo Carreno Busta",
      "pays": "ESP",
      "points": 760
     },
     {
-     "rang": 68,
+     "rang": 74,
      "nom": "Zachary Svajda",
      "pays": "USA",
      "points": 759
     },
     {
-     "rang": 69,
-     "nom": "Martin Landaluce",
-     "pays": "ESP",
-     "points": 758
-    },
-    {
-     "rang": 70,
-     "nom": "Tomas Machac",
-     "pays": "CZE",
-     "points": 753
-    },
-    {
-     "rang": 71,
-     "nom": "Roman Andres Burruchaga",
-     "pays": "ARG",
-     "points": 752
-    },
-    {
-     "rang": 72,
+     "rang": 75,
      "nom": "Hamad Medjedovic",
      "pays": "SRB",
      "points": 751
     },
     {
-     "rang": 73,
-     "nom": "Adrian Mannarino",
-     "pays": "FRA",
-     "points": 733
+     "rang": 76,
+     "nom": "Roman Andres Burruchaga",
+     "pays": "ARG",
+     "points": 742
     },
     {
-     "rang": 74,
+     "rang": 77,
      "nom": "Titouan Droguet",
      "pays": "FRA",
      "points": 732
     },
     {
-     "rang": 75,
+     "rang": 78,
      "nom": "Alex Molcan",
      "pays": "SVK",
      "points": 727
     },
     {
-     "rang": 76,
-     "nom": "James Duckworth",
-     "pays": "AUS",
-     "points": 724
-    },
-    {
-     "rang": 77,
-     "nom": "Daniel Altmaier",
-     "pays": "GER",
-     "points": 724
-    },
-    {
-     "rang": 78,
+     "rang": 79,
      "nom": "Camilo Ugo Carabelli",
      "pays": "ARG",
      "points": 720
     },
     {
-     "rang": 79,
+     "rang": 80,
      "nom": "Kamil Majchrzak",
      "pays": "POL",
      "points": 715
     },
     {
-     "rang": 80,
-     "nom": "Mattia Bellucci",
-     "pays": "ITA",
-     "points": 687
+     "rang": 81,
+     "nom": "Kyrian Jacquet",
+     "pays": "FRA",
+     "points": 684
     },
     {
-     "rang": 81,
+     "rang": 82,
      "nom": "Aleksandar Kovacevic",
      "pays": "USA",
      "points": 677
     },
     {
-     "rang": 82,
+     "rang": 83,
      "nom": "Rinky Hijikata",
      "pays": "AUS",
      "points": 673
     },
     {
-     "rang": 83,
-     "nom": "Kyrian Jacquet",
-     "pays": "FRA",
-     "points": 646
-    },
-    {
      "rang": 84,
-     "nom": "Marco Trungelliti",
-     "pays": "ARG",
-     "points": 643
+     "nom": "Terence Atmane",
+     "pays": "FRA",
+     "points": 666
     },
     {
      "rang": 85,
+     "nom": "Damir Dzumhur",
+     "pays": "BIH",
+     "points": 661
+    },
+    {
+     "rang": 86,
+     "nom": "Marco Trungelliti",
+     "pays": "ARG",
+     "points": 659
+    },
+    {
+     "rang": 87,
+     "nom": "Jacob Fearnley",
+     "pays": "GBR",
+     "points": 653
+    },
+    {
+     "rang": 88,
      "nom": "Dino Prizmic",
      "pays": "CRO",
      "points": 638
     },
     {
-     "rang": 86,
+     "rang": 89,
      "nom": "Yunchaokete Bu",
      "pays": "CHN",
      "points": 638
     },
     {
-     "rang": 87,
+     "rang": 90,
+     "nom": "Benjamin Bonzi",
+     "pays": "FRA",
+     "points": 630
+    },
+    {
+     "rang": 91,
      "nom": "Marcos Giron",
      "pays": "USA",
      "points": 626
     },
     {
-     "rang": 88,
+     "rang": 92,
      "nom": "Toby Samuel",
      "pays": "GBR",
      "points": 617
     },
     {
-     "rang": 89,
-     "nom": "Terence Atmane",
-     "pays": "FRA",
-     "points": 616
-    },
-    {
-     "rang": 90,
+     "rang": 93,
      "nom": "Marin Cilic",
      "pays": "CRO",
-     "points": 605
+     "points": 613
     },
     {
-     "rang": 91,
+     "rang": 94,
      "nom": "Adam Walton",
      "pays": "AUS",
-     "points": 605
+     "points": 612
     },
     {
-     "rang": 92,
-     "nom": "Benjamin Bonzi",
-     "pays": "FRA",
-     "points": 605
-    },
-    {
-     "rang": 93,
+     "rang": 95,
      "nom": "Michael Zheng",
      "pays": "USA",
      "points": 594
     },
     {
-     "rang": 94,
+     "rang": 96,
      "nom": "Sebastian Korda",
      "pays": "USA",
      "points": 590
     },
     {
-     "rang": 95,
+     "rang": 97,
+     "nom": "Zsombor Piros",
+     "pays": "HUN",
+     "points": 590
+    },
+    {
+     "rang": 98,
+     "nom": "Coleman Wong",
+     "pays": "HKG",
+     "points": 587
+    },
+    {
+     "rang": 99,
      "nom": "Jesper de Jong",
      "pays": "NED",
      "points": 575
     },
     {
-     "rang": 96,
-     "nom": "Coleman Wong",
-     "pays": "HKG",
-     "points": 575
-    },
-    {
-     "rang": 97,
-     "nom": "Lloyd Harris",
-     "pays": "RSA",
-     "points": 571
-    },
-    {
-     "rang": 98,
-     "nom": "Yibing Wu",
-     "pays": "CHN",
-     "points": 565
-    },
-    {
-     "rang": 99,
-     "nom": "Jacob Fearnley",
-     "pays": "GBR",
-     "points": 564
-    },
-    {
      "rang": 100,
      "nom": "Jenson Brooksby",
      "pays": "USA",
-     "points": 563
+     "points": 575
     }
    ]
   }
