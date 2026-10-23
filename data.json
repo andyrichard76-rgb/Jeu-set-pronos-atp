@@ -89,7 +89,7 @@
    "j2Pays": "",
    "j2Tds": "5",
    "ordre": 4,
-   "score": "4-6 3-3",
+   "score": "4-6 7-6 1-1",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -98,18 +98,22 @@
    "vainqueur": null,
    "live": {
     "srId": "sr:sport_event:75620034",
-    "maj": "2026-10-23T17:42:15+02:00",
+    "maj": "2026-10-23T18:20:38+02:00",
     "sets": [
      [
       4,
       6
      ],
      [
-      3,
-      3
+      7,
+      6
+     ],
+     [
+      1,
+      1
      ]
     ],
-    "service": 1,
+    "service": 2,
     "stats": {
      "j1": {
       "aces": 6,
@@ -438,7 +442,7 @@
    "j2Tds": "",
    "live": {
     "srId": "sr:sport_event:75621144",
-    "maj": "2026-10-23T17:42:15+02:00",
+    "maj": "2026-10-23T18:20:38+02:00",
     "sets": [
      [
       6,
@@ -449,11 +453,11 @@
       6
      ],
      [
-      0,
-      0
+      2,
+      5
      ]
     ],
-    "service": 2,
+    "service": 1,
     "stats": {
      "j1": {
       "aces": 8,
@@ -484,7 +488,7 @@
     }
    },
    "ordre": 2,
-   "score": "6-4 4-6 0-0",
+   "score": "6-4 4-6 2-5",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -542,7 +546,7 @@
    "j2Pays": "GER",
    "j2Tds": "",
    "ordre": 2,
-   "score": "3-2",
+   "score": "7-6 0-0",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -552,12 +556,16 @@
    "live": {
     "sets": [
      [
-      3,
-      2
+      7,
+      6
+     ],
+     [
+      0,
+      0
      ]
     ],
     "service": 2,
-    "maj": "2026-10-23T17:42:15+02:00"
+    "maj": "2026-10-23T18:20:38+02:00"
    }
   },
   {
@@ -2049,7 +2057,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T17:42:15+02:00",
+  "misAJour": "2026-10-23T18:20:38+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
