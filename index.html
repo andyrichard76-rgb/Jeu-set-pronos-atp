@@ -413,7 +413,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <nav class="tabs" role="tablist">
     <button role="tab" aria-selected="true" data-tab="tournois">Tournois</button>
     <button role="tab" aria-selected="false" data-tab="suivre">À suivre</button>
-    <button role="tab" aria-selected="false" data-tab="pronos">Pronos</button>
+    <button role="tab" aria-selected="false" data-tab="pronos">Résultats</button>
     <button role="tab" aria-selected="false" data-tab="classements">Classements</button>
     <button role="tab" aria-selected="false" data-tab="bilan">Bilan</button>
   </nav>
@@ -447,7 +447,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <!-- Mes pronos -->
   <section id="v-pronos" class="view" hidden>
     <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
-      <h2>Mes pronos</h2>
+      <h2>Mes résultats</h2>
       <div class="seg" id="filter">
         <button type="button" data-v="all" aria-pressed="true">Tous</button>
         <button type="button" data-v="wait" aria-pressed="false">En attente</button>
@@ -522,7 +522,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T11:10:00+02:00",note:"En direct sur l'accueil, À suivre = 2 prochaines heures"};
+const SITE_VERSION={date:"2026-10-23T11:12:00+02:00",note:"onglet Pronos renommé Résultats"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
