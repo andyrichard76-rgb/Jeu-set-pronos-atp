@@ -17,13 +17,13 @@
    "j2Pays": "FRA",
    "j2Tds": "",
    "ordre": 1,
-   "score": "",
-   "statut": "a_venir",
+   "score": "6-3 6-1",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null
+   "vainqueur": 1
   },
   {
    "id": "2026-10-23-almaty-bublik-khachanov",
@@ -92,8 +92,8 @@
    "j2Pays": "AUS",
    "j2Tds": "",
    "ordre": 2,
-   "score": "",
-   "statut": "a_venir",
+   "score": "3-0",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Almaty",
@@ -686,8 +686,8 @@
         "pays": "FRA",
         "tds": ""
        },
-       "score": "",
-       "vainqueur": null
+       "score": "6-3 6-1",
+       "vainqueur": 1
       },
       {
        "j1": {
@@ -712,7 +712,11 @@
        "vainqueur": null
       },
       {
-       "j1": null,
+       "j1": {
+        "nom": "N. Basilashvili",
+        "pays": "GEO",
+        "tds": "Q"
+       },
        "j2": null,
        "score": "",
        "vainqueur": null
@@ -1639,7 +1643,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T09:05:00+02:00",
+  "misAJour": "2026-10-23T10:22:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
