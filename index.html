@@ -435,7 +435,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T10:18:00+02:00",note:"message d'aide pour ordinateur"};
+const SITE_VERSION={date:"2026-10-23T10:24:00+02:00",note:"pronos triés par jour et heure du match"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -577,7 +577,8 @@ function renderTableau(t){
 
 /* ---------- Mes pronos ---------- */
 function renderList(){
-  const sorted=[...pronos].sort((a,b)=>(b.date||"").localeCompare(a.date||"")||(b.createdAt||0)-(a.createdAt||0));
+  const when=p=>{const m=p.matchId&&matchById(p.matchId);return [p.date||"9999",(m&&m.heure)||"99:99",(m&&m.tournoi)||p.tournoi||"",String((m&&m.ordre)||99).padStart(3,"0")].join("|")};
+  const sorted=[...pronos].sort((a,b)=>when(a).localeCompare(when(b))||(a.createdAt||0)-(b.createdAt||0));
   const shown=sorted.filter(p=>filter==="all"||status(p)===filter);
   if(!pronos.length){$("list").innerHTML=`<div class="empty">Aucun prono pour l'instant.<br>Ouvre un tournoi et touche le joueur que tu vois gagner.</div>`;return}
   if(!shown.length){$("list").innerHTML=`<div class="empty">Aucun prono dans cette catégorie.</div>`;return}
@@ -592,7 +593,7 @@ function renderList(){
     const aiPick=m&&m.claude&&m.claude.choix?`<span>Site : ${esc(m.claude.choix==1?m.j1:m.j2)}</span>`:"";
     return `<article class="card match ${s}"><div class="chead"><span class="round" style="color:var(--fg)">${esc(p.tournoi||"Tournoi")}${m&&m.tour?" · "+esc(m.tour):""}</span><span class="surf s-${p.surface}"><i></i>${SURF[p.surface]||""}</span></div>
       ${row(1)}${row(2)}
-      <div class="mfoot"><span class="badge ${s}">${label}</span><span class="meta"><span>${fmtDate(p.date)}</span>${aiPick}</span></div>
+      <div class="mfoot"><span class="badge ${s}">${label}</span><span class="meta"><span>${fmtDate(p.date)}${m&&m.heure?" · "+esc(m.heure):""}</span>${aiPick}</span></div>
       <div class="mfoot" style="border-top:1px solid var(--line)"><div class="actions">${actions}</div><div class="actions">${del}</div></div></article>`}).join("");
 }
 
