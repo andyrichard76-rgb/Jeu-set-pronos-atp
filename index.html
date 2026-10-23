@@ -576,7 +576,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T16:22:00+02:00",note:"notre choix dans mes prédictions"};
+const SITE_VERSION={date:"2026-10-23T16:30:00+02:00",note:"résultat des prédictions vérifié par le nom du joueur"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -606,7 +606,9 @@ function avatar(name,sm){if(!name)return `<span class="av tbd ${sm?"sm":""}" ari
 
 /* Résultats */
 function result(p){if(p.resultat)return p.resultat;const m=p.matchId&&matchById(p.matchId);return m&&m.vainqueur?m.vainqueur:null}
-function status(p){const r=result(p);return !r?"wait":(String(r)===String(p.choix)?"won":"lost")}
+/* côté choisi, dans l'ordre j1/j2 du match actuel (retrouvé par le nom du joueur, pour ne jamais confondre) */
+function side(p){const m=p&&p.matchId&&matchById(p.matchId);const c=Number(p&&p.choix);if(!m||!p.j1||!p.j2)return c;const k=pkey(c===1?p.j1:p.j2);if(k===pkey(m.j1))return 1;if(k===pkey(m.j2))return 2;return c}
+function status(p){const r=result(p);return !r?"wait":(String(r)===String(p.resultat?p.choix:side(p))?"won":"lost")}
 function tally(list,fn){let won=0,lost=0,wait=0;for(const x of list){const s=fn(x);if(s==="won")won++;else if(s==="lost")lost++;else wait++}return{won,lost,wait,pct:won+lost?Math.round(won*100/(won+lost)):null}}
 function aiStatus(m){if(!m.claude||!m.claude.choix)return"none";if(!m.vainqueur)return"wait";return String(m.vainqueur)===String(m.claude.choix)?"won":"lost"}
 const pl=n=>`${n} ${n>1?"s":""}`;
@@ -681,7 +683,7 @@ function card(m){
   const sc=(m.score||"").split(" ").filter(Boolean);
   const sets=n=>sc.filter(s=>s.includes("-")).map(s=>{const [a,b]=s.split("-");return n===1?a:b}).join(" ");
   const pb=n=>{const name=n===1?m.j1:m.j2,pays=n===1?m.j1Pays:m.j2Pays,tds=n===1?m.j1Tds:m.j2Tds;
-    const isMine=mine&&String(mine.choix)===String(n),ai=m.claude&&String(m.claude.choix)===String(n);
+    const isMine=mine&&String(side(mine))===String(n),ai=m.claude&&String(m.claude.choix)===String(n);
     return `<button class="pbtn ${isMine?"mine":""} ${String(m.vainqueur)===String(n)?"winner":""}" data-match="${m.id}" data-v="${n}" ${done||live?"disabled":""} aria-label="${done||live?esc(name):"Pronostiquer "+esc(name)}">
       <span class="pick-dot" aria-hidden="true"></span>${avatar(name)}
       <span class="who"><span class="name">${flagImg(pays)}${esc(name)}${tdsHTML(tds)}</span></span>
@@ -689,7 +691,7 @@ function card(m){
   let state;
   if(done)state=mine?`<span class="badge ${status(mine)}">${status(mine)==="won"?"Prédiction gagnée":"Prédiction perdue"}</span>`:`<span class="badge wait">Terminé</span>`;
   else if(live)state=`<span class="badge live">En cours</span>`;
-  else state=mine?`<span class="muted">Ta prédiction : <b style="color:var(--fg)">${esc(mine.choix==1?m.j1:m.j2)}</b></span>`:`<span class="muted">Pas encore de prédiction</span>`;
+  else state=mine?`<span class="muted">Ta prédiction : <b style="color:var(--fg)">${esc(side(mine)==1?m.j1:m.j2)}</b></span>`:`<span class="muted">Pas encore de prédiction</span>`;
   const liveLink=(!done&&m.date===today())?`<a class="livelink" href="https://www.atptour.com/en/scores/current" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Score en direct</a>`:"";
   const statB=`<button class="statbtn" data-stats="${m.id}">${done||live?"Score et stats":"Fiche du match"}</button>`;
   const foot=statB+liveLink+((!done&&!live&&mine)?`<button class="ghost" data-act="del" data-id="${mine.id}">Retirer ma prédiction</button>`:"");
@@ -732,7 +734,7 @@ function renderList(){
     const ab=m&&/ab\.|forfait/.test(m.score||"")?(/forfait/.test(m.score)?"forfait":"ab."):"";
     const row=n=>{const mine=sc.map(x=>x[n-1]),opp=sc.map(x=>x[2-n]);
       const cells=sc.length?`<span class="psc">${mine.map((v,i)=>`<span class="${+v>+opp[i]?"w":""}">${esc(v)}</span>`).join("")}</span>`:"";
-      return `<div class="pl ${String(p.choix)===String(n)?"picked":""}"><span class="pick-dot" aria-hidden="true"></span>${m?flagImg(n==1?m.j1Pays:m.j2Pays):""}<span class="name">${esc(n==1?p.j1:p.j2)}${m?tdsHTML(n==1?m.j1Tds:m.j2Tds):""}</span>${String(r)===String(n)?'<span class="badge won">Vainqueur</span>':""}${cells}</div>`};
+      return `<div class="pl ${String(m?side(p):p.choix)===String(n)?"picked":""}"><span class="pick-dot" aria-hidden="true"></span>${m?flagImg(n==1?m.j1Pays:m.j2Pays):""}<span class="name">${esc(m?(n==1?m.j1:m.j2):(n==1?p.j1:p.j2))}${m?tdsHTML(n==1?m.j1Tds:m.j2Tds):""}</span>${String(r)===String(n)?'<span class="badge won">Vainqueur</span>':""}${cells}</div>`};
     let actions="";
     if(!p.matchId)actions=s==="wait"?`<span class="muted">Qui a gagné ?</span><button class="ghost" data-act="res" data-id="${p.id}" data-v="1">${esc(p.j1)}</button><button class="ghost" data-act="res" data-id="${p.id}" data-v="2">${esc(p.j2)}</button>`:`<button class="ghost" data-act="undo" data-id="${p.id}">Corriger le résultat</button>`;
     else if(s==="wait")actions=`<span class="muted">Résultat ajouté automatiquement</span>`;
@@ -888,7 +890,7 @@ function nextCard(nx){
   const mine=pronos.find(p=>p.matchId===nx.id),c=nx.claude||{};
   const side=n=>{const nm=n===1?nx.j1:nx.j2,pays=n===1?nx.j1Pays:nx.j2Pays,tds=n===1?nx.j1Tds:nx.j2Tds;
     return `<div class="nside">${avatar(nm)}<span class="nm">${flagImg(pays)}${esc(nm)}${tdsHTML(tds)}</span>
-      <button class="npick" data-pickm="${nx.id}" data-v="${n}" aria-pressed="${mine&&mine.choix==n?"true":"false"}">${mine&&mine.choix==n?"Mon choix ✓":"Je choisis"}</button></div>`};
+      <button class="npick" data-pickm="${nx.id}" data-v="${n}" aria-pressed="${mine&&side(mine)==n?"true":"false"}">${mine&&side(mine)==n?"Mon choix ✓":"Je choisis"}</button></div>`};
   return `<div class="nextc"><span class="ey">${esc(nx.tournoi)} · ${esc(nx.categorie||"")} · ${esc(nx.tour||"")}</span>
     <span class="when">${esc(nx.heure)}</span>
     <div class="nvs">${side(1)}<span class="x">VS</span>${side(2)}</div>
@@ -900,7 +902,7 @@ $("v-suivre").addEventListener("click",async e=>{
   const sb=e.target.closest("[data-stats]");if(sb){openSheet(sb.dataset.stats);return}
   const pb=e.target.closest("[data-pickm]");if(!pb)return;const m=matchById(pb.dataset.pickm);if(!m)return;
   const choix=Number(pb.dataset.v),ex=pronos.find(p=>p.matchId===m.id);
-  try{if(ex){if(ex.choix!==choix)await store.update(ex.id,{choix})}
+  try{if(ex){if(side(ex)!==choix||ex.j1!==m.j1)await store.update(ex.id,{choix,j1:m.j1,j2:m.j2})}
     else await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()})}
   catch{$("storeNote").textContent="Ta prédiction n'a pas pu être enregistrée. Réessaie."}
 });
@@ -924,7 +926,7 @@ $("sub-programme").addEventListener("click",async e=>{
   if(del){try{await store.remove(del.dataset.id)}catch{$("storeNote").textContent="Impossible de retirer la prédiction. Réessaie."}return}
   const b=e.target.closest("button.pbtn");if(!b||b.disabled)return;const m=matchById(b.dataset.match);if(!m)return;
   const choix=Number(b.dataset.v),existing=pronos.find(p=>p.matchId===m.id);
-  try{if(existing){if(existing.choix!==choix)await store.update(existing.id,{choix})}
+  try{if(existing){if(side(existing)!==choix||existing.j1!==m.j1)await store.update(existing.id,{choix,j1:m.j1,j2:m.j2})}
     else await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()})}
   catch{$("storeNote").textContent="Ta prédiction n'a pas pu être enregistrée. Réessaie."}
 });
@@ -959,7 +961,7 @@ async function importPronos(code){
   let added=0,updated=0,missing=0;
   for(const [mid,c] of pairs){const choix=Number(c);const m=matchById(mid);
     const ex=pronos.find(p=>p.matchId===mid);
-    if(ex){if(ex.choix!==choix){await store.update(ex.id,{choix});updated++}continue}
+    if(ex){if(m&&(side(ex)!==choix||ex.j1!==m.j1)){await store.update(ex.id,{choix,j1:m.j1,j2:m.j2});updated++}continue}
     if(!m){missing++;continue}
     await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()});added++}
   return{added,updated,missing};
@@ -970,7 +972,7 @@ function showImport(r,err){const el=$("importMsg");el.hidden=false;
 $("exportBtn").addEventListener("click",async()=>{
   const ps=pronos.filter(p=>p.matchId);const el=$("importMsg");el.hidden=false;
   if(!ps.length){el.style.color="var(--loss)";el.textContent="Aucune prédiction à sauvegarder pour l'instant.";return}
-  const code="JSP1."+btoa(unescape(encodeURIComponent(ps.map(p=>p.matchId+"|"+p.choix).join(","))));
+  const code="JSP1."+btoa(unescape(encodeURIComponent(ps.map(p=>p.matchId+"|"+side(p)).join(","))));
   try{await navigator.clipboard.writeText(code);el.style.color="var(--win)";el.textContent=`Code copié (${ps.length} prédiction${ps.length>1?"s":""}). Colle-le dans tes notes ou envoie-le-toi par message.`}
   catch{$("importCode").value=code;$("importCode").select();el.style.color="var(--fg)";el.textContent="Ton code est dans la case ci-dessus : copie-le et garde-le dans tes notes."}
 });
