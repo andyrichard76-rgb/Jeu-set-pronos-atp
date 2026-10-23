@@ -263,8 +263,9 @@
    "j2Pays": "ARG",
    "j2Tds": "3",
    "live": {
+    "fini": true,
     "jeu": "0-15",
-    "maj": "2026-10-23T15:23:00+02:00",
+    "maj": "2026-10-23T15:52:00+02:00",
     "service": 2,
     "sets": [
      [
@@ -273,7 +274,7 @@
      ],
      [
       4,
-      5
+      6
      ]
     ],
     "srId": "sr:sport_event:75621158",
@@ -284,7 +285,7 @@
       "bpWon": 0,
       "df": 0,
       "maxPts": 4,
-      "pts": 43,
+      "pts": 45,
       "s1in": 44,
       "s1won": 26,
       "s2won": 6,
@@ -292,28 +293,28 @@
       "svpts": 59
      },
      "j2": {
-      "aces": 7,
+      "aces": 8,
       "bpTot": 8,
       "bpWon": 3,
-      "df": 1,
+      "df": 2,
       "maxPts": 8,
-      "pts": 61,
-      "s1in": 29,
-      "s1won": 27,
-      "s2won": 7,
-      "svGames": 8,
-      "svpts": 45
+      "pts": 64,
+      "s1in": 30,
+      "s1won": 28,
+      "s2won": 9,
+      "svGames": 9,
+      "svpts": 50
      }
     }
    },
    "ordre": 1,
-   "score": "2-6 4-5",
-   "statut": "en_cours",
+   "score": "2-6 4-6",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Bruxelles",
    "tournoiId": "2026-bruxelles",
-   "vainqueur": null
+   "vainqueur": 2
   },
   {
    "id": "2026-10-23-bruxelles-fils-michelsen",
@@ -415,7 +416,7 @@
     ]
    },
    "date": "2026-10-23",
-   "heure": "15:30",
+   "heure": "16:00",
    "j1": "Taylor Fritz",
    "j1Pays": "USA",
    "j1Tds": "2",
@@ -453,51 +454,55 @@
    "j2Pays": "USA",
    "j2Tds": "4",
    "live": {
-    "jeu": "30-30",
-    "maj": "2026-10-23T15:23:00+02:00",
-    "service": 2,
+    "jeu": "0-0",
+    "maj": "2026-10-23T15:52:00+02:00",
+    "service": 1,
     "sets": [
      [
       4,
       6
      ],
      [
-      3,
-      1
+      6,
+      3
+     ],
+     [
+      0,
+      0
      ]
     ],
     "srId": "sr:sport_event:75620254",
     "stats": {
      "j1": {
-      "aces": 1,
-      "bpTot": 8,
-      "bpWon": 2,
+      "aces": 2,
+      "bpTot": 10,
+      "bpWon": 3,
       "df": 0,
       "maxPts": 6,
-      "pts": 50,
-      "s1in": 33,
-      "s1won": 21,
-      "s2won": 3,
-      "svGames": 5,
-      "svpts": 40
+      "pts": 67,
+      "s1in": 43,
+      "s1won": 28,
+      "s2won": 4,
+      "svGames": 7,
+      "svpts": 52
      },
      "j2": {
-      "aces": 1,
+      "aces": 2,
       "bpTot": 4,
       "bpWon": 2,
-      "df": 1,
+      "df": 2,
       "maxPts": 6,
-      "pts": 48,
-      "s1in": 34,
-      "s1won": 19,
-      "s2won": 13,
-      "svGames": 5,
-      "svpts": 58
+      "pts": 64,
+      "s1in": 48,
+      "s1won": 29,
+      "s2won": 15,
+      "svGames": 7,
+      "svpts": 79
      }
     }
    },
    "ordre": 1,
-   "score": "4-6 3-1",
+   "score": "4-6 6-3 0-0",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -1380,8 +1385,8 @@
         "pays": "ARG",
         "tds": "3"
        },
-       "score": "",
-       "vainqueur": null
+       "score": "2-6 4-6",
+       "vainqueur": 2
       },
       {
        "j1": {
@@ -1406,7 +1411,11 @@
        "vainqueur": null
       },
       {
-       "j1": null,
+       "j1": {
+        "nom": "F. Cerundolo",
+        "pays": "ARG",
+        "tds": "3"
+       },
        "j2": null,
        "score": "",
        "vainqueur": null
@@ -1889,7 +1898,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T15:23:00+02:00",
+  "misAJour": "2026-10-23T15:52:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
