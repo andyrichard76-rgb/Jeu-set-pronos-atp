@@ -579,7 +579,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T21:10:00+02:00",note:"diagnostic d'affichage"};
+const SITE_VERSION={date:"2026-10-23T21:15:00+02:00",note:"correction de l'onglet À suivre"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -897,12 +897,12 @@ function renderHome(){
 }
 function nextCard(nx){
   const mine=pronos.find(p=>p.matchId===nx.id),c=nx.claude||{};
-  const side=n=>{const nm=n===1?nx.j1:nx.j2,pays=n===1?nx.j1Pays:nx.j2Pays,tds=n===1?nx.j1Tds:nx.j2Tds;
+  const pside=n=>{const nm=n===1?nx.j1:nx.j2,pays=n===1?nx.j1Pays:nx.j2Pays,tds=n===1?nx.j1Tds:nx.j2Tds;
     return `<div class="nside">${avatar(nm)}<span class="nm">${flagImg(pays)}${esc(nm)}${tdsHTML(tds)}</span>
       <button class="npick" data-pickm="${nx.id}" data-v="${n}" aria-pressed="${mine&&side(mine)==n?"true":"false"}">${mine&&side(mine)==n?"Mon choix ✓":"Je choisis"}</button></div>`};
   return `<div class="nextc"><span class="ey">${esc(nx.tournoi)} · ${esc(nx.categorie||"")} · ${esc(nx.tour||"")}</span>
     <span class="when">${esc(nx.heure)}</span>
-    <div class="nvs">${side(1)}<span class="x">VS</span>${side(2)}</div>
+    <div class="nvs">${pside(1)}<span class="x">VS</span>${pside(2)}</div>
     ${c.choix?`<div class="ai"><p><b>Notre analyse :</b> ${esc(c.choix==1?nx.j1:nx.j2)} <span class="conf">${"●".repeat(c.confiance||2)}${"○".repeat(3-(c.confiance||2))}</span>${c.analyse?" · "+esc(c.analyse):""}</p></div>`:""}
     ${probaHTML(nx)}
     <div class="row2"><button class="statbtn" data-stats="${nx.id}">Fiche du match</button></div>${tvHTML(nx)}</div>`;
