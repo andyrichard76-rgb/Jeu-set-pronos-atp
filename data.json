@@ -365,9 +365,49 @@
    "j2": "Tallon Griekspoor",
    "j2Pays": "NED",
    "j2Tds": "",
+   "live": {
+    "jeu": "0-0",
+    "maj": "2026-10-23T16:23:00+02:00",
+    "service": 1,
+    "sets": [
+     [
+      1,
+      2
+     ]
+    ],
+    "srId": "sr:sport_event:75621144",
+    "stats": {
+     "j1": {
+      "aces": 1,
+      "bpTot": 2,
+      "bpWon": 1,
+      "df": 0,
+      "maxPts": 2,
+      "pts": 8,
+      "s1in": 4,
+      "s1won": 2,
+      "s2won": 0,
+      "svGames": 0,
+      "svpts": 6
+     },
+     "j2": {
+      "aces": 0,
+      "bpTot": 1,
+      "bpWon": 1,
+      "df": 0,
+      "maxPts": 3,
+      "pts": 10,
+      "s1in": 8,
+      "s1won": 4,
+      "s2won": 2,
+      "svGames": 1,
+      "svpts": 12
+     }
+    }
+   },
    "ordre": 2,
-   "score": "",
-   "statut": "a_venir",
+   "score": "1-2",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Bruxelles",
@@ -416,7 +456,7 @@
     ]
    },
    "date": "2026-10-23",
-   "heure": "16:00",
+   "heure": "16:30",
    "j1": "Taylor Fritz",
    "j1Pays": "USA",
    "j1Tds": "2",
@@ -455,8 +495,8 @@
    "j2Tds": "4",
    "live": {
     "jeu": "0-0",
-    "maj": "2026-10-23T15:52:00+02:00",
-    "service": 1,
+    "maj": "2026-10-23T16:23:00+02:00",
+    "service": 2,
     "sets": [
      [
       4,
@@ -467,42 +507,42 @@
       3
      ],
      [
-      0,
-      0
+      1,
+      2
      ]
     ],
     "srId": "sr:sport_event:75620254",
     "stats": {
      "j1": {
       "aces": 2,
-      "bpTot": 10,
+      "bpTot": 12,
       "bpWon": 3,
       "df": 0,
       "maxPts": 6,
-      "pts": 67,
-      "s1in": 43,
-      "s1won": 28,
-      "s2won": 4,
-      "svGames": 7,
-      "svpts": 52
+      "pts": 84,
+      "s1in": 59,
+      "s1won": 38,
+      "s2won": 5,
+      "svGames": 8,
+      "svpts": 74
      },
      "j2": {
-      "aces": 2,
-      "bpTot": 4,
-      "bpWon": 2,
+      "aces": 3,
+      "bpTot": 7,
+      "bpWon": 3,
       "df": 2,
       "maxPts": 6,
-      "pts": 64,
-      "s1in": 48,
-      "s1won": 29,
-      "s2won": 15,
-      "svGames": 7,
-      "svpts": 79
+      "pts": 83,
+      "s1in": 57,
+      "s1won": 35,
+      "s2won": 17,
+      "svGames": 8,
+      "svpts": 93
      }
     }
    },
    "ordre": 1,
-   "score": "4-6 6-3 0-0",
+   "score": "4-6 6-3 1-2",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -1898,7 +1938,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T15:52:00+02:00",
+  "misAJour": "2026-10-23T16:23:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
