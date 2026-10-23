@@ -547,7 +547,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T12:05:00+02:00",note:"chaînes cliquables"};
+const SITE_VERSION={date:"2026-10-23T12:08:00+02:00",note:"diffuseur sans Tennis TV"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -820,7 +820,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&openMatch)closeShee
 /* ---------- Accueil : En direct + Match à suivre ---------- */
 function tvFor(m){if(m.diffuseur)return m.diffuseur;const t=tournois.find(x=>x.id===m.tournoiId);return t&&t.diffuseur||""}
 const TV_URLS=[[/bein/i,"https://www.beinsports.com/fr-fr/"],[/eurosport/i,"https://www.eurosport.fr/watch/tennis/"],[/tennis ?tv/i,"https://www.tennistv.com/"],[/france ?(tv|2|3|4|télévisions)/i,"https://www.france.tv/sport/tennis/"]];
-function tvList(m){return tvFor(m).split("·").map(x=>x.trim()).filter(Boolean).map(name=>{const u=TV_URLS.find(([r])=>r.test(name));return {name,url:u?u[1]:""}})}
+function tvList(m){return tvFor(m).split("·").map(x=>x.trim()).filter(x=>x&&!/tennis ?tv/i.test(x)).map(name=>{const u=TV_URLS.find(([r])=>r.test(name));return {name,url:u?u[1]:""}})}
 function tvHTML(m){const l=tvList(m);if(!l.length)return "";return `<div class="tvline"><span aria-hidden="true">📺</span>Diffusion :<span>${l.map(x=>x.url?`<a href="${x.url}" target="_blank" rel="noopener">${esc(x.name)}</a>`:`<b>${esc(x.name)}</b>`).join("")}</span></div>`}
 function tvBtn(m){const x=tvList(m).find(x=>x.url);return x?`<a class="tvbtn" href="${x.url}" target="_blank" rel="noopener" title="Regarder sur ${esc(x.name)}" aria-label="Regarder le match sur ${esc(x.name)}">📺</a>`:""}
 function hasStarted(m){if(m.statut!=="a_venir"||!m.heure||m.date!==today())return false;const hm=h=>{const [H,M]=h.split(":").map(Number);return H*60+M};const n=hm(new Date().toTimeString().slice(0,5)),d=n-hm(m.heure);return d>=0&&d<240}
