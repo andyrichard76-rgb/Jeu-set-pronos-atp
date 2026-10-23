@@ -29,6 +29,7 @@
 
 *{box-sizing:border-box}
 .legal{margin-top:8px;padding:14px 16px;border-radius:12px;background:rgba(0,0,0,.35);color:var(--on-bg-muted);font-size:.78rem;line-height:1.5;backdrop-filter:blur(6px)}
+.storewarn{background:var(--loss-soft);color:var(--fg);border:2px solid var(--loss);border-radius:12px;padding:12px 14px;font-size:.88rem;line-height:1.45}.storewarn b{color:var(--loss)}
 .fresh{display:flex;align-items:center;gap:10px;align-self:flex-start;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.18);color:var(--on-bg);border-radius:999px;padding:8px 14px;font-size:.88rem;backdrop-filter:blur(6px);font-variant-numeric:tabular-nums}
 .fresh b{color:var(--ball)}
 .fdot{width:9px;height:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.25);flex:none}
@@ -398,7 +399,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T02:44:00+02:00",note:"bouton de sauvegarde des pronos"};
+const SITE_VERSION={date:"2026-10-23T02:50:00+02:00",note:"alerte si le navigateur ne garde pas les pronos"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -645,6 +646,10 @@ async function importFromHash(){const h=location.hash||"";if(!h.startsWith("#imp
     showTab("pronos");$("importBox").open=true;showImport(r)}catch{}}
 
 /* ---------- Données ---------- */
+function storageOK(){try{const k="__jsp_test";localStorage.setItem(k,"1");const ok=localStorage.getItem(k)==="1";localStorage.removeItem(k);return ok}catch{return false}}
+function warnStorage(){if(storageOK())return;const w=document.createElement("div");w.className="storewarn";w.setAttribute("role","alert");
+  w.innerHTML="<b>Tes pronos ne peuvent pas être enregistrés sur ce navigateur.</b> Tu es sans doute en navigation privée, ou Safari bloque les données des sites. Ouvre le site dans un onglet Safari normal, et vérifie Réglages → Safari → « Bloquer tous les cookies » (à désactiver).";
+  const f=$("fresh");f.parentNode.insertBefore(w,f.nextSibling)}
 function localStore(){const KEY="pronos-tennis-v1";try{pronos=JSON.parse(localStorage.getItem(KEY)||"[]")}catch{pronos=[]}
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(pronos))}catch{}};renderAll();
   return{add:async p=>{pronos.push({...p,id:"l"+Date.now()+Math.random().toString(36).slice(2,7)});save();renderAll()},update:async(id,patch)=>{pronos=pronos.map(p=>p.id===id?{...p,...patch}:p);save();renderAll()},remove:async id=>{pronos=pronos.filter(p=>p.id!==id);save();renderAll()}}}
@@ -657,7 +662,7 @@ async function init(){
       if(S.fond){$("photoBg").style.backgroundImage=`url("${S.fond}")`;$("photoBg").hidden=false}
       renderAll();$("storeNote").textContent="Tes pronos sont gardés dans ce navigateur.";}
       catch{$("storeNote").textContent="Impossible de charger les matchs. Vérifie ta connexion."}};
-    await load();await importFromHash();setInterval(load,10*60*1000);return}
+    warnStorage();await load();await importFromHash();setInterval(load,10*60*1000);return}
   const col=db.collection("pronos");
   store={add:p=>col.add(p),update:(id,patch)=>col.doc(id).update(patch),remove:id=>col.doc(id).delete()};
   const onErr=()=>{$("storeNote").textContent="Connexion perdue. Recharge la page."};
