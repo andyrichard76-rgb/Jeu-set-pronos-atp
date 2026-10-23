@@ -86,6 +86,18 @@
 .srow .bars i:last-child b{background:var(--clay)}
 .sheet .foot{font-size:.78rem;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
 .sheet .na{font-size:.84rem;color:var(--muted);text-align:center;padding:14px;border:1px dashed var(--line);border-radius:10px}
+
+/* Centrage des tournois */
+.groupe>h2,.daygrp>h2,.view>h2{text-align:center}
+.tlist button.tcard{grid-template-columns:6px 1fr 6px 28px}
+#sub-programme>.note{text-align:center}
+.tcard .body{align-items:center;text-align:center;padding-inline:8px}
+.tcard .top{justify-content:center}
+.thero{align-items:center;text-align:center}
+.thero>div{justify-content:center}
+.thero .facts{justify-content:center}
+.subtabs{justify-content:center}
+.tourn-head{justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:2px}
 .legal p{margin:0}.legal p+p{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.15);font-variant-numeric:tabular-nums}.legal b{color:var(--on-bg)}
 .court-bg canvas{width:100%;height:100%;display:block}
 .photo-bg{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center}
@@ -470,7 +482,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T10:34:00+02:00",note:"fiche match avec score et statistiques"};
+const SITE_VERSION={date:"2026-10-23T10:32:00+02:00",note:"tournois centrés"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -549,7 +561,7 @@ function renderTList(){
           <h3>${esc(t.nom)}</h3>
           <span class="line">${t.debut?fmtDate(t.debut)+" → "+fmtDate(t.fin):""}${t.pays?" · "+esc(t.pays):""}</span>
           <span class="line" style="color:var(--fg)">${line}</span></span>
-        <span class="go" aria-hidden="true">›</span></button>`}).join("")}</div>`).join("");
+        <span aria-hidden="true"></span><span class="go" aria-hidden="true">›</span></button>`}).join("")}</div>`).join("");
 }
 
 /* ---------- Fiche tournoi ---------- */
