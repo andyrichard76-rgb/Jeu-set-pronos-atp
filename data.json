@@ -439,7 +439,8 @@
    "tour": "Quart de finale",
    "tournoi": "Lyon",
    "tournoiId": "2026-lyon",
-   "vainqueur": null
+   "vainqueur": null,
+   "diffuseur": "beIN SPORTS 1 · Tennis TV"
   },
   {
    "id": "2026-10-23-lyon-musetti-vanassche",
@@ -468,7 +469,8 @@
    "tour": "Quart de finale",
    "tournoi": "Lyon",
    "tournoiId": "2026-lyon",
-   "vainqueur": null
+   "vainqueur": null,
+   "diffuseur": "beIN SPORTS MAX 9 · Tennis TV"
   }
  ],
  "tournois": [
@@ -912,7 +914,8 @@
      "Demi-finale",
      "Finale"
     ]
-   }
+   },
+   "diffuseur": "Eurosport 360 · Tennis TV"
   },
   {
    "id": "2026-bale",
@@ -1357,7 +1360,8 @@
      "Demi-finale",
      "Finale"
     ]
-   }
+   },
+   "diffuseur": "Eurosport 360 · Tennis TV"
   },
   {
    "id": "2026-lyon",
@@ -1791,7 +1795,8 @@
      "Demi-finale",
      "Finale"
     ]
-   }
+   },
+   "diffuseur": "beIN SPORTS · Tennis TV"
   },
   {
    "id": "2026-paris",
