@@ -89,7 +89,7 @@
    "j2Pays": "",
    "j2Tds": "5",
    "ordre": 4,
-   "score": "3-5",
+   "score": "4-6 1-0",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -97,14 +97,48 @@
    "tournoiId": "2026-almaty",
    "vainqueur": null,
    "live": {
+    "srId": "sr:sport_event:75620034",
+    "maj": "2026-10-23T17:24:00+02:00",
     "sets": [
      [
-      3,
-      5
+      4,
+      6
+     ],
+     [
+      1,
+      0
      ]
     ],
-    "service": 1,
-    "maj": "2026-10-23T17:11:05+02:00"
+    "jeu": "40-A",
+    "service": 2,
+    "stats": {
+     "j1": {
+      "aces": 6,
+      "df": 2,
+      "s1in": 29,
+      "s1won": 22,
+      "s2won": 1,
+      "svpts": 34,
+      "bpWon": 0,
+      "bpTot": 3,
+      "svGames": 5,
+      "pts": 33,
+      "maxPts": 5
+     },
+     "j2": {
+      "aces": 2,
+      "df": 2,
+      "s1in": 26,
+      "s1won": 22,
+      "s2won": 3,
+      "svpts": 35,
+      "bpWon": 1,
+      "bpTot": 5,
+      "svGames": 5,
+      "pts": 36,
+      "maxPts": 7
+     }
+    }
    }
   },
   {
@@ -128,7 +162,7 @@
    "j2Pays": "FRA",
    "j2Tds": "",
    "live": {
-    "fini": true,
+    "srId": "sr:sport_event:75620048",
     "maj": "2026-10-23T14:14:52+02:00",
     "sets": [
      [
@@ -140,7 +174,35 @@
       4
      ]
     ],
-    "srId": "sr:sport_event:75620048"
+    "fini": true,
+    "stats": {
+     "j1": {
+      "aces": 5,
+      "df": 3,
+      "s1in": 34,
+      "s1won": 31,
+      "s2won": 10,
+      "svpts": 50,
+      "bpWon": 2,
+      "bpTot": 8,
+      "svGames": 10,
+      "pts": 68,
+      "maxPts": 6
+     },
+     "j2": {
+      "aces": 4,
+      "df": 1,
+      "s1in": 48,
+      "s1won": 31,
+      "s2won": 9,
+      "svpts": 67,
+      "bpWon": 0,
+      "bpTot": 0,
+      "svGames": 8,
+      "pts": 49,
+      "maxPts": 4
+     }
+    }
    },
    "ordre": 3,
    "score": "6-4 6-4",
@@ -376,50 +438,51 @@
    "j2Pays": "NED",
    "j2Tds": "",
    "live": {
-    "maj": "2026-10-23T17:11:05+02:00",
-    "service": 2,
+    "srId": "sr:sport_event:75621144",
+    "maj": "2026-10-23T17:24:00+02:00",
     "sets": [
      [
       6,
       4
      ],
      [
-      2,
-      3
+      3,
+      4
      ]
     ],
-    "srId": "sr:sport_event:75621144",
+    "jeu": "40-30",
+    "service": 1,
     "stats": {
      "j1": {
-      "aces": 1,
-      "bpTot": 2,
-      "bpWon": 1,
+      "aces": 8,
       "df": 0,
-      "maxPts": 2,
-      "pts": 8,
-      "s1in": 4,
-      "s1won": 2,
-      "s2won": 0,
-      "svGames": 0,
-      "svpts": 6
+      "s1in": 33,
+      "s1won": 26,
+      "s2won": 8,
+      "svpts": 49,
+      "bpWon": 2,
+      "bpTot": 3,
+      "svGames": 7,
+      "pts": 51,
+      "maxPts": 8
      },
      "j2": {
-      "aces": 0,
-      "bpTot": 1,
+      "aces": 4,
+      "df": 2,
+      "s1in": 31,
+      "s1won": 23,
+      "s2won": 8,
+      "svpts": 48,
       "bpWon": 1,
-      "df": 0,
-      "maxPts": 3,
-      "pts": 10,
-      "s1in": 8,
-      "s1won": 4,
-      "s2won": 2,
-      "svGames": 1,
-      "svpts": 12
+      "bpTot": 1,
+      "svGames": 7,
+      "pts": 46,
+      "maxPts": 4
      }
     }
    },
    "ordre": 2,
-   "score": "6-4 2-3",
+   "score": "6-4 3-4",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -1974,7 +2037,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T17:11:05+02:00",
+  "misAJour": "2026-10-23T17:24:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
