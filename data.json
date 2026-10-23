@@ -718,7 +718,7 @@
    "j2Pays": "FRA",
    "j2Tds": "",
    "ordre": 4,
-   "score": "7-6 3-4",
+   "score": "7-6 6-6",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -732,11 +732,11 @@
       6
      ],
      [
-      3,
-      4
+      6,
+      6
      ]
     ],
-    "maj": "2026-10-23T23:47:58+02:00",
+    "maj": "2026-10-24T00:14:29+02:00",
     "service": 1
    }
   },
@@ -2276,7 +2276,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T23:50:00+02:00",
+  "misAJour": "2026-10-24T00:14:29+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
