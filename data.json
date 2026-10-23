@@ -16,16 +16,8 @@
    "j2": "Adrian Mannarino",
    "j2Pays": "FRA",
    "j2Tds": "",
-   "ordre": 1,
-   "score": "6-3 6-1",
-   "statut": "termine",
-   "surface": "indoor",
-   "tour": "Quart de finale",
-   "tournoi": "Almaty",
-   "tournoiId": "2026-almaty",
-   "vainqueur": 1,
    "live": {
-    "srId": "sr:sport_event:75620036",
+    "fini": true,
     "maj": "2026-10-23T10:21:00+02:00",
     "sets": [
      [
@@ -37,47 +29,55 @@
       1
      ]
     ],
-    "fini": true,
+    "srId": "sr:sport_event:75620036",
     "stats": {
      "j1": {
       "aces": 11,
+      "bpTot": 8,
+      "bpWon": 4,
       "df": 2,
+      "maxPts": 7,
+      "pts": 60,
       "s1in": 34,
       "s1won": 27,
       "s2won": 11,
-      "svpts": 56,
-      "bpWon": 4,
-      "bpTot": 8,
       "svGames": 8,
-      "pts": 60,
-      "maxPts": 7
+      "svpts": 56
      },
      "j2": {
       "aces": 6,
+      "bpTot": 3,
+      "bpWon": 0,
       "df": 1,
+      "maxPts": 4,
+      "pts": 45,
       "s1in": 30,
       "s1won": 18,
       "s2won": 9,
-      "svpts": 49,
-      "bpWon": 0,
-      "bpTot": 3,
       "svGames": 4,
-      "pts": 45,
-      "maxPts": 4
+      "svpts": 49
      }
     }
-   }
+   },
+   "ordre": 1,
+   "score": "6-3 6-1",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": 1
   },
   {
    "id": "2026-10-23-almaty-bublik-khachanov",
    "categorie": "ATP 250",
    "claude": {
-    "analyse": "Tête de série n°3 et joueur local, Bublik arrive en quarts sans avoir joué au 2e tour (forfait de Marozsan). Khachanov, tête de série n°5, a dû batailler face à Machac (6-2, 4-6, 7-6) : match très ouvert.",
+    "analyse": "Tête de série n°3 et joueur local, Bublik arrive en quarts sans avoir joué au 2e tour (forfait de Marozsan). Khachanov, tête de série n°5, a dû batailler face à Machac (6-2, 4-6, 7-6) mais fait une meilleure saison 2026 (22e à la Race contre 24e) : match très ouvert.",
     "choix": 1,
     "confiance": 1,
     "proba": [
-     54,
-     46
+     52,
+     48
     ]
    },
    "date": "2026-10-23",
@@ -105,8 +105,8 @@
     "choix": 1,
     "confiance": 3,
     "proba": [
-     83,
-     17
+     81,
+     19
     ]
    },
    "date": "2026-10-23",
@@ -117,6 +117,9 @@
    "j2": "Terence Atmane",
    "j2Pays": "FRA",
    "j2Tds": "",
+   "live": {
+    "srId": "sr:sport_event:75620048"
+   },
    "ordre": 3,
    "score": "",
    "statut": "a_venir",
@@ -124,10 +127,7 @@
    "tour": "Quart de finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null,
-   "live": {
-    "srId": "sr:sport_event:75620048"
-   }
+   "vainqueur": null
   },
   {
    "id": "2026-10-23-almaty-tsitsipas-duckworth",
@@ -149,6 +149,46 @@
    "j2": "James Duckworth",
    "j2Pays": "AUS",
    "j2Tds": "",
+   "live": {
+    "jeu": "0-15",
+    "maj": "2026-10-23T10:23:00+02:00",
+    "service": 2,
+    "sets": [
+     [
+      4,
+      1
+     ]
+    ],
+    "srId": "sr:sport_event:75620038",
+    "stats": {
+     "j1": {
+      "aces": 5,
+      "bpTot": 1,
+      "bpWon": 1,
+      "df": 0,
+      "maxPts": 7,
+      "pts": 17,
+      "s1in": 10,
+      "s1won": 10,
+      "s2won": 2,
+      "svGames": 3,
+      "svpts": 13
+     },
+     "j2": {
+      "aces": 0,
+      "bpTot": 0,
+      "bpWon": 0,
+      "df": 0,
+      "maxPts": 3,
+      "pts": 7,
+      "s1in": 6,
+      "s1won": 3,
+      "s2won": 3,
+      "svGames": 1,
+      "svpts": 11
+     }
+    }
+   },
    "ordre": 2,
    "score": "4-1",
    "statut": "en_cours",
@@ -156,47 +196,7 @@
    "tour": "Quart de finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null,
-   "live": {
-    "srId": "sr:sport_event:75620038",
-    "maj": "2026-10-23T10:23:00+02:00",
-    "sets": [
-     [
-      4,
-      1
-     ]
-    ],
-    "jeu": "0-15",
-    "service": 2,
-    "stats": {
-     "j1": {
-      "aces": 5,
-      "df": 0,
-      "s1in": 10,
-      "s1won": 10,
-      "s2won": 2,
-      "svpts": 13,
-      "bpWon": 1,
-      "bpTot": 1,
-      "svGames": 3,
-      "pts": 17,
-      "maxPts": 7
-     },
-     "j2": {
-      "aces": 0,
-      "df": 0,
-      "s1in": 6,
-      "s1won": 3,
-      "s2won": 3,
-      "svpts": 11,
-      "bpWon": 0,
-      "bpTot": 0,
-      "svGames": 1,
-      "pts": 7,
-      "maxPts": 3
-     }
-    }
-   }
+   "vainqueur": null
   },
   {
    "id": "2026-10-23-bruxelles-bergs-struff",
@@ -235,8 +235,8 @@
     "choix": 2,
     "confiance": 2,
     "proba": [
-     26,
-     74
+     24,
+     76
     ]
    },
    "date": "2026-10-23",
@@ -264,8 +264,8 @@
     "choix": 1,
     "confiance": 2,
     "proba": [
-     63,
-     37
+     64,
+     36
     ]
    },
    "date": "2026-10-23",
@@ -351,8 +351,8 @@
     "choix": 1,
     "confiance": 3,
     "proba": [
-     73,
-     27
+     72,
+     28
     ]
    },
    "date": "2026-10-23",
@@ -380,8 +380,8 @@
     "choix": 2,
     "confiance": 2,
     "proba": [
-     29,
-     71
+     27,
+     73
     ]
    },
    "date": "2026-10-23",
@@ -405,12 +405,12 @@
    "id": "2026-10-23-lyon-musetti-vanassche",
    "categorie": "ATP 250",
    "claude": {
-    "analyse": "Écart de classement net en faveur de Musetti (tête de série n°6). Van Assche joue à domicile et sort d'un match en trois sets, il peut accrocher un set.",
+    "analyse": "Écart de classement en faveur de Musetti (tête de série n°6), mais sa saison 2026 est en retrait (35e à la Race contre 26e à l'ATP). Van Assche joue à domicile et sort d'un match en trois sets contre Vacherot : il peut accrocher un set.",
     "choix": 1,
     "confiance": 2,
     "proba": [
-     61,
-     39
+     57,
+     43
     ]
    },
    "date": "2026-10-23",
