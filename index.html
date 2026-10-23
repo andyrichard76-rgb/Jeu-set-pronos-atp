@@ -33,6 +33,25 @@
 .fresh{display:flex;align-items:center;gap:10px;align-self:flex-start;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.18);color:var(--on-bg);border-radius:999px;padding:8px 14px;font-size:.88rem;backdrop-filter:blur(6px);font-variant-numeric:tabular-nums}
 .fresh b{color:var(--ball)}
 .fdot{width:9px;height:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.25);flex:none}
+
+/* Classements */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.clhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;color:var(--on-bg-muted);font-size:.84rem}
+.clhead b{color:var(--on-bg)}
+.clsearch input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--fg);font-size:15px}
+.cllist{color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.clrow{display:grid;grid-template-columns:40px 34px 1fr auto;gap:10px;align-items:center;padding:8px 12px;border-top:1px solid var(--line)}
+.clrow:first-child{border-top:0}
+.clrow .rk{font-family:var(--display);font-weight:700;font-size:1.25rem;font-variant-numeric:tabular-nums;text-align:right;color:var(--muted)}
+.clrow.top10 .rk{color:var(--court)}
+.clrow .nm{min-width:0;display:flex;flex-direction:column}
+.clrow .nm span:first-child{overflow-wrap:anywhere;font-weight:500}
+.clrow .pt{font-family:var(--display);font-weight:600;font-size:1.05rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.clrow .pt small{font-family:var(--body);font-size:.7rem;color:var(--muted);font-weight:400;margin-left:3px}
+.clrow.turin{background:color-mix(in srgb,var(--ball) 14%,transparent)}
+.clsep{padding:6px 12px;font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);background:var(--bg);border-top:1px solid var(--line)}
+.playing{font-size:.64rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--win);background:var(--win-soft);border-radius:4px;padding:1px 6px;margin-left:6px;white-space:nowrap}
+.fr{font-size:.64rem;font-weight:700;color:var(--court);background:var(--court-soft);border-radius:4px;padding:1px 5px;margin-left:6px}
 .legal p{margin:0}.legal p+p{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.15);font-variant-numeric:tabular-nums}.legal b{color:var(--on-bg)}
 .court-bg canvas{width:100%;height:100%;display:block}
 .photo-bg{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center}
@@ -76,8 +95,8 @@ button{cursor:pointer}
 .duel + .duel{border-left:2px solid rgba(23,32,29,.2);padding-left:16px}
 
 /* Onglets */
-.tabs{display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}
-.tabs button{border:0;background:transparent;border-radius:9px;padding:9px 6px;font-weight:500;font-size:.92rem;color:var(--muted)}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}
+.tabs button{border:0;background:transparent;border-radius:9px;padding:9px 4px;font-weight:500;font-size:.84rem;white-space:nowrap;color:var(--muted)}
 .tabs button[aria-selected="true"]{background:var(--court-soft);color:var(--court);font-weight:600}
 .subtabs{display:flex;gap:4px;border-bottom:2px solid var(--court-line)}
 .subtabs button{border:0;background:transparent;padding:10px 14px;font-family:var(--display);font-size:1.1rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--on-bg-muted);border-bottom:4px solid transparent;margin-bottom:-2px}
@@ -317,7 +336,8 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
   <nav class="tabs" role="tablist">
     <button role="tab" aria-selected="true" data-tab="tournois">Tournois</button>
-    <button role="tab" aria-selected="false" data-tab="pronos">Mes pronos</button>
+    <button role="tab" aria-selected="false" data-tab="pronos">Pronos</button>
+    <button role="tab" aria-selected="false" data-tab="classements">Classements</button>
     <button role="tab" aria-selected="false" data-tab="bilan">Bilan</button>
   </nav>
 
@@ -384,6 +404,17 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
     </details>
   </section>
 
+  <!-- Classements -->
+  <section id="v-classements" class="view" hidden aria-label="Classements ATP">
+    <div class="subtabs" role="tablist" id="clTabs">
+      <button role="tab" aria-selected="true" data-cl="atp">Classement ATP</button>
+      <button role="tab" aria-selected="false" data-cl="race">Race</button>
+    </div>
+    <div class="clhead" id="clHead"></div>
+    <label class="clsearch"><span class="sr">Chercher un joueur</span><input type="search" id="clSearch" placeholder="Chercher un joueur…" autocomplete="off"></label>
+    <div class="cllist" id="clList"><div class="empty">Chargement des classements…</div></div>
+  </section>
+
   <!-- Bilan -->
   <section id="v-bilan" class="view" hidden>
     <div class="panel"><h2>Moi contre le site</h2><div class="kv" id="kv"></div></div>
@@ -399,7 +430,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T02:50:00+02:00",note:"alerte si le navigateur ne garde pas les pronos"};
+const SITE_VERSION={date:"2026-10-23T09:55:00+02:00",note:"rubrique Classements ATP et Race (top 100)"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -572,13 +603,45 @@ function renderBilan(){
     return `<div class="bar"><span class="surf s-${k}"><i></i>${SURF[k]}</span><div class="track" role="img" aria-label="${SURF[k]} : ${done?s.pct+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${done?s.pct:0}%;background:var(--${SURFVAR[k]})"></div></div><span class="n">${done?s.pct+" % · "+s.won+"/"+done:"—"}</span></div>`}).join("");
 }
 
-function renderAll(){renderBoard();renderTList();if(openT)renderTournoi();renderList();renderBilan()}
+function renderAll(){renderBoard();renderTList();if(openT)renderTournoi();renderList();renderBilan();renderClassements()}
+
+
+/* ---------- Classements ---------- */
+let classements={},clSub="atp",clQuery="";
+const pkey=n=>{const w=norm(n).replace(/\./g," ").split(/\s+/).filter(Boolean);return w.length?w[0][0]+" "+w[w.length-1]:""};
+function renderClassements(){
+  const c=classements[clSub];
+  if(!c||!c.joueurs){$("clList").innerHTML=`<div class="empty">Classement pas encore disponible.</div>`;$("clHead").innerHTML="";return}
+  const d=new Date(c.date+"T12:00:00").toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"});
+  $("clHead").innerHTML=clSub==="atp"
+    ? `<span>Top 100 · classement du <b>${esc(d)}</b></span><span>Mis à jour chaque lundi</span>`
+    : `<span>Top 100 · points de la saison au <b>${esc(d)}</b></span><span>Les 8 premiers vont aux ATP Finals de Turin</span>`;
+  const week=new Set(),out=new Set();for(const t of tournois){if(tStatus(t)!=="en_cours"||!t.tableau)continue;
+    for(const r of t.tableau.matchs)for(const m of r){for(const p of [m.j1,m.j2])if(p&&p.nom)week.add(pkey(p.nom));
+      const l=m.vainqueur==1?m.j2:m.vainqueur==2?m.j1:null;if(l&&l.nom)out.add(pkey(l.nom))}}
+  out.forEach(n=>week.delete(n));
+  const q=norm(clQuery).trim();
+  const rows=c.joueurs.filter(j=>!q||norm(j.nom).includes(q)||norm(j.pays).includes(q));
+  if(!rows.length){$("clList").innerHTML=`<div class="empty">Aucun joueur ne correspond à « ${esc(clQuery)} ».</div>`;return}
+  let html="",sep=false;
+  for(const j of rows){
+    if(clSub==="race"&&!q&&j.rang===9&&!sep){html+=`<div class="clsep">Hors zone de qualification</div>`;sep=true}
+    const inWeek=week.has(pkey(j.nom));
+    html+=`<div class="clrow ${j.rang<=10?"top10":""} ${clSub==="race"&&j.rang<=8?"turin":""}">
+      <span class="rk">${j.rang}</span>${avatar(j.nom,1)}
+      <span class="nm"><span>${esc(j.nom)}${j.pays==="FRA"?'<span class="fr">FR</span>':""}${inWeek?'<span class="playing">En lice</span>':""}</span><span class="ctry">${esc(j.pays||"Bannière neutre")}</span></span>
+      <span class="pt">${j.points.toLocaleString("fr-FR")}<small>pts</small></span></div>`}
+  $("clList").innerHTML=(clSub==="race"&&!q?`<div class="clsep">Zone de qualification pour Turin</div>`:"")+html;
+}
+$("clTabs").addEventListener("click",e=>{const b=e.target.closest("button[data-cl]");if(!b)return;clSub=b.dataset.cl;
+  $("clTabs").querySelectorAll("button").forEach(x=>x.setAttribute("aria-selected",x===b?"true":"false"));renderClassements()});
+$("clSearch").addEventListener("input",e=>{clQuery=e.target.value;renderClassements()});
 
 /* ---------- Navigation ---------- */
 function showTab(t){tab=t;
   document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x.dataset.tab===t?"true":"false"));
   $("v-tournois").hidden=!(t==="tournois"&&!openT);$("v-tournoi").hidden=!(t==="tournois"&&openT);
-  $("v-pronos").hidden=t!=="pronos";$("v-bilan").hidden=t!=="bilan";}
+  $("v-pronos").hidden=t!=="pronos";$("v-bilan").hidden=t!=="bilan";$("v-classements").hidden=t!=="classements";}
 document.querySelector(".tabs").addEventListener("click",e=>{const b=e.target.closest("button[data-tab]");if(!b)return;if(b.dataset.tab==="tournois")openT=null;showTab(b.dataset.tab)});
 $("tlist").addEventListener("click",e=>{const b=e.target.closest(".tcard");if(!b)return;openT=b.dataset.t;sub="programme";renderTournoi();showTab("tournois");window.scrollTo({top:0})});
 $("back").addEventListener("click",()=>{openT=null;showTab("tournois")});
@@ -658,7 +721,7 @@ async function init(){
   let db=null;try{db=window.claude&&window.claude.use?await window.claude.use("db"):null}catch{db=null}
   if(!db){store=localStore();
     const load=async()=>{try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});const S=await r.json();
-      matchs=S.matchs||[];tournois=S.tournois||[];meta=S.meta||null;
+      matchs=S.matchs||[];tournois=S.tournois||[];meta=S.meta||null;classements=S.classements||{};
       if(S.fond){$("photoBg").style.backgroundImage=`url("${S.fond}")`;$("photoBg").hidden=false}
       renderAll();$("storeNote").textContent="Tes pronos sont gardés dans ce navigateur.";}
       catch{$("storeNote").textContent="Impossible de charger les matchs. Vérifie ta connexion."}};
@@ -669,6 +732,7 @@ async function init(){
   col.onSnapshot(s=>{pronos=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},onErr);
   db.collection("matchs").onSnapshot(s=>{matchs=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},onErr);
   db.collection("tournois").onSnapshot(s=>{tournois=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},onErr);
+  db.collection("classements").onSnapshot(s=>{classements={};s.docs.forEach(d=>classements[d.id]=d.data());renderClassements()},onErr);
   db.doc("meta/maj").onSnapshot(s=>{meta=s.exists?s.data():null;renderBoard()},onErr);
   setupBackground(db);
 }
