@@ -351,6 +351,14 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
       </div>
     </div>
     <div class="list" id="list"></div>
+    <details class="panel" id="importBox">
+      <summary><h2>Récupérer des pronos</h2><span class="plus" aria-hidden="true">+</span></summary>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <label class="f">Code de récupération<input type="text" id="importCode" placeholder="JSP1.…" autocomplete="off" autocapitalize="off" spellcheck="false"></label>
+        <button class="primary" type="button" id="importBtn">Récupérer</button>
+        <p class="err" id="importMsg" hidden></p>
+      </div>
+    </details>
     <details class="panel">
       <summary><h2>Ajouter un match à la main</h2><span class="plus" aria-hidden="true">+</span></summary>
       <form id="form" style="display:flex;flex-direction:column;gap:14px" novalidate>
@@ -389,7 +397,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T02:37:00+02:00",note:"date de mise à jour affichée en haut de page"};
+const SITE_VERSION={date:"2026-10-23T02:41:00+02:00",note:"récupération de pronos par code"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -605,6 +613,29 @@ $("list").addEventListener("click",async e=>{const b=e.target.closest("button[da
     else if(act==="delok"){pendingDelete=null;await store.remove(id)}}
   catch{$("storeNote").textContent="La modification n'a pas pu être enregistrée. Réessaie."}});
 
+
+/* ---------- Récupération de pronos par code ---------- */
+async function importPronos(code){
+  code=String(code||"").trim();if(!code.startsWith("JSP1."))throw new Error("format");
+  let raw;try{raw=decodeURIComponent(escape(atob(code.slice(5))))}catch{throw new Error("format")}
+  const pairs=raw.split(",").map(x=>x.split("|")).filter(x=>x.length===2);
+  if(!pairs.length)throw new Error("format");
+  let added=0,updated=0,missing=0;
+  for(const [mid,c] of pairs){const choix=Number(c);const m=matchById(mid);
+    const ex=pronos.find(p=>p.matchId===mid);
+    if(ex){if(ex.choix!==choix){await store.update(ex.id,{choix});updated++}continue}
+    if(!m){missing++;continue}
+    await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()});added++}
+  return{added,updated,missing};
+}
+function showImport(r,err){const el=$("importMsg");el.hidden=false;
+  if(err){el.style.color="var(--loss)";el.textContent="Ce code n'est pas valide. Vérifie que tu l'as copié en entier.";return}
+  el.style.color="var(--win)";el.textContent=`${r.added} prono${r.added>1?"s":""} récupéré${r.added>1?"s":""}`+(r.updated?`, ${r.updated} mis à jour`:"")+(r.missing?` (${r.missing} match${r.missing>1?"s":""} introuvable${r.missing>1?"s":""})`:"")+".";}
+$("importBtn").addEventListener("click",async()=>{try{const r=await importPronos($("importCode").value);showImport(r);$("importCode").value=""}catch{showImport(null,true)}});
+async function importFromHash(){const h=location.hash||"";if(!h.startsWith("#import="))return;
+  try{const r=await importPronos(decodeURIComponent(h.slice(8)));history.replaceState(null,"",location.pathname);
+    showTab("pronos");$("importBox").open=true;showImport(r)}catch{}}
+
 /* ---------- Données ---------- */
 function localStore(){const KEY="pronos-tennis-v1";try{pronos=JSON.parse(localStorage.getItem(KEY)||"[]")}catch{pronos=[]}
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(pronos))}catch{}};renderAll();
@@ -618,7 +649,7 @@ async function init(){
       if(S.fond){$("photoBg").style.backgroundImage=`url("${S.fond}")`;$("photoBg").hidden=false}
       renderAll();$("storeNote").textContent="Tes pronos sont gardés dans ce navigateur.";}
       catch{$("storeNote").textContent="Impossible de charger les matchs. Vérifie ta connexion."}};
-    await load();setInterval(load,10*60*1000);return}
+    await load();await importFromHash();setInterval(load,10*60*1000);return}
   const col=db.collection("pronos");
   store={add:p=>col.add(p),update:(id,patch)=>col.doc(id).update(patch),remove:id=>col.doc(id).delete()};
   const onErr=()=>{$("storeNote").textContent="Connexion perdue. Recharge la page."};
