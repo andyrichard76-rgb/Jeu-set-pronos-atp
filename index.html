@@ -206,8 +206,13 @@ button{cursor:pointer}
 .duel + .duel{border-left:2px solid rgba(23,32,29,.2);padding-left:16px}
 
 /* Onglets */
-.tabs{display:grid;grid-template-columns:repeat(5,minmax(0,auto));justify-content:space-between;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}
+.tabs{display:grid;grid-template-columns:repeat(6,auto);justify-content:space-between;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}
 .tabs button{border:0;background:transparent;border-radius:9px;padding:9px clamp(4px,1.6vw,14px);font-weight:500;font-size:clamp(.74rem,3.2vw,.9rem);white-space:nowrap;color:var(--muted)}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{display:inline-flex;align-items:center;justify-content:center;gap:5px}
+@media (max-width:560px){.tabs{grid-template-columns:repeat(3,1fr);justify-content:stretch}.tabs button{font-size:.88rem;padding:9px 4px}}
+.tabdot{width:7px;height:7px;border-radius:50%;background:var(--live)}
+@media (prefers-reduced-motion:no-preference){.tabdot{animation:pulse 1.4s ease-in-out infinite}}
 .tabs button[aria-selected="true"]{background:var(--court-soft);color:var(--court);font-weight:600}
 .subtabs{display:flex;gap:4px;border-bottom:2px solid var(--court-line)}
 .subtabs button{border:0;background:transparent;padding:10px 14px;font-family:var(--display);font-size:1.1rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--on-bg-muted);border-bottom:4px solid transparent;margin-bottom:-2px}
@@ -444,6 +449,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
   <nav class="tabs" role="tablist">
     <button role="tab" aria-selected="true" data-tab="tournois">Tournois</button>
+    <button role="tab" aria-selected="false" data-tab="direct"><span class="tabdot" id="tabDot" hidden aria-hidden="true"></span>En direct</button>
     <button role="tab" aria-selected="false" data-tab="suivre">À suivre</button>
     <button role="tab" aria-selected="false" data-tab="pronos">Prédictions</button>
     <button role="tab" aria-selected="false" data-tab="classements">Classements</button>
@@ -452,7 +458,6 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
   <!-- Liste des tournois -->
   <section id="v-tournois" class="view" aria-label="Tournois ATP">
-    <div class="homeblk" id="liveBlk" hidden><h2><span class="livedot" aria-hidden="true"></span>En direct</h2><div class="homeblk" id="liveList"></div></div>
     <div id="tlist" class="tlist"><div class="empty">Chargement des tournois…</div></div>
   </section>
 
@@ -471,6 +476,11 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   </section>
 
   <!-- Match à suivre -->
+  <section id="v-direct" class="view" hidden aria-label="Matchs en direct">
+    <div class="homeblk" id="liveBlk" hidden><h2><span class="livedot" aria-hidden="true"></span>En direct</h2><div class="homeblk" id="liveList"></div></div>
+    <div class="empty" id="directEmpty" hidden>Aucun match en direct pour le moment. Regarde l'onglet « À suivre » pour les prochains matchs.</div>
+  </section>
+
   <section id="v-suivre" class="view" hidden aria-label="Match à suivre">
     <div class="homeblk" id="nextBlk" hidden><h2 id="nextTitle">Dans les 2 prochaines heures</h2><div class="homeblk" id="nextBox"></div></div>
     <div class="empty" id="suivreEmpty" hidden>Aucun match prévu dans les prochaines heures. Le programme de demain arrive ce soir.</div>
@@ -554,7 +564,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T15:02:00+02:00",note:"bilan de nos analyses"};
+const SITE_VERSION={date:"2026-10-23T15:10:00+02:00",note:"onglet En direct"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -836,7 +846,7 @@ function renderHome(){
   const day=matchs.filter(m=>m.date===t).sort((a,b)=>key(a).localeCompare(key(b)));
     /* un match dont l'heure de début est passée est affiché en direct sans attendre la mise à jour */
   const lives=day.filter(m=>m.statut==="en_cours"||hasStarted(m));
-  $("liveBlk").hidden=!lives.length;
+  $("liveBlk").hidden=!lives.length;$("directEmpty").hidden=!!lives.length;$("tabDot").hidden=!lives.length;
   $("liveList").innerHTML=lives.map(m=>{const L=m.live||{},sets=setsFor(m);const g=L.jeu?L.jeu.split("-"):null;
     const won=n=>sets.filter(s=>s[n-1]>s[2-n]&&(Math.max(...s)>=6)).length;
     const lead=won(1)===won(2)?0:(won(1)>won(2)?1:2);
@@ -879,7 +889,7 @@ setInterval(()=>{try{renderHome()}catch{}},60000);
 function showTab(t){tab=t;
   document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x.dataset.tab===t?"true":"false"));
   $("v-tournois").hidden=!(t==="tournois"&&!openT);$("v-tournoi").hidden=!(t==="tournois"&&openT);
-  $("v-pronos").hidden=t!=="pronos";$("v-bilan").hidden=t!=="bilan";$("v-classements").hidden=t!=="classements";$("v-suivre").hidden=t!=="suivre";}
+  $("v-pronos").hidden=t!=="pronos";$("v-bilan").hidden=t!=="bilan";$("v-classements").hidden=t!=="classements";$("v-suivre").hidden=t!=="suivre";$("v-direct").hidden=t!=="direct";}
 document.querySelector(".tabs").addEventListener("click",e=>{const b=e.target.closest("button[data-tab]");if(!b)return;if(b.dataset.tab==="tournois")openT=null;showTab(b.dataset.tab)});
 $("liveList").addEventListener("click",e=>{const sb=e.target.closest("[data-stats]");if(sb)openSheet(sb.dataset.stats)});
 $("tlist").addEventListener("click",e=>{const b=e.target.closest(".tcard");if(!b)return;openT=b.dataset.t;sub="programme";renderTournoi();showTab("tournois");window.scrollTo({top:0})});
