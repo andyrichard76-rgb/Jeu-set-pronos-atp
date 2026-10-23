@@ -525,7 +525,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T11:20:00+02:00",note:"lien Point par point dans En direct"};
+const SITE_VERSION={date:"2026-10-23T11:22:00+02:00",note:"En direct allégé"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -797,7 +797,7 @@ function renderHome(){
     const p=n=>`<span class="lvp ${lead===n?"lead":""}"><span class="srv ${L.service===n?"":"off"}" title="Au service"></span>${avatar(n===1?m.j1:m.j2,1)}<span class="nm">${esc(n===1?m.j1:m.j2)}</span></span>
       <span class="lvsets">${sets.map(s=>`<span class="${s[n-1]>=s[2-n]?"":"dim"}">${s[n-1]}</span>`).join("")}${g?`<span class="g">${esc(g[n-1])}</span>`:""}</span>`;
     const maj=L.maj?new Date(L.maj).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"}):"";
-    return `<div class="lvcard"><button class="lvhit" data-stats="${m.id}" aria-label="Score et stats ${esc(m.j1)} contre ${esc(m.j2)}"><span class="tt"><span>${esc(m.tournoi)} · ${esc(m.tour)}</span><span class="lv">● En cours${maj?" · maj "+maj:""}</span></span><span class="lvgrid">${p(1)}${p(2)}</span></button><a class="livelink lvlink" href="https://www.atptour.com/en/scores/current" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Point par point</a></div>`}).join("");
+    return `<div class="lvcard"><button class="lvhit" data-stats="${m.id}" aria-label="Score et stats ${esc(m.j1)} contre ${esc(m.j2)}"><span class="tt"><span>${esc(m.tournoi)} · ${esc(m.tour)}</span><span class="lv">● En cours</span></span><span class="lvgrid">${p(1)}${p(2)}</span></button><a class="livelink lvlink" href="https://www.atptour.com/en/scores/current" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Point par point</a></div>`}).join("");
   const toMin=h=>{const [H,M]=h.split(":").map(Number);return H*60+M};
   const nowMin=toMin(now);
   const soon=day.filter(m=>m.statut==="a_venir"&&m.heure&&toMin(m.heure)>=nowMin-15&&toMin(m.heure)<=nowMin+120);
