@@ -100,6 +100,34 @@
 .subtabs{justify-content:center}
 .tourn-head{justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:2px}
 .intro{text-align:center;color:var(--on-bg-muted);font-size:.84rem;line-height:1.5;margin-top:-6px;padding-inline:8px;text-shadow:0 1px 2px rgba(0,0,0,.35)}.intro p{margin:0;text-wrap:balance}.intro b{color:var(--on-bg)}
+
+/* Accueil : En direct + Match à suivre */
+.homeblk{display:flex;flex-direction:column;gap:10px}
+.homeblk>h2{display:flex;align-items:center;justify-content:center;gap:8px}
+.livedot{width:9px;height:9px;border-radius:50%;background:var(--live);box-shadow:0 0 0 4px color-mix(in srgb,var(--live) 30%,transparent)}
+@media (prefers-reduced-motion:no-preference){.livedot{animation:pulse 1.4s ease-in-out infinite}}
+.lvcard{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;width:100%;text-align:left;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-left:4px solid var(--live);border-radius:12px;padding:10px 12px}
+.lvcard .tt{grid-column:1/-1;display:flex;justify-content:space-between;gap:8px;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.lvcard .tt .lv{color:var(--live)}
+.lvp{display:flex;align-items:center;gap:8px;min-width:0}
+.lvp .nm{min-width:0;overflow-wrap:break-word;font-weight:500}
+.lvp.lead .nm{font-weight:700}
+.lvsets{display:grid;grid-auto-flow:column;gap:10px;font-family:var(--display);font-weight:700;font-size:1.2rem;font-variant-numeric:tabular-nums;text-align:center}
+.lvsets .g{color:var(--court);background:var(--court-soft);border-radius:5px;padding:0 6px}
+.lvsets .dim{color:var(--muted)}
+.lvgrid{display:grid;grid-template-columns:minmax(0,1fr) auto;row-gap:6px;column-gap:12px;align-items:center;grid-column:1/-1}
+.nextc{background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px;text-align:center;position:relative;overflow:hidden}
+.nextc .ey{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.nextc .when{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--court);line-height:1}
+.nvs{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center}
+.nside{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.nside .nm{font-family:var(--display);font-weight:700;font-size:clamp(1.15rem,4.6vw,1.6rem);line-height:1.05;overflow-wrap:break-word;max-width:100%}
+.nside .ctry{font-size:.7rem}
+.nvs .x{font-family:var(--display);font-weight:700;color:var(--muted)}
+.npick{border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:999px;padding:6px 14px;font-size:.82rem;font-weight:600}
+.npick[aria-pressed="true"]{background:var(--court);border-color:var(--court);color:var(--on-court)}
+.nextc .ai{border-radius:10px;text-align:left}
+.nextc .row2{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
 .legal p{margin:0}.legal p+p{font-variant-numeric:tabular-nums}.legal b{color:var(--on-bg)}
 .court-bg canvas{width:100%;height:100%;display:block}
 .photo-bg{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center}
@@ -391,6 +419,8 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
   <!-- Liste des tournois -->
   <section id="v-tournois" class="view" aria-label="Tournois ATP">
+    <div class="homeblk" id="liveBlk" hidden><h2><span class="livedot" aria-hidden="true"></span>En direct</h2><div class="homeblk" id="liveList"></div></div>
+    <div class="homeblk" id="nextBlk" hidden><h2>Match à suivre</h2><div id="nextBox"></div></div>
     <div id="tlist" class="tlist"><div class="empty">Chargement des tournois…</div></div>
   </section>
 
@@ -486,7 +516,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T10:39:00+02:00",note:"présentation du site sous le titre"};
+const SITE_VERSION={date:"2026-10-23T11:02:00+02:00",note:"modules En direct et Match à suivre"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -552,7 +582,7 @@ function renderTList(){
   const groups={en_cours:[],a_venir:[],termine:[]};
   for(const t of tournois)groups[tStatus(t)].push(t);
   const ordre=(a,b)=>(a.debut||"").localeCompare(b.debut||"")||(b.niveau||0)-(a.niveau||0)||a.nom.localeCompare(b.nom);
-  const titles={en_cours:"En cours",a_venir:"À venir",termine:"Terminés"};
+  const titles={en_cours:"Tournois en cours",a_venir:"Tournois à venir",termine:"Tournois terminés"};
   $("tlist").innerHTML=["en_cours","a_venir","termine"].filter(k=>groups[k].length).map(k=>`
     <div class="groupe"><h2>${titles[k]}</h2>${groups[k].sort(ordre).slice(0,k==="termine"?4:20).map(t=>{
       const ms=tMatchs(t),todayN=ms.filter(m=>m.date===today()).length;
@@ -661,7 +691,7 @@ function renderBilan(){
     return `<div class="bar"><span class="surf s-${k}"><i></i>${SURF[k]}</span><div class="track" role="img" aria-label="${SURF[k]} : ${done?s.pct+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${done?s.pct:0}%;background:var(--${SURFVAR[k]})"></div></div><span class="n">${done?s.pct+" % · "+s.won+"/"+done:"—"}</span></div>`}).join("");
 }
 
-function renderAll(){if(openMatch)renderSheet();renderBoard();renderTList();if(openT)renderTournoi();renderList();renderBilan();renderClassements()}
+function renderAll(){if(openMatch)renderSheet();renderBoard();renderHome();renderTList();if(openT)renderTournoi();renderList();renderBilan();renderClassements()}
 
 
 /* ---------- Classements ---------- */
@@ -742,6 +772,45 @@ function openSheet(id){openMatch=id;renderSheet();document.body.style.overflow="
 function closeSheet(){openMatch=null;$("sheetBg").hidden=true;document.body.style.overflow=""}
 $("sheetBg").addEventListener("click",e=>{if(e.target===$("sheetBg"))closeSheet()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&openMatch)closeSheet()});
+
+
+/* ---------- Accueil : En direct + Match à suivre ---------- */
+function setsFor(m){const L=m.live||{};return L.sets&&L.sets.length?L.sets:(m.score||"").split(" ").filter(s=>/^\d+-\d+$/.test(s)).map(s=>s.split("-").map(Number))}
+function renderHome(){
+  const t=today(),now=new Date().toTimeString().slice(0,5);
+  const key=m=>(m.heure||"99:99")+"|"+m.tournoi+"|"+String(m.ordre||0).padStart(2,"0");
+  const day=matchs.filter(m=>m.date===t).sort((a,b)=>key(a).localeCompare(key(b)));
+  const lives=day.filter(m=>m.statut==="en_cours");
+  $("liveBlk").hidden=!lives.length;
+  $("liveList").innerHTML=lives.map(m=>{const L=m.live||{},sets=setsFor(m);const g=L.jeu?L.jeu.split("-"):null;
+    const won=n=>sets.filter(s=>s[n-1]>s[2-n]&&(Math.max(...s)>=6)).length;
+    const lead=won(1)===won(2)?0:(won(1)>won(2)?1:2);
+    const p=n=>`<span class="lvp ${lead===n?"lead":""}"><span class="srv ${L.service===n?"":"off"}" title="Au service"></span>${avatar(n===1?m.j1:m.j2,1)}<span class="nm">${esc(n===1?m.j1:m.j2)}</span></span>
+      <span class="lvsets">${sets.map(s=>`<span class="${s[n-1]>=s[2-n]?"":"dim"}">${s[n-1]}</span>`).join("")}${g?`<span class="g">${esc(g[n-1])}</span>`:""}</span>`;
+    const maj=L.maj?new Date(L.maj).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"}):"";
+    return `<button class="lvcard" data-stats="${m.id}" aria-label="Score et stats ${esc(m.j1)} contre ${esc(m.j2)}"><span class="tt"><span>${esc(m.tournoi)} · ${esc(m.tour)}</span><span class="lv">● En cours${maj?" · maj "+maj:""}</span></span><span class="lvgrid">${p(1)}${p(2)}</span></button>`}).join("");
+  const nx=day.find(m=>m.statut==="a_venir"&&m.heure&&m.heure>=now)||day.find(m=>m.statut==="a_venir");
+  $("nextBlk").hidden=!nx;
+  if(!nx){$("nextBox").innerHTML="";return}
+  const mine=pronos.find(p=>p.matchId===nx.id),c=nx.claude||{};
+  const side=n=>{const nm=n===1?nx.j1:nx.j2,pays=n===1?nx.j1Pays:nx.j2Pays,tds=n===1?nx.j1Tds:nx.j2Tds;
+    return `<div class="nside">${avatar(nm)}<span class="nm">${esc(nm)}${tds?` <span class="tds">[${esc(tds)}]</span>`:""}</span><span class="ctry">${esc(pays||"")}</span>
+      <button class="npick" data-pickm="${nx.id}" data-v="${n}" aria-pressed="${mine&&mine.choix==n?"true":"false"}">${mine&&mine.choix==n?"Mon choix ✓":"Je choisis"}</button></div>`};
+  $("nextBox").innerHTML=`<div class="nextc"><span class="ey">${esc(nx.tournoi)} · ${esc(nx.categorie||"")} · ${esc(nx.tour||"")}</span>
+    <span class="when">${nx.heure?esc(nx.heure):"Horaire à confirmer"}</span>
+    <div class="nvs">${side(1)}<span class="x">VS</span>${side(2)}</div>
+    ${c.choix?`<div class="ai"><p><b>Notre analyse :</b> ${esc(c.choix==1?nx.j1:nx.j2)} <span class="conf">${"●".repeat(c.confiance||2)}${"○".repeat(3-(c.confiance||2))}</span>${c.analyse?" · "+esc(c.analyse):""}</p></div>`:""}
+    <div class="row2"><button class="statbtn" data-stats="${nx.id}">Fiche du match</button></div></div>`;
+}
+$("v-tournois").addEventListener("click",async e=>{
+  const sb=e.target.closest("[data-stats]");if(sb){openSheet(sb.dataset.stats);return}
+  const pb=e.target.closest("[data-pickm]");if(!pb)return;const m=matchById(pb.dataset.pickm);if(!m)return;
+  const choix=Number(pb.dataset.v),ex=pronos.find(p=>p.matchId===m.id);
+  try{if(ex){if(ex.choix!==choix)await store.update(ex.id,{choix})}
+    else await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()})}
+  catch{$("storeNote").textContent="Ton prono n'a pas pu être enregistré. Réessaie."}
+});
+setInterval(()=>{try{renderHome()}catch{}},60000);
 
 /* ---------- Navigation ---------- */
 function showTab(t){tab=t;
