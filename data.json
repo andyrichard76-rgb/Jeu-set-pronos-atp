@@ -88,17 +88,11 @@
    "j2": "Karen Khachanov",
    "j2Pays": "",
    "j2Tds": "5",
-   "ordre": 4,
-   "score": "4-6 7-6 7-6",
-   "statut": "termine",
-   "surface": "indoor",
-   "tour": "Quart de finale",
-   "tournoi": "Almaty",
-   "tournoiId": "2026-almaty",
-   "vainqueur": 1,
    "live": {
-    "srId": "sr:sport_event:75620034",
+    "fini": true,
+    "jeu": "40-A",
     "maj": "2026-10-23T19:34:16+02:00",
+    "service": 2,
     "sets": [
      [
       4,
@@ -113,36 +107,44 @@
       6
      ]
     ],
+    "srId": "sr:sport_event:75620034",
     "stats": {
      "j1": {
       "aces": 6,
+      "bpTot": 3,
+      "bpWon": 0,
       "df": 2,
+      "maxPts": 5,
+      "pts": 33,
       "s1in": 29,
       "s1won": 22,
       "s2won": 1,
-      "svpts": 34,
-      "bpWon": 0,
-      "bpTot": 3,
       "svGames": 5,
-      "pts": 33,
-      "maxPts": 5
+      "svpts": 34
      },
      "j2": {
       "aces": 2,
+      "bpTot": 5,
+      "bpWon": 1,
       "df": 2,
+      "maxPts": 7,
+      "pts": 36,
       "s1in": 26,
       "s1won": 22,
       "s2won": 3,
-      "svpts": 35,
-      "bpWon": 1,
-      "bpTot": 5,
       "svGames": 5,
-      "pts": 36,
-      "maxPts": 7
+      "svpts": 35
      }
-    },
-    "fini": true
-   }
+    }
+   },
+   "ordre": 4,
+   "score": "4-6 7-6 7-6",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": 1
   },
   {
    "id": "2026-10-23-almaty-medvedev-atmane",
@@ -165,7 +167,7 @@
    "j2Pays": "FRA",
    "j2Tds": "",
    "live": {
-    "srId": "sr:sport_event:75620048",
+    "fini": true,
     "maj": "2026-10-23T14:14:52+02:00",
     "sets": [
      [
@@ -177,33 +179,33 @@
       4
      ]
     ],
-    "fini": true,
+    "srId": "sr:sport_event:75620048",
     "stats": {
      "j1": {
       "aces": 5,
+      "bpTot": 8,
+      "bpWon": 2,
       "df": 3,
+      "maxPts": 6,
+      "pts": 68,
       "s1in": 34,
       "s1won": 31,
       "s2won": 10,
-      "svpts": 50,
-      "bpWon": 2,
-      "bpTot": 8,
       "svGames": 10,
-      "pts": 68,
-      "maxPts": 6
+      "svpts": 50
      },
      "j2": {
       "aces": 4,
+      "bpTot": 0,
+      "bpWon": 0,
       "df": 1,
+      "maxPts": 4,
+      "pts": 49,
       "s1in": 48,
       "s1won": 31,
       "s2won": 9,
-      "svpts": 67,
-      "bpWon": 0,
-      "bpTot": 0,
       "svGames": 8,
-      "pts": 49,
-      "maxPts": 4
+      "svpts": 67
      }
     }
    },
@@ -308,15 +310,9 @@
    "j2": "Jan-Lennard Struff",
    "j2Pays": "GER",
    "j2Tds": "",
-   "ordre": 4,
-   "score": "3-6 6-7",
-   "statut": "termine",
-   "surface": "indoor",
-   "tour": "Quart de finale",
-   "tournoi": "Bruxelles",
-   "tournoiId": "2026-bruxelles",
-   "vainqueur": 2,
    "live": {
+    "fini": true,
+    "maj": "2026-10-23T23:16:00+02:00",
     "sets": [
      [
       3,
@@ -326,10 +322,16 @@
       6,
       7
      ]
-    ],
-    "maj": "2026-10-23T22:40:58+02:00",
-    "fini": true
-   }
+    ]
+   },
+   "ordre": 4,
+   "score": "3-6 6-7",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": 2
   },
   {
    "id": "2026-10-23-bruxelles-chidekh-cerundolo",
@@ -425,15 +427,9 @@
    "j2": "Alex Michelsen",
    "j2Pays": "USA",
    "j2Tds": "5",
-   "ordre": 3,
-   "score": "6-4 7-6",
-   "statut": "termine",
-   "surface": "indoor",
-   "tour": "Quart de finale",
-   "tournoi": "Bruxelles",
-   "tournoiId": "2026-bruxelles",
-   "vainqueur": 1,
    "live": {
+    "fini": true,
+    "maj": "2026-10-23T20:39:50+02:00",
     "sets": [
      [
       6,
@@ -443,10 +439,16 @@
       7,
       6
      ]
-    ],
-    "maj": "2026-10-23T20:39:50+02:00",
-    "fini": true
-   }
+    ]
+   },
+   "ordre": 3,
+   "score": "6-4 7-6",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": 1
   },
   {
    "id": "2026-10-23-bruxelles-lehecka-griekspoor",
@@ -469,8 +471,10 @@
    "j2Pays": "NED",
    "j2Tds": "",
    "live": {
-    "srId": "sr:sport_event:75621144",
+    "fini": true,
+    "jeu": "40-30",
     "maj": "2026-10-23T19:01:31+02:00",
+    "service": 1,
     "sets": [
      [
       6,
@@ -485,35 +489,35 @@
       6
      ]
     ],
+    "srId": "sr:sport_event:75621144",
     "stats": {
      "j1": {
       "aces": 8,
+      "bpTot": 3,
+      "bpWon": 2,
       "df": 0,
+      "maxPts": 8,
+      "pts": 51,
       "s1in": 33,
       "s1won": 26,
       "s2won": 8,
-      "svpts": 49,
-      "bpWon": 2,
-      "bpTot": 3,
       "svGames": 7,
-      "pts": 51,
-      "maxPts": 8
+      "svpts": 49
      },
      "j2": {
       "aces": 4,
+      "bpTot": 1,
+      "bpWon": 1,
       "df": 2,
+      "maxPts": 4,
+      "pts": 46,
       "s1in": 31,
       "s1won": 23,
       "s2won": 8,
-      "svpts": 48,
-      "bpWon": 1,
-      "bpTot": 1,
       "svGames": 7,
-      "pts": 46,
-      "maxPts": 4
+      "svpts": 48
      }
-    },
-    "fini": true
+    }
    },
    "ordre": 2,
    "score": "6-4 4-6 3-6",
@@ -544,15 +548,10 @@
    "j2": "Brandon Nakashima",
    "j2Pays": "USA",
    "j2Tds": "5",
-   "ordre": 3,
-   "score": "4-6 6-4 6-4",
-   "statut": "termine",
-   "surface": "indoor",
-   "tour": "Quart de finale",
-   "tournoi": "Lyon",
-   "tournoiId": "2026-lyon",
-   "vainqueur": 1,
    "live": {
+    "fini": true,
+    "maj": "2026-10-23T22:15:00+02:00",
+    "service": 2,
     "sets": [
      [
       4,
@@ -566,10 +565,16 @@
       6,
       4
      ]
-    ],
-    "maj": "2026-10-23T21:47:21+02:00",
-    "fini": true
-   }
+    ]
+   },
+   "ordre": 3,
+   "score": "4-6 6-4 6-4",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Lyon",
+   "tournoiId": "2026-lyon",
+   "vainqueur": 1
   },
   {
    "id": "2026-10-23-lyon-fritz-altmaier",
@@ -591,15 +596,9 @@
    "j2": "Daniel Altmaier",
    "j2Pays": "GER",
    "j2Tds": "",
-   "ordre": 2,
-   "score": "7-6 6-2",
-   "statut": "termine",
-   "surface": "indoor",
-   "tour": "Quart de finale",
-   "tournoi": "Lyon",
-   "tournoiId": "2026-lyon",
-   "vainqueur": 1,
    "live": {
+    "fini": true,
+    "maj": "2026-10-23T19:01:31+02:00",
     "sets": [
      [
       7,
@@ -609,10 +608,16 @@
       6,
       2
      ]
-    ],
-    "maj": "2026-10-23T19:01:31+02:00",
-    "fini": true
-   }
+    ]
+   },
+   "ordre": 2,
+   "score": "7-6 6-2",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Lyon",
+   "tournoiId": "2026-lyon",
+   "vainqueur": 1
   },
   {
    "id": "2026-10-23-lyon-moutet-paul",
@@ -636,6 +641,7 @@
    "j2Pays": "USA",
    "j2Tds": "4",
    "live": {
+    "fini": true,
     "maj": "2026-10-23T17:09:39+02:00",
     "sets": [
      [
@@ -679,8 +685,7 @@
       "svGames": 8,
       "svpts": 93
      }
-    },
-    "fini": true
+    }
    },
    "ordre": 1,
    "score": "4-6 6-3 3-6",
@@ -736,104 +741,149 @@
    }
   },
   {
-   "tournoiId": "2026-almaty",
-   "tournoi": "Almaty",
+   "id": "2026-10-24-almaty-basilashvili-tsitsipas",
    "categorie": "ATP 250",
-   "surface": "indoor",
-   "tour": "Demi-finale",
+   "claude": {
+    "analyse": "Tsitsipas, mieux placé à la Race (30e) qu'à l'ATP (39e), monte en puissance après un premier tour en trois sets face à Kovacevic. Basilashvili, issu des qualifications et hors du top 100, est en grande forme : Cilic, Diaz Acosta et Mannarino battus sans perdre un set.",
+    "choix": 2,
+    "confiance": 1,
+    "proba": [
+     38,
+     62
+    ]
+   },
    "date": "2026-10-24",
    "heure": "12:00",
-   "ordre": 1,
    "j1": "Nikoloz Basilashvili",
    "j1Pays": "GEO",
    "j1Tds": "Q",
    "j2": "Stefanos Tsitsipas",
    "j2Pays": "GRE",
    "j2Tds": "7",
-   "statut": "a_venir",
+   "ordre": 1,
    "score": "",
-   "vainqueur": null,
-   "id": "2026-10-24-almaty-basilashvili-tsitsipas"
-  },
-  {
-   "tournoiId": "2026-bruxelles",
-   "tournoi": "Bruxelles",
-   "categorie": "ATP 250",
+   "statut": "a_venir",
    "surface": "indoor",
    "tour": "Demi-finale",
-   "date": "2026-10-24",
-   "heure": "16:00",
-   "ordre": 1,
-   "j1": "Francisco Cerundolo",
-   "j1Pays": "ARG",
-   "j1Tds": "3",
-   "j2": "Tallon Griekspoor",
-   "j2Pays": "NED",
-   "j2Tds": "",
-   "statut": "a_venir",
-   "score": "",
-   "vainqueur": null,
-   "id": "2026-10-24-bruxelles-cerundolo-griekspoor"
-  },
-  {
-   "tournoiId": "2026-lyon",
-   "tournoi": "Lyon",
-   "categorie": "ATP 250",
-   "surface": "indoor",
-   "tour": "Demi-finale",
-   "date": "2026-10-24",
-   "heure": "14:00",
-   "ordre": 1,
-   "j1": "Tommy Paul",
-   "j1Pays": "USA",
-   "j1Tds": "4",
-   "j2": "Taylor Fritz",
-   "j2Pays": "USA",
-   "j2Tds": "2",
-   "statut": "a_venir",
-   "score": "",
-   "vainqueur": null,
-   "id": "2026-10-24-lyon-paul-fritz"
-  },
-  {
-   "tournoiId": "2026-almaty",
    "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": null
+  },
+  {
+   "id": "2026-10-24-almaty-medvedev-bublik",
    "categorie": "ATP 250",
-   "surface": "indoor",
-   "tour": "Demi-finale",
+   "claude": {
+    "analyse": "Tête de série n°1 et 6e à la Race, Medvedev n'a cédé aucun set (Shimabukuro, Atmane). Bublik joue à domicile mais sort d'un combat en trois sets face à Khachanov et fait une saison en retrait (25e à la Race contre 19e à l'ATP).",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     64,
+     36
+    ]
+   },
    "date": "2026-10-24",
    "heure": "15:00",
-   "ordre": 2,
    "j1": "Daniil Medvedev",
    "j1Pays": "",
    "j1Tds": "1",
    "j2": "Alexander Bublik",
    "j2Pays": "KAZ",
    "j2Tds": "3",
-   "statut": "a_venir",
+   "ordre": 2,
    "score": "",
-   "vainqueur": null,
-   "id": "2026-10-24-almaty-medvedev-bublik"
-  },
-  {
-   "tournoiId": "2026-bruxelles",
-   "tournoi": "Bruxelles",
-   "categorie": "ATP 250",
+   "statut": "a_venir",
    "surface": "indoor",
    "tour": "Demi-finale",
+   "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": null
+  },
+  {
+   "id": "2026-10-24-bruxelles-cerundolo-griekspoor",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°3, Cerundolo n'a pas lâché un set (Damm, Chidekh). Griekspoor, 60e à l'ATP comme à la Race, a sorti Lehecka mais enchaîne trois matchs accrochés, dont deux en trois sets : avantage Cerundolo.",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     65,
+     35
+    ]
+   },
+   "date": "2026-10-24",
+   "heure": "16:00",
+   "j1": "Francisco Cerundolo",
+   "j1Pays": "ARG",
+   "j1Tds": "3",
+   "j2": "Tallon Griekspoor",
+   "j2Pays": "NED",
+   "j2Tds": "",
+   "ordre": 1,
+   "score": "",
+   "statut": "a_venir",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": null
+  },
+  {
+   "id": "2026-10-24-bruxelles-fils-struff",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°1, 10e à l'ATP et 8e à la Race, Fils a dû sauver deux balles de set dans le tie-break face à Michelsen après un forfait au tour précédent. Struff (58e, 36 ans) n'a pas perdu un set cette semaine (Giron, Onclin, Bergs) et dispute sa première demi-finale sur dur depuis 2023 ; Fils mène 1-0 dans les face-à-face (Paris 2024).",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     70,
+     30
+    ]
+   },
    "date": "2026-10-24",
    "heure": "18:30",
-   "ordre": 2,
    "j1": "Arthur Fils",
    "j1Pays": "FRA",
    "j1Tds": "1",
    "j2": "Jan-Lennard Struff",
    "j2Pays": "GER",
    "j2Tds": "",
-   "statut": "a_venir",
+   "ordre": 2,
    "score": "",
-   "vainqueur": null,
-   "id": "2026-10-24-bruxelles-fils-struff"
+   "statut": "a_venir",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": null
+  },
+  {
+   "id": "2026-10-24-lyon-paul-fritz",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Duel américain très équilibré au classement (Fritz 14e ATP, Paul 12e à la Race). Fritz n'a perdu aucun set cette semaine (Herbert, Altmaier) alors que Paul a dû passer par trois sets face à Bonzi puis Moutet : léger avantage Fritz.",
+    "choix": 2,
+    "confiance": 1,
+    "proba": [
+     45,
+     55
+    ]
+   },
+   "date": "2026-10-24",
+   "heure": "14:00",
+   "j1": "Tommy Paul",
+   "j1Pays": "USA",
+   "j1Tds": "4",
+   "j2": "Taylor Fritz",
+   "j2Pays": "USA",
+   "j2Tds": "2",
+   "ordre": 1,
+   "score": "",
+   "statut": "a_venir",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "tournoi": "Lyon",
+   "tournoiId": "2026-lyon",
+   "vainqueur": null
   }
  ],
  "tournois": [
@@ -2218,10 +2268,15 @@
    "nomComplet": "Erste Bank Open",
    "pays": "Autriche",
    "surface": "indoor"
+  },
+  {
+   "id": "historique",
+   "note": "Archive des analyses : ne jamais supprimer ce document.",
+   "tournois": {}
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T23:47:58+02:00",
+  "misAJour": "2026-10-23T23:50:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
