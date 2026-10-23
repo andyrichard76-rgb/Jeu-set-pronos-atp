@@ -364,6 +364,15 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 .fill{height:100%}
 .bar .n{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
 .catnote{margin:0;font-size:.76rem;color:var(--muted)}
+#tourBars{display:flex;flex-direction:column;gap:14px}
+.tgrp{display:flex;flex-direction:column;gap:9px}
+.tgrp+.tgrp{border-top:1px solid var(--line);padding-top:14px}
+.tgrp h3{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:1.05rem;text-transform:uppercase;letter-spacing:.06em}
+.tgrp h3 .cl{display:inline-flex;align-items:center;gap:7px}
+.tgrp h3 .cl i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.tgrp h3 small{font-family:var(--body);font-size:.8rem;font-weight:600;color:var(--muted);letter-spacing:0;text-transform:none;font-variant-numeric:tabular-nums}
+.tgrp .tn{font-weight:500;overflow-wrap:anywhere}
+.tempty{margin:0;font-size:.82rem;color:var(--muted)}
 .kv{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .kv div{background:var(--bg);border-radius:10px;padding:10px 12px}
 .kv b{display:block;font-family:var(--display);font-size:1.6rem;font-variant-numeric:tabular-nums;line-height:1.1}
@@ -555,6 +564,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
     <div class="panel"><h2>Bilan de nos analyses</h2><div class="kv" id="kv"></div></div>
     <div class="panel"><h2>Réussite par surface</h2><div class="bars" id="bars"></div></div>
     <div class="panel"><h2>Réussite par catégorie</h2><div class="bars" id="catBars"></div><p class="catnote">Les ATP Finals sont comptées avec les Masters 1000.</p></div>
+    <div class="panel"><h2>Réussite par tournoi</h2><div id="tourBars"></div></div>
   </section>
 
   <!-- Classements -->
@@ -581,11 +591,11 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T22:51:00+02:00",note:"réussite par catégorie dans le Bilan"};
+const SITE_VERSION={date:"2026-10-23T23:03:00+02:00",note:"réussite par tournoi dans le Bilan"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
-let matchs=[],pronos=[],tournois=[],meta=null,filter="all",pendingDelete=null,store=null;
+let historique=null,matchs=[],pronos=[],tournois=[],meta=null,filter="all",pendingDelete=null,store=null;
 let tab="tournois",openT=null,sub="programme";
 
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
@@ -762,6 +772,17 @@ function renderBilan(){
     return `<div class="bar"><span class="surf s-${k}"><i></i>${SURF[k]}</span><div class="track" role="img" aria-label="${SURF[k]} : ${done?s.pct+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${done?s.pct:0}%;background:var(--${SURFVAR[k]})"></div></div><span class="n">${done?s.pct+" % · "+s.won+"/"+done:"—"}</span></div>`}).join("");
   const el=$("catBars");if(el)el.innerHTML=CATS.map(([lab,list,col])=>{const s=tally(an.filter(m=>list.includes(m.categorie)),aiStatus);const done=s.won+s.lost;
     return `<div class="bar"><span class="surf"><i style="background:var(--${col})"></i>${lab}</span><div class="track" role="img" aria-label="${lab} : ${done?s.pct+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${done?s.pct:0}%;background:var(--${col})"></div></div><span class="n">${done?s.pct+" % · "+s.won+"/"+done:"—"}</span></div>`}).join("");
+  const tb=$("tourBars");if(tb){const T={};
+    const add=(id,o)=>{const t=T[id]||(T[id]={nom:o.nom,categorie:o.categorie,annee:o.annee,date:"",won:0,lost:0,wait:0});t.won+=o.won||0;t.lost+=o.lost||0;t.wait+=o.wait||0;if((o.date||"")>t.date)t.date=o.date||""};
+    const H=(historique&&historique.tournois)||{};
+    for(const id in H){const h=H[id]||{};add(id,{nom:h.nom,categorie:h.categorie,annee:String(h.annee||id.slice(0,4)),date:h.fin||"",won:h.gagnes,lost:h.perdus})}
+    for(const m of an){const s=aiStatus(m);add(m.tournoiId||norm(m.tournoi),{nom:m.tournoi,categorie:m.categorie,annee:String(m.date||"").slice(0,4),date:m.date,won:s==="won"?1:0,lost:s==="lost"?1:0,wait:s==="wait"?1:0})}
+    const all=Object.values(T),years=new Set(all.map(t=>t.annee));
+    tb.innerHTML=CATS.map(([lab,list,col])=>{const ts=all.filter(t=>list.includes(t.categorie)).sort((a,b)=>b.date.localeCompare(a.date));
+      const w=ts.reduce((a,t)=>a+t.won,0),d=ts.reduce((a,t)=>a+t.won+t.lost,0);
+      const rows=ts.map(t=>{const n=t.won+t.lost,p=n?Math.round(t.won*100/n):0,nm=esc(t.nom||"")+(years.size>1&&t.annee?" "+esc(t.annee):"");
+        return `<div class="bar"><span class="tn">${nm}</span><div class="track" role="img" aria-label="${nm} : ${n?p+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${n?p:0}%;background:var(--${col})"></div></div><span class="n">${n?p+" % · "+t.won+"/"+n:(t.wait?"en cours":"—")}</span></div>`}).join("");
+      return `<div class="tgrp"><h3><span class="cl"><i style="background:var(--${col})"></i>${lab}</span><small>${d?Math.round(w*100/d)+" % · "+w+"/"+d:""}</small></h3>${rows||'<p class="tempty">Aucun tournoi analysé pour l\'instant.</p>'}</div>`}).join("")}
 }
 const CATS=[["Grand Chelem",["Grand Chelem"],"court"],["Masters 1000",["Masters 1000","ATP Finals"],"ai"],["ATP 500",["ATP 500"],"steel"],["ATP 250",["ATP 250"],"grass"]];
 
@@ -1045,7 +1066,7 @@ async function init(){
   let db=null;try{db=window.claude&&window.claude.use?await window.claude.use("db"):null}catch{db=null}
   if(!db){store=localStore();
     const load=async()=>{try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});const S=await r.json();
-      matchs=S.matchs||[];tournois=S.tournois||[];meta=S.meta||null;classements=S.classements||{};espnApply();
+      matchs=S.matchs||[];tournois=(S.tournois||[]).filter(t=>t.id!=="historique");meta=S.meta||null;classements=S.classements||{};historique=(S.tournois||[]).find(t=>t.id==="historique")||S.historique||null;espnApply();
       if(S.fond){$("photoBg").style.backgroundImage=`url("${S.fond}")`;$("photoBg").hidden=false}
       renderAll();$("storeNote").textContent="Tes prédictions sont gardées dans ce navigateur.";}
       catch(e){console.error(e);$("storeNote").textContent="Chargement en cours… nouvel essai dans quelques secondes.";setTimeout(load,5000)}};
@@ -1055,7 +1076,7 @@ async function init(){
   const onErr=()=>{$("storeNote").textContent="Connexion perdue. Recharge la page."};
   col.onSnapshot(s=>{pronos=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},onErr);
   db.collection("matchs").onSnapshot(s=>{matchs=s.docs.map(d=>({id:d.id,...d.data()}));espnApply();renderAll()},onErr);espnFetch();
-  db.collection("tournois").onSnapshot(s=>{tournois=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},onErr);
+  db.collection("tournois").onSnapshot(s=>{const all=s.docs.map(d=>({id:d.id,...d.data()}));tournois=all.filter(t=>t.id!=="historique");historique=all.find(t=>t.id==="historique")||null;renderAll()},onErr);
   db.collection("classements").onSnapshot(s=>{classements={};s.docs.forEach(d=>classements[d.id]=d.data());renderClassements()},onErr);
   db.doc("meta/maj").onSnapshot(s=>{meta=s.exists?s.data():null;renderBoard()},onErr);
   setupBackground(db);
