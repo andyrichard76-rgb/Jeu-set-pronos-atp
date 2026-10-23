@@ -119,46 +119,50 @@
    "j2Tds": "",
    "live": {
     "srId": "sr:sport_event:75620048",
-    "maj": "2026-10-23T11:40:00+02:00",
+    "maj": "2026-10-23T12:20:00+02:00",
     "sets": [
      [
-      0,
+      6,
+      4
+     ],
+     [
+      1,
       0
      ]
     ],
-    "jeu": "15-30",
-    "service": 2,
+    "jeu": "0-0",
+    "service": 1,
     "stats": {
      "j1": {
-      "aces": 0,
-      "df": 0,
-      "s1in": 0,
-      "s1won": 0,
-      "s2won": 0,
-      "svpts": 0,
-      "bpWon": 0,
-      "bpTot": 0,
-      "svGames": 0,
-      "pts": 1,
-      "maxPts": 1
+      "aces": 1,
+      "df": 1,
+      "s1in": 15,
+      "s1won": 14,
+      "s2won": 6,
+      "svpts": 24,
+      "bpWon": 2,
+      "bpTot": 5,
+      "svGames": 5,
+      "pts": 38,
+      "maxPts": 5
      },
      "j2": {
-      "aces": 0,
-      "df": 0,
-      "s1in": 1,
-      "s1won": 1,
-      "s2won": 1,
-      "svpts": 3,
+      "aces": 3,
+      "df": 1,
+      "s1in": 29,
+      "s1won": 19,
+      "s2won": 3,
+      "svpts": 40,
       "bpWon": 0,
       "bpTot": 0,
-      "svGames": 0,
-      "pts": 2,
-      "maxPts": 2
+      "svGames": 4,
+      "pts": 26,
+      "maxPts": 4
      }
     }
    },
    "ordre": 3,
-   "score": "0-0",
+   "score": "6-4 1-0",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -1822,7 +1826,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T11:40:00+02:00",
+  "misAJour": "2026-10-23T12:20:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
