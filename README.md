@@ -1,5 +1,5 @@
 # Jeu, Set et Prono
 
-Site de pronostics tennis (circuit ATP). Les matchs, scores, tableaux et pronostics de Claude sont mis à jour automatiquement dans `data.json`.
+Site d'analyses de tennis (circuit ATP) : tournois, tableaux, scores et pronostics mis à jour chaque jour.
 
-Site : https://andyrichard76-rgb.github.io/jeu-set-pronos-atp/
+Site : https://andyrichard76-rgb.github.io/Jeu-set-pronos-atp/
