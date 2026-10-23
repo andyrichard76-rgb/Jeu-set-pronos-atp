@@ -28,6 +28,8 @@
   --turf:#0b1120; --court-in:#173459; --court-line:rgba(255,255,255,.5); --net:#05090a; --on-bg:#f1f5f2; --on-bg-muted:rgba(241,245,242,.78); color-scheme:dark}
 
 *{box-sizing:border-box}
+.legal{margin-top:8px;padding:14px 16px;border-radius:12px;background:rgba(0,0,0,.35);color:var(--on-bg-muted);font-size:.78rem;line-height:1.5;backdrop-filter:blur(6px)}
+.legal p{margin:0}.legal b{color:var(--on-bg)}
 .court-bg canvas{width:100%;height:100%;display:block}
 .photo-bg{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center}
 .photo-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,5,12,.55),rgba(3,5,12,.35) 40%,rgba(3,5,12,.7))}
@@ -375,6 +377,9 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   </section>
 
   <p class="note" id="storeNote" style="text-align:center"></p>
+  <footer class="legal" id="legal">
+    <p><b>Jeu, Set et Prono</b> est un site d'analyses de tennis, pas un site de paris. Les avis signés « Claude » sont rédigés par une intelligence artificielle à partir des résultats publics de la semaine, à titre informatif. Aucun résultat n'est garanti.</p>
+  </footer>
 </div>
 
 <script>
@@ -487,7 +492,7 @@ function card(m){
   const c=m.claude;
   return `<article class="card"><div class="chead"><span class="round">${esc(m.tour||"")}</span><span>${m.heure?esc(m.heure):"Horaire à confirmer"}</span></div>
     ${pb(1)}${pb(2)}
-    ${c&&c.choix?`<div class="ai"><p><b>Mon avis :</b> ${esc(c.choix==1?m.j1:m.j2)} <span class="conf" title="Confiance">${"●".repeat(c.confiance||2)}${"○".repeat(3-(c.confiance||2))}</span>${c.analyse?" · "+esc(c.analyse):""}</p></div>`:""}
+    ${c&&c.choix?`<div class="ai"><p><b>Avis de Claude (IA) :</b> ${esc(c.choix==1?m.j1:m.j2)} <span class="conf" title="Confiance">${"●".repeat(c.confiance||2)}${"○".repeat(3-(c.confiance||2))}</span>${c.analyse?" · "+esc(c.analyse):""}</p></div>`:""}
     <div class="cfoot">${state}${foot}</div></article>`;
 }
 function renderTableau(t){
