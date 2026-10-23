@@ -639,7 +639,7 @@ async function importFromHash(){const h=location.hash||"";if(!h.startsWith("#imp
 /* ---------- Données ---------- */
 function localStore(){const KEY="pronos-tennis-v1";try{pronos=JSON.parse(localStorage.getItem(KEY)||"[]")}catch{pronos=[]}
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(pronos))}catch{}};renderAll();
-  return{add:async p=>{pronos.push({...p,id:"l"+Date.now()});save();renderAll()},update:async(id,patch)=>{pronos=pronos.map(p=>p.id===id?{...p,...patch}:p);save();renderAll()},remove:async id=>{pronos=pronos.filter(p=>p.id!==id);save();renderAll()}}}
+  return{add:async p=>{pronos.push({...p,id:"l"+Date.now()+Math.random().toString(36).slice(2,7)});save();renderAll()},update:async(id,patch)=>{pronos=pronos.map(p=>p.id===id?{...p,...patch}:p);save();renderAll()},remove:async id=>{pronos=pronos.filter(p=>p.id!==id);save();renderAll()}}}
 async function init(){
   renderBoard();
   let db=null;try{db=window.claude&&window.claude.use?await window.claude.use("db"):null}catch{db=null}
