@@ -356,6 +356,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
       <div style="display:flex;flex-direction:column;gap:10px">
         <label class="f">Code de récupération<input type="text" id="importCode" placeholder="JSP1.…" autocomplete="off" autocapitalize="off" spellcheck="false"></label>
         <button class="primary" type="button" id="importBtn">Récupérer</button>
+        <button class="ghost" type="button" id="exportBtn" style="padding:10px">Copier mon code de sauvegarde</button>
         <p class="err" id="importMsg" hidden></p>
       </div>
     </details>
@@ -397,7 +398,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T02:41:00+02:00",note:"récupération de pronos par code"};
+const SITE_VERSION={date:"2026-10-23T02:44:00+02:00",note:"bouton de sauvegarde des pronos"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -631,6 +632,13 @@ async function importPronos(code){
 function showImport(r,err){const el=$("importMsg");el.hidden=false;
   if(err){el.style.color="var(--loss)";el.textContent="Ce code n'est pas valide. Vérifie que tu l'as copié en entier.";return}
   el.style.color="var(--win)";el.textContent=`${r.added} prono${r.added>1?"s":""} récupéré${r.added>1?"s":""}`+(r.updated?`, ${r.updated} mis à jour`:"")+(r.missing?` (${r.missing} match${r.missing>1?"s":""} introuvable${r.missing>1?"s":""})`:"")+".";}
+$("exportBtn").addEventListener("click",async()=>{
+  const ps=pronos.filter(p=>p.matchId);const el=$("importMsg");el.hidden=false;
+  if(!ps.length){el.style.color="var(--loss)";el.textContent="Aucun prono à sauvegarder pour l'instant.";return}
+  const code="JSP1."+btoa(unescape(encodeURIComponent(ps.map(p=>p.matchId+"|"+p.choix).join(","))));
+  try{await navigator.clipboard.writeText(code);el.style.color="var(--win)";el.textContent=`Code copié (${ps.length} prono${ps.length>1?"s":""}). Colle-le dans tes notes ou envoie-le-toi par message.`}
+  catch{$("importCode").value=code;$("importCode").select();el.style.color="var(--fg)";el.textContent="Ton code est dans la case ci-dessus : copie-le et garde-le dans tes notes."}
+});
 $("importBtn").addEventListener("click",async()=>{try{const r=await importPronos($("importCode").value);showImport(r);$("importCode").value=""}catch{showImport(null,true)}});
 async function importFromHash(){const h=location.hash||"";if(!h.startsWith("#import="))return;
   try{const r=await importPronos(decodeURIComponent(h.slice(8)));history.replaceState(null,"",location.pathname);
