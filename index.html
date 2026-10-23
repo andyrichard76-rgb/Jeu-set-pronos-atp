@@ -413,7 +413,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <nav class="tabs" role="tablist">
     <button role="tab" aria-selected="true" data-tab="tournois">Tournois</button>
     <button role="tab" aria-selected="false" data-tab="suivre">À suivre</button>
-    <button role="tab" aria-selected="false" data-tab="pronos">Résultats</button>
+    <button role="tab" aria-selected="false" data-tab="pronos">Prédictions</button>
     <button role="tab" aria-selected="false" data-tab="classements">Classements</button>
     <button role="tab" aria-selected="false" data-tab="bilan">Bilan</button>
   </nav>
@@ -447,7 +447,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <!-- Mes pronos -->
   <section id="v-pronos" class="view" hidden>
     <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
-      <h2>Mes résultats</h2>
+      <h2>Mes prédictions</h2>
       <div class="seg" id="filter">
         <button type="button" data-v="all" aria-pressed="true">Tous</button>
         <button type="button" data-v="wait" aria-pressed="false">En attente</button>
@@ -457,7 +457,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
     </div>
     <div class="list" id="list"></div>
     <details class="panel" id="importBox">
-      <summary><h2>Récupérer des pronos</h2><span class="plus" aria-hidden="true">+</span></summary>
+      <summary><h2>Récupérer mes prédictions</h2><span class="plus" aria-hidden="true">+</span></summary>
       <div style="display:flex;flex-direction:column;gap:10px">
         <label class="f">Code de récupération<input type="text" id="importCode" placeholder="JSP1.…" autocomplete="off" autocapitalize="off" spellcheck="false"></label>
         <button class="primary" type="button" id="importBtn">Récupérer</button>
@@ -483,7 +483,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
           <div class="seg" id="surface"><button type="button" data-v="dur" aria-pressed="true">Dur</button><button type="button" data-v="terre" aria-pressed="false">Terre battue</button><button type="button" data-v="gazon" aria-pressed="false">Gazon</button><button type="button" data-v="indoor" aria-pressed="false">Indoor</button></div>
         </div>
         <p class="err" id="formErr" hidden></p>
-        <button class="primary" type="submit" id="save">Enregistrer le prono</button>
+        <button class="primary" type="submit" id="save">Enregistrer la prédiction</button>
       </form>
     </details>
   </section>
@@ -522,7 +522,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T11:12:00+02:00",note:"onglet Pronos renommé Résultats"};
+const SITE_VERSION={date:"2026-10-23T11:14:00+02:00",note:"onglet Prédictions"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -610,7 +610,7 @@ function renderTournoi(){
   const ms=tMatchs(t);const nPronos=pronos.filter(p=>p.matchId&&ms.some(m=>m.id===p.matchId)).length;
   $("thero").innerHTML=`<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="font-family:var(--display);font-weight:600;letter-spacing:.06em;color:var(--court)">${esc(t.categorie)}</span><span class="surf s-${t.surface}"><i></i>${SURF[t.surface]||""}</span></div>
     <h3>${esc(t.nom)}</h3>${t.nomComplet?`<span class="muted" style="font-size:.88rem">${esc(t.nomComplet)}</span>`:""}
-    <div class="facts"><span>${t.debut?fmtLong(t.debut)+" → "+fmtLong(t.fin):""}</span><span>Tour actuel : <b>${esc(currentRound(t))}</b></span><span>Mes pronos : <b>${nPronos}</b></span></div>`;
+    <div class="facts"><span>${t.debut?fmtLong(t.debut)+" → "+fmtLong(t.fin):""}</span><span>Tour actuel : <b>${esc(currentRound(t))}</b></span><span>Mes prédictions : <b>${nPronos}</b></span></div>`;
   document.querySelectorAll(".subtabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.sub===sub?"true":"false"));
   $("sub-programme").hidden=sub!=="programme";$("sub-tableau").hidden=sub!=="tableau";
   renderProgramme(t,ms);renderTableau(t);
@@ -619,7 +619,7 @@ function renderProgramme(t,ms){
   if(!ms.length){$("sub-programme").innerHTML=`<div class="empty">Pas encore de matchs programmés.<br>Le programme est publié la veille au soir.</div>`;return}
   const d=today();const byDay={};for(const m of ms)(byDay[m.date]=byDay[m.date]||[]).push(m);
   const days=Object.keys(byDay).sort();const fut=days.filter(x=>x>=d),past=days.filter(x=>x<d).reverse();
-  $("sub-programme").innerHTML=`<p class="note">Touche un joueur pour faire ton prono. Notre analyse est en violet.</p>`+
+  $("sub-programme").innerHTML=`<p class="note">Touche un joueur pour faire ta prédiction. Notre analyse est en violet.</p>`+
     [...fut,...past].map(day=>`<div class="daygrp"><h2>${esc(dayLabel(day))}</h2>${byDay[day].sort((a,b)=>(a.ordre||0)-(b.ordre||0)).map(card).join("")}</div>`).join("");
 }
 function card(m){
@@ -633,12 +633,12 @@ function card(m){
       <span class="who"><span class="name">${esc(name)}${tds?`<span class="tds">[${esc(tds)}]</span>`:""}</span>${pays?`<span class="ctry">${esc(pays)}</span>`:""}</span>
       ${ai?'<span class="ai-tag">Notre choix</span>':""}${sc.length?`<span class="sc">${esc(sets(n))}</span>`:""}</button>`};
   let state;
-  if(done)state=mine?`<span class="badge ${status(mine)}">${status(mine)==="won"?"Prono gagné":"Prono perdu"}</span>`:`<span class="badge wait">Terminé</span>`;
+  if(done)state=mine?`<span class="badge ${status(mine)}">${status(mine)==="won"?"Prédiction gagnée":"Prédiction perdue"}</span>`:`<span class="badge wait">Terminé</span>`;
   else if(live)state=`<span class="badge live">En cours</span>`;
-  else state=mine?`<span class="muted">Ton prono : <b style="color:var(--fg)">${esc(mine.choix==1?m.j1:m.j2)}</b></span>`:`<span class="muted">Pas encore de prono</span>`;
+  else state=mine?`<span class="muted">Ta prédiction : <b style="color:var(--fg)">${esc(mine.choix==1?m.j1:m.j2)}</b></span>`:`<span class="muted">Pas encore de prédiction</span>`;
   const liveLink=(!done&&m.date===today())?`<a class="livelink" href="https://www.atptour.com/en/scores/current" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Score en direct</a>`:"";
   const statB=`<button class="statbtn" data-stats="${m.id}">${done||live?"Score et stats":"Fiche du match"}</button>`;
-  const foot=statB+liveLink+((!done&&!live&&mine)?`<button class="ghost" data-act="del" data-id="${mine.id}">Retirer mon prono</button>`:"");
+  const foot=statB+liveLink+((!done&&!live&&mine)?`<button class="ghost" data-act="del" data-id="${mine.id}">Retirer ma prédiction</button>`:"");
   const c=m.claude;
   return `<article class="card"><div class="chead"><span class="round">${esc(m.tour||"")}</span><span>${m.heure?esc(m.heure):"Horaire à confirmer"}</span></div>
     ${pb(1)}${pb(2)}
@@ -668,8 +668,8 @@ function renderList(){
   const when=p=>{const m=p.matchId&&matchById(p.matchId);return [p.date||"9999",(m&&m.heure)||"99:99",(m&&m.tournoi)||p.tournoi||"",String((m&&m.ordre)||99).padStart(3,"0")].join("|")};
   const sorted=[...pronos].sort((a,b)=>when(a).localeCompare(when(b))||(a.createdAt||0)-(b.createdAt||0));
   const shown=sorted.filter(p=>filter==="all"||status(p)===filter);
-  if(!pronos.length){$("list").innerHTML=`<div class="empty">Aucun prono pour l'instant.<br>Ouvre un tournoi et touche le joueur que tu vois gagner.</div>`;return}
-  if(!shown.length){$("list").innerHTML=`<div class="empty">Aucun prono dans cette catégorie.</div>`;return}
+  if(!pronos.length){$("list").innerHTML=`<div class="empty">Aucune prédiction pour l'instant.<br>Ouvre un tournoi et touche le joueur que tu vois gagner.</div>`;return}
+  if(!shown.length){$("list").innerHTML=`<div class="empty">Aucune prédiction dans cette catégorie.</div>`;return}
   $("list").innerHTML=shown.map(p=>{
     const s=status(p),r=result(p),m=p.matchId&&matchById(p.matchId);
     const label={wait:"En attente",won:"Gagné",lost:"Perdu"}[s];
@@ -821,7 +821,7 @@ $("v-suivre").addEventListener("click",async e=>{
   const choix=Number(pb.dataset.v),ex=pronos.find(p=>p.matchId===m.id);
   try{if(ex){if(ex.choix!==choix)await store.update(ex.id,{choix})}
     else await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()})}
-  catch{$("storeNote").textContent="Ton prono n'a pas pu être enregistré. Réessaie."}
+  catch{$("storeNote").textContent="Ta prédiction n'a pas pu être enregistrée. Réessaie."}
 });
 setInterval(()=>{try{renderHome()}catch{}},60000);
 
@@ -840,12 +840,12 @@ document.querySelector(".subtabs").addEventListener("click",e=>{const b=e.target
 $("sub-programme").addEventListener("click",async e=>{
   const sb=e.target.closest("button[data-stats]");if(sb){openSheet(sb.dataset.stats);return}
   const del=e.target.closest("button[data-act=del]");
-  if(del){try{await store.remove(del.dataset.id)}catch{$("storeNote").textContent="Impossible de retirer le prono. Réessaie."}return}
+  if(del){try{await store.remove(del.dataset.id)}catch{$("storeNote").textContent="Impossible de retirer la prédiction. Réessaie."}return}
   const b=e.target.closest("button.pbtn");if(!b||b.disabled)return;const m=matchById(b.dataset.match);if(!m)return;
   const choix=Number(b.dataset.v),existing=pronos.find(p=>p.matchId===m.id);
   try{if(existing){if(existing.choix!==choix)await store.update(existing.id,{choix})}
     else await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()})}
-  catch{$("storeNote").textContent="Ton prono n'a pas pu être enregistré. Réessaie."}
+  catch{$("storeNote").textContent="Ta prédiction n'a pas pu être enregistrée. Réessaie."}
 });
 
 /* ---------- Formulaire manuel ---------- */
@@ -885,12 +885,12 @@ async function importPronos(code){
 }
 function showImport(r,err){const el=$("importMsg");el.hidden=false;
   if(err){el.style.color="var(--loss)";el.textContent="Ce code n'est pas valide. Vérifie que tu l'as copié en entier.";return}
-  el.style.color="var(--win)";el.textContent=`${r.added} prono${r.added>1?"s":""} récupéré${r.added>1?"s":""}`+(r.updated?`, ${r.updated} mis à jour`:"")+(r.missing?` (${r.missing} match${r.missing>1?"s":""} introuvable${r.missing>1?"s":""})`:"")+".";}
+  el.style.color="var(--win)";el.textContent=`${r.added} prédiction${r.added>1?"s":""} récupérée${r.added>1?"s":""}`+(r.updated?`, ${r.updated} mis à jour`:"")+(r.missing?` (${r.missing} match${r.missing>1?"s":""} introuvable${r.missing>1?"s":""})`:"")+".";}
 $("exportBtn").addEventListener("click",async()=>{
   const ps=pronos.filter(p=>p.matchId);const el=$("importMsg");el.hidden=false;
-  if(!ps.length){el.style.color="var(--loss)";el.textContent="Aucun prono à sauvegarder pour l'instant.";return}
+  if(!ps.length){el.style.color="var(--loss)";el.textContent="Aucune prédiction à sauvegarder pour l'instant.";return}
   const code="JSP1."+btoa(unescape(encodeURIComponent(ps.map(p=>p.matchId+"|"+p.choix).join(","))));
-  try{await navigator.clipboard.writeText(code);el.style.color="var(--win)";el.textContent=`Code copié (${ps.length} prono${ps.length>1?"s":""}). Colle-le dans tes notes ou envoie-le-toi par message.`}
+  try{await navigator.clipboard.writeText(code);el.style.color="var(--win)";el.textContent=`Code copié (${ps.length} prédiction${ps.length>1?"s":""}). Colle-le dans tes notes ou envoie-le-toi par message.`}
   catch{$("importCode").value=code;$("importCode").select();el.style.color="var(--fg)";el.textContent="Ton code est dans la case ci-dessus : copie-le et garde-le dans tes notes."}
 });
 $("importBtn").addEventListener("click",async()=>{try{const r=await importPronos($("importCode").value);showImport(r);$("importCode").value=""}catch{showImport(null,true)}});
@@ -912,7 +912,7 @@ document.addEventListener("visibilitychange",()=>{if(document.visibilityState===
 /* ---------- Données ---------- */
 function storageOK(){try{const k="__jsp_test";localStorage.setItem(k,"1");const ok=localStorage.getItem(k)==="1";localStorage.removeItem(k);return ok}catch{return false}}
 function warnStorage(){if(storageOK())return;const w=document.createElement("div");w.className="storewarn";w.setAttribute("role","alert");
-  w.innerHTML="<b>Tes pronos ne peuvent pas être enregistrés sur ce navigateur.</b> Le navigateur bloque les données de ce site (navigation privée ou cookies bloqués). Sur ordinateur : clique sur l'icône barrée dans la barre d'adresse et autorise ce site. Sur iPhone : ouvre un onglet Safari normal et désactive Réglages → Safari → « Bloquer tous les cookies ».";
+  w.innerHTML="<b>Tes prédictions ne peuvent pas être enregistrées sur ce navigateur.</b> Le navigateur bloque les données de ce site (navigation privée ou cookies bloqués). Sur ordinateur : clique sur l'icône barrée dans la barre d'adresse et autorise ce site. Sur iPhone : ouvre un onglet Safari normal et désactive Réglages → Safari → « Bloquer tous les cookies ».";
   const f=document.querySelector("header.brand");f.parentNode.insertBefore(w,f.nextSibling)}
 function localStore(){const KEY="pronos-tennis-v1";try{pronos=JSON.parse(localStorage.getItem(KEY)||"[]")}catch{pronos=[]}
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(pronos))}catch{}};renderAll();
@@ -924,7 +924,7 @@ async function init(){
     const load=async()=>{try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});const S=await r.json();
       matchs=S.matchs||[];tournois=S.tournois||[];meta=S.meta||null;classements=S.classements||{};
       if(S.fond){$("photoBg").style.backgroundImage=`url("${S.fond}")`;$("photoBg").hidden=false}
-      renderAll();$("storeNote").textContent="Tes pronos sont gardés dans ce navigateur.";}
+      renderAll();$("storeNote").textContent="Tes prédictions sont gardées dans ce navigateur.";}
       catch{$("storeNote").textContent="Impossible de charger les matchs. Vérifie ta connexion."}};
     warnStorage();await load();await importFromHash();setInterval(load,10*60*1000);return}
   const col=db.collection("pronos");
