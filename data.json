@@ -101,7 +101,7 @@
    "id": "2026-10-23-almaty-medvedev-atmane",
    "categorie": "ATP 250",
    "claude": {
-    "analyse": "Tenant du titre, tête de série n°1, il a écrasé Shimabukuro (6-2, 6-1). Atmane sort de trois tie-breaks, la fraîcheur sera de son côté à Medvedev.",
+    "analyse": "Tenant du titre, tête de série n°1, il a écrasé Shimabukuro (6-2, 6-1). Atmane sort de trois tie-breaks : la fraîcheur penche du côté de Medvedev.",
     "choix": 1,
     "confiance": 3,
     "proba": [
@@ -118,11 +118,48 @@
    "j2Pays": "FRA",
    "j2Tds": "",
    "live": {
-    "srId": "sr:sport_event:75620048"
+    "srId": "sr:sport_event:75620048",
+    "maj": "2026-10-23T11:40:00+02:00",
+    "sets": [
+     [
+      0,
+      0
+     ]
+    ],
+    "jeu": "15-30",
+    "service": 2,
+    "stats": {
+     "j1": {
+      "aces": 0,
+      "df": 0,
+      "s1in": 0,
+      "s1won": 0,
+      "s2won": 0,
+      "svpts": 0,
+      "bpWon": 0,
+      "bpTot": 0,
+      "svGames": 0,
+      "pts": 1,
+      "maxPts": 1
+     },
+     "j2": {
+      "aces": 0,
+      "df": 0,
+      "s1in": 1,
+      "s1won": 1,
+      "s2won": 1,
+      "svpts": 3,
+      "bpWon": 0,
+      "bpTot": 0,
+      "svGames": 0,
+      "pts": 2,
+      "maxPts": 2
+     }
+    }
    },
    "ordre": 3,
-   "score": "",
-   "statut": "a_venir",
+   "score": "0-0",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Almaty",
@@ -1780,7 +1817,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T11:31:00+02:00",
+  "misAJour": "2026-10-23T11:40:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
