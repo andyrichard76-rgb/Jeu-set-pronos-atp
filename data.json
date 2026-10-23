@@ -1,1 +1,3538 @@
-{"matchs": [{"id": "2026-10-23-almaty-basilashvili-mannarino", "categorie": "ATP 250", "claude": {"analyse": "Mannarino vient d'éliminer Rublev et se plaît à Almaty. Basilashvili, qualifié, frappe très fort et n'a pas perdu de set depuis le tableau final : match ouvert.", "choix": 2, "confiance": 1}, "date": "2026-10-23", "heure": "08:30", "j1": "Nikoloz Basilashvili", "j1Pays": "GEO", "j1Tds": "Q", "j2": "Adrian Mannarino", "j2Pays": "FRA", "j2Tds": "", "live": {"fini": true, "maj": "2026-10-23T10:21:00+02:00", "sets": [[6, 3], [6, 1]], "srId": "sr:sport_event:75620036", "stats": {"j1": {"aces": 11, "bpTot": 8, "bpWon": 4, "df": 2, "maxPts": 7, "pts": 60, "s1in": 34, "s1won": 27, "s2won": 11, "svGames": 8, "svpts": 56}, "j2": {"aces": 6, "bpTot": 3, "bpWon": 0, "df": 1, "maxPts": 4, "pts": 45, "s1in": 30, "s1won": 18, "s2won": 9, "svGames": 4, "svpts": 49}}}, "ordre": 1, "score": "6-3 6-1", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Almaty", "tournoiId": "2026-almaty", "vainqueur": 1}, {"id": "2026-10-23-almaty-bublik-khachanov", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°3 et joueur local, Bublik arrive en quarts sans avoir joué au 2e tour (forfait de Marozsan). Khachanov, tête de série n°5, a dû batailler face à Machac (6-2, 4-6, 7-6) mais fait une meilleure saison 2026 (22e à la Race contre 24e) : match très ouvert.", "choix": 1, "confiance": 1, "proba": [52, 48]}, "date": "2026-10-23", "heure": "16:30", "j1": "Alexander Bublik", "j1Pays": "KAZ", "j1Tds": "3", "j2": "Karen Khachanov", "j2Pays": "", "j2Tds": "5", "live": {"fini": true, "jeu": "40-A", "maj": "2026-10-23T19:34:16+02:00", "service": 2, "sets": [[4, 6], [7, 6], [7, 6]], "srId": "sr:sport_event:75620034", "stats": {"j1": {"aces": 6, "bpTot": 3, "bpWon": 0, "df": 2, "maxPts": 5, "pts": 33, "s1in": 29, "s1won": 22, "s2won": 1, "svGames": 5, "svpts": 34}, "j2": {"aces": 2, "bpTot": 5, "bpWon": 1, "df": 2, "maxPts": 7, "pts": 36, "s1in": 26, "s1won": 22, "s2won": 3, "svGames": 5, "svpts": 35}}}, "ordre": 4, "score": "4-6 7-6 7-6", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Almaty", "tournoiId": "2026-almaty", "vainqueur": 1}, {"id": "2026-10-23-almaty-medvedev-atmane", "categorie": "ATP 250", "claude": {"analyse": "Tenant du titre, tête de série n°1, il a écrasé Shimabukuro (6-2, 6-1). Atmane sort de trois tie-breaks : la fraîcheur penche du côté de Medvedev.", "choix": 1, "confiance": 3, "proba": [81, 19]}, "date": "2026-10-23", "heure": "11:30", "j1": "Daniil Medvedev", "j1Pays": "", "j1Tds": "1", "j2": "Terence Atmane", "j2Pays": "FRA", "j2Tds": "", "live": {"fini": true, "maj": "2026-10-23T14:14:52+02:00", "sets": [[6, 4], [6, 4]], "srId": "sr:sport_event:75620048", "stats": {"j1": {"aces": 5, "bpTot": 8, "bpWon": 2, "df": 3, "maxPts": 6, "pts": 68, "s1in": 34, "s1won": 31, "s2won": 10, "svGames": 10, "svpts": 50}, "j2": {"aces": 4, "bpTot": 0, "bpWon": 0, "df": 1, "maxPts": 4, "pts": 49, "s1in": 48, "s1won": 31, "s2won": 9, "svGames": 8, "svpts": 67}}}, "ordre": 3, "score": "6-4 6-4", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Almaty", "tournoiId": "2026-almaty", "vainqueur": 1}, {"id": "2026-10-23-almaty-tsitsipas-duckworth", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°7, expéditif contre Kukushkin (6-1, 6-2). Duckworth a sorti Darderi (tête de série n°2) et sert bien en indoor, il faut s'en méfier.", "choix": 1, "confiance": 2, "proba": [58, 42]}, "date": "2026-10-23", "heure": "10:00", "j1": "Stefanos Tsitsipas", "j1Pays": "GRE", "j1Tds": "7", "j2": "James Duckworth", "j2Pays": "AUS", "j2Tds": "", "live": {"fini": true, "maj": "2026-10-23T11:21:00+02:00", "sets": [[6, 3], [6, 4]], "srId": "sr:sport_event:75620038", "stats": {"j1": {"aces": 15, "bpTot": 8, "bpWon": 2, "df": 0, "maxPts": 7, "pts": 71, "s1in": 37, "s1won": 34, "s2won": 6, "svGames": 10, "svpts": 46}, "j2": {"aces": 5, "bpTot": 0, "bpWon": 0, "df": 1, "maxPts": 6, "pts": 49, "s1in": 42, "s1won": 27, "s2won": 16, "svGames": 7, "svpts": 74}}}, "ordre": 2, "score": "6-3 6-4", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Almaty", "tournoiId": "2026-almaty", "vainqueur": 1}, {"id": "2026-10-23-bruxelles-bergs-struff", "categorie": "ATP 250", "claude": {"analyse": "Bergs joue devant son public et a dominé Dzumhur (6-2, 6-4). Struff a l'expérience et un gros service : prono fragile.", "choix": 1, "confiance": 1, "proba": [56, 44]}, "date": "2026-10-23", "heure": "20:50", "j1": "Zizou Bergs", "j1Pays": "BEL", "j1Tds": "6", "j2": "Jan-Lennard Struff", "j2Pays": "GER", "j2Tds": "", "live": {"fini": true, "maj": "2026-10-23T23:16:00+02:00", "sets": [[3, 6], [6, 7]]}, "ordre": 4, "score": "3-6 6-7", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Bruxelles", "tournoiId": "2026-bruxelles", "vainqueur": 2}, {"id": "2026-10-23-bruxelles-chidekh-cerundolo", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°3, solide contre Damm (6-4, 7-6). Chidekh, sorti des qualifs, gagne tout en deux sets cette semaine, mais l'écart de niveau reste net.", "choix": 2, "confiance": 2, "proba": [24, 76]}, "date": "2026-10-23", "heure": "14:00", "j1": "Clément Chidekh", "j1Pays": "FRA", "j1Tds": "Q", "j2": "Francisco Cerundolo", "j2Pays": "ARG", "j2Tds": "3", "live": {"fini": true, "jeu": "0-15", "maj": "2026-10-23T15:52:00+02:00", "service": 2, "sets": [[2, 6], [4, 6]], "srId": "sr:sport_event:75621158", "stats": {"j1": {"aces": 0, "bpTot": 0, "bpWon": 0, "df": 0, "maxPts": 4, "pts": 45, "s1in": 44, "s1won": 26, "s2won": 6, "svGames": 6, "svpts": 59}, "j2": {"aces": 8, "bpTot": 8, "bpWon": 3, "df": 2, "maxPts": 8, "pts": 64, "s1in": 30, "s1won": 28, "s2won": 9, "svGames": 9, "svpts": 50}}}, "ordre": 1, "score": "2-6 4-6", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Bruxelles", "tournoiId": "2026-bruxelles", "vainqueur": 2}, {"id": "2026-10-23-bruxelles-fils-michelsen", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°1 et plus de puissance du fond. Petit doute : il passe par forfait (Munar) donc peu de rythme, alors que Michelsen vient de battre Goffin en deux sets.", "choix": 1, "confiance": 2, "proba": [64, 36]}, "date": "2026-10-23", "heure": "18:30", "j1": "Arthur Fils", "j1Pays": "FRA", "j1Tds": "1", "j2": "Alex Michelsen", "j2Pays": "USA", "j2Tds": "5", "live": {"fini": true, "maj": "2026-10-23T20:39:50+02:00", "sets": [[6, 4], [7, 6]]}, "ordre": 3, "score": "6-4 7-6", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Bruxelles", "tournoiId": "2026-bruxelles", "vainqueur": 1}, {"id": "2026-10-23-bruxelles-lehecka-griekspoor", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°2, propre contre Collignon (6-4, 6-2). Griekspoor est dangereux au service en indoor, match serré possible.", "choix": 1, "confiance": 2, "proba": [68, 32]}, "date": "2026-10-23", "heure": "16:00", "j1": "Jiri Lehecka", "j1Pays": "CZE", "j1Tds": "2", "j2": "Tallon Griekspoor", "j2Pays": "NED", "j2Tds": "", "live": {"fini": true, "jeu": "40-30", "maj": "2026-10-23T19:01:31+02:00", "service": 1, "sets": [[6, 4], [4, 6], [3, 6]], "srId": "sr:sport_event:75621144", "stats": {"j1": {"aces": 8, "bpTot": 3, "bpWon": 2, "df": 0, "maxPts": 8, "pts": 51, "s1in": 33, "s1won": 26, "s2won": 8, "svGames": 7, "svpts": 49}, "j2": {"aces": 4, "bpTot": 1, "bpWon": 1, "df": 2, "maxPts": 4, "pts": 46, "s1in": 31, "s1won": 23, "s2won": 8, "svGames": 7, "svpts": 48}}}, "ordre": 2, "score": "6-4 4-6 3-6", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Bruxelles", "tournoiId": "2026-bruxelles", "vainqueur": 2}, {"id": "2026-10-23-lyon-cobolli-nakashima", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°1, expéditif contre Wawrinka (6-2, 6-4) et en course pour Turin. Nakashima sert bien en indoor, ça peut se jouer aux tie-breaks.", "choix": 1, "confiance": 2, "proba": [58, 42]}, "date": "2026-10-23", "heure": "19:00", "j1": "Flavio Cobolli", "j1Pays": "ITA", "j1Tds": "1", "j2": "Brandon Nakashima", "j2Pays": "USA", "j2Tds": "5", "live": {"fini": true, "maj": "2026-10-23T22:15:00+02:00", "service": 2, "sets": [[4, 6], [6, 4], [6, 4]]}, "ordre": 3, "score": "4-6 6-4 6-4", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Lyon", "tournoiId": "2026-lyon", "vainqueur": 1}, {"id": "2026-10-23-lyon-fritz-altmaier", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°2, solide face à Herbert (6-2, 7-5). Son service et son jeu à plat sont taillés pour l'indoor rapide, Altmaier est plus à l'aise sur terre.", "choix": 1, "confiance": 3, "proba": [72, 28]}, "date": "2026-10-23", "heure": "17:15", "j1": "Taylor Fritz", "j1Pays": "USA", "j1Tds": "2", "j2": "Daniel Altmaier", "j2Pays": "GER", "j2Tds": "", "live": {"fini": true, "maj": "2026-10-23T19:01:31+02:00", "sets": [[7, 6], [6, 2]]}, "ordre": 2, "score": "7-6 6-2", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Lyon", "tournoiId": "2026-lyon", "vainqueur": 1}, {"id": "2026-10-23-lyon-moutet-paul", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°4, il a dû batailler contre Bonzi (4-6, 7-6, 6-3). Moutet est en confiance après avoir sorti Humbert et jouera avec le public, mais Paul a plus de régularité.", "choix": 2, "confiance": 2, "proba": [27, 73]}, "date": "2026-10-23", "diffuseur": "beIN SPORTS 1 · Tennis TV", "heure": "14:00", "j1": "Corentin Moutet", "j1Pays": "FRA", "j1Tds": "", "j2": "Tommy Paul", "j2Pays": "USA", "j2Tds": "4", "live": {"fini": true, "maj": "2026-10-23T17:09:39+02:00", "sets": [[4, 6], [6, 3], [3, 6]], "srId": "sr:sport_event:75620254", "stats": {"j1": {"aces": 2, "bpTot": 12, "bpWon": 3, "df": 0, "maxPts": 6, "pts": 84, "s1in": 59, "s1won": 38, "s2won": 5, "svGames": 8, "svpts": 74}, "j2": {"aces": 3, "bpTot": 7, "bpWon": 3, "df": 2, "maxPts": 6, "pts": 83, "s1in": 57, "s1won": 35, "s2won": 17, "svGames": 8, "svpts": 93}}}, "ordre": 1, "score": "4-6 6-3 3-6", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Lyon", "tournoiId": "2026-lyon", "vainqueur": 2}, {"id": "2026-10-23-lyon-musetti-vanassche", "categorie": "ATP 250", "claude": {"analyse": "Écart de classement en faveur de Musetti (tête de série n°6), mais sa saison 2026 est en retrait (35e à la Race contre 26e à l'ATP). Van Assche joue à domicile et sort d'un match en trois sets contre Vacherot : il peut accrocher un set.", "choix": 1, "confiance": 2, "proba": [57, 43]}, "date": "2026-10-23", "diffuseur": "beIN SPORTS MAX 9 · Tennis TV", "heure": "21:00", "j1": "Lorenzo Musetti", "j1Pays": "ITA", "j1Tds": "6", "j2": "Luca Van Assche", "j2Pays": "FRA", "j2Tds": "", "ordre": 4, "score": "7-6 6-7 6-4", "statut": "termine", "surface": "indoor", "tour": "Quart de finale", "tournoi": "Lyon", "tournoiId": "2026-lyon", "vainqueur": 1, "live": {"sets": [[7, 6], [6, 7], [6, 4]], "maj": "2026-10-24T01:10:13+02:00", "service": 1, "fini": true}}, {"id": "2026-10-24-almaty-basilashvili-tsitsipas", "categorie": "ATP 250", "claude": {"analyse": "Tsitsipas, mieux placé à la Race (30e) qu'à l'ATP (39e), monte en puissance après un premier tour en trois sets face à Kovacevic. Basilashvili, issu des qualifications et hors du top 100, est en grande forme : Cilic, Diaz Acosta et Mannarino battus sans perdre un set.", "choix": 2, "confiance": 1, "proba": [38, 62]}, "date": "2026-10-24", "heure": "12:00", "j1": "Nikoloz Basilashvili", "j1Pays": "GEO", "j1Tds": "Q", "j2": "Stefanos Tsitsipas", "j2Pays": "GRE", "j2Tds": "7", "ordre": 1, "score": "", "statut": "a_venir", "surface": "indoor", "tour": "Demi-finale", "tournoi": "Almaty", "tournoiId": "2026-almaty", "vainqueur": null}, {"id": "2026-10-24-almaty-medvedev-bublik", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°1 et 6e à la Race, Medvedev n'a cédé aucun set (Shimabukuro, Atmane). Bublik joue à domicile mais sort d'un combat en trois sets face à Khachanov et fait une saison en retrait (25e à la Race contre 19e à l'ATP).", "choix": 1, "confiance": 2, "proba": [64, 36]}, "date": "2026-10-24", "heure": "15:00", "j1": "Daniil Medvedev", "j1Pays": "", "j1Tds": "1", "j2": "Alexander Bublik", "j2Pays": "KAZ", "j2Tds": "3", "ordre": 2, "score": "", "statut": "a_venir", "surface": "indoor", "tour": "Demi-finale", "tournoi": "Almaty", "tournoiId": "2026-almaty", "vainqueur": null}, {"id": "2026-10-24-bruxelles-cerundolo-griekspoor", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°3, Cerundolo n'a pas lâché un set (Damm, Chidekh). Griekspoor, 60e à l'ATP comme à la Race, a sorti Lehecka mais enchaîne trois matchs accrochés, dont deux en trois sets : avantage Cerundolo.", "choix": 1, "confiance": 2, "proba": [65, 35]}, "date": "2026-10-24", "heure": "16:00", "j1": "Francisco Cerundolo", "j1Pays": "ARG", "j1Tds": "3", "j2": "Tallon Griekspoor", "j2Pays": "NED", "j2Tds": "", "ordre": 1, "score": "", "statut": "a_venir", "surface": "indoor", "tour": "Demi-finale", "tournoi": "Bruxelles", "tournoiId": "2026-bruxelles", "vainqueur": null}, {"id": "2026-10-24-bruxelles-fils-struff", "categorie": "ATP 250", "claude": {"analyse": "Tête de série n°1, 10e à l'ATP et 8e à la Race, Fils a dû sauver deux balles de set dans le tie-break face à Michelsen après un forfait au tour précédent. Struff (58e, 36 ans) n'a pas perdu un set cette semaine (Giron, Onclin, Bergs) et dispute sa première demi-finale sur dur depuis 2023 ; Fils mène 1-0 dans les face-à-face (Paris 2024).", "choix": 1, "confiance": 2, "proba": [70, 30]}, "date": "2026-10-24", "heure": "18:30", "j1": "Arthur Fils", "j1Pays": "FRA", "j1Tds": "1", "j2": "Jan-Lennard Struff", "j2Pays": "GER", "j2Tds": "", "ordre": 2, "score": "", "statut": "a_venir", "surface": "indoor", "tour": "Demi-finale", "tournoi": "Bruxelles", "tournoiId": "2026-bruxelles", "vainqueur": null}, {"id": "2026-10-24-lyon-paul-fritz", "categorie": "ATP 250", "claude": {"analyse": "Duel américain très équilibré au classement (Fritz 14e ATP, Paul 12e à la Race). Fritz n'a perdu aucun set cette semaine (Herbert, Altmaier) alors que Paul a dû passer par trois sets face à Bonzi puis Moutet : léger avantage Fritz.", "choix": 2, "confiance": 1, "proba": [45, 55]}, "date": "2026-10-24", "heure": "14:00", "j1": "Tommy Paul", "j1Pays": "USA", "j1Tds": "4", "j2": "Taylor Fritz", "j2Pays": "USA", "j2Tds": "2", "ordre": 1, "score": "", "statut": "a_venir", "surface": "indoor", "tour": "Demi-finale", "tournoi": "Lyon", "tournoiId": "2026-lyon", "vainqueur": null}, {"id": "2026-10-24-lyon-cobolli-musetti", "categorie": "ATP 250", "claude": {"analyse": "Derby italien : Cobolli, tête de série n°1, est 5e à la Race et lancé vers Turin, alors que Musetti (34e à la Race) vit une saison en retrait. Musetti a fini son quart contre Van Assche vers 1h15 après 3h33 de jeu (7-6, 6-7, 6-4) et dispose de très peu de récupération.", "choix": 1, "confiance": 2, "proba": [72, 28]}, "date": "2026-10-24", "heure": "", "j1": "Flavio Cobolli", "j1Pays": "ITA", "j1Tds": "1", "j2": "Lorenzo Musetti", "j2Pays": "ITA", "j2Tds": "6", "ordre": 2, "score": "", "statut": "a_venir", "surface": "indoor", "tour": "Demi-finale", "tournoi": "Lyon", "tournoiId": "2026-lyon", "vainqueur": null}], "tournois": [{"id": "2026-almaty", "categorie": "ATP 250", "debut": "2026-10-19", "diffuseur": "Eurosport 360 · Tennis TV", "fin": "2026-10-25", "niveau": 250, "nom": "Almaty", "nomComplet": "Almaty Open", "pays": "Kazakhstan", "surface": "indoor", "tableau": {"matchs": [[{"j1": {"nom": "D. Medvedev", "pays": "", "tds": "1"}, "j2": {"bye": true}, "score": "", "vainqueur": 1}, {"j1": {"nom": "S. Shimabukuro", "pays": "JPN", "tds": ""}, "j2": {"nom": "R. Safiullin", "pays": "", "tds": "Q"}, "score": "6-7 6-4 6-4", "vainqueur": 1}, {"j1": {"nom": "T. Atmane", "pays": "FRA", "tds": ""}, "j2": {"nom": "R. Hijikata", "pays": "AUS", "tds": ""}, "score": "7-6 6-2", "vainqueur": 1}, {"j1": {"nom": "M. Bellucci", "pays": "ITA", "tds": ""}, "j2": {"nom": "T. Etcheverry", "pays": "ARG", "tds": "6"}, "score": "7-6 2-6 6-4", "vainqueur": 1}, {"j1": {"nom": "A. Bublik", "pays": "KAZ", "tds": "3"}, "j2": {"bye": true}, "score": "", "vainqueur": 1}, {"j1": {"nom": "F. Marozsan", "pays": "HUN", "tds": ""}, "j2": {"nom": "T. Skatov", "pays": "KAZ", "tds": "WC"}, "score": "7-5 7-6", "vainqueur": 1}, {"j1": {"nom": "Z. Nurlanuly", "pays": "KAZ", "tds": "WC"}, "j2": {"nom": "T. Machac", "pays": "CZE", "tds": ""}, "score": "2-6 0-6", "vainqueur": 2}, {"j1": {"nom": "R. Sakamoto", "pays": "JPN", "tds": "Q"}, "j2": {"nom": "K. Khachanov", "pays": "", "tds": "5"}, "score": "2-6 4-6", "vainqueur": 2}, {"j1": {"nom": "T. Tirante", "pays": "ARG", "tds": "8"}, "j2": {"nom": "F. Diaz Acosta", "pays": "ARG", "tds": ""}, "score": "7-6 1-6 4-6", "vainqueur": 2}, {"j1": {"nom": "M. Cilic", "pays": "CRO", "tds": ""}, "j2": {"nom": "N. Basilashvili", "pays": "GEO", "tds": "Q"}, "score": "2-6 5-7", "vainqueur": 2}, {"j1": {"nom": "A. Mannarino", "pays": "FRA", "tds": ""}, "j2": {"nom": "A. Vukic", "pays": "AUS", "tds": ""}, "score": "7-6 4-6 6-3", "vainqueur": 1}, {"j1": {"nom": "A. Rublev", "pays": "", "tds": "4"}, "j2": {"bye": true}, "score": "", "vainqueur": 1}, {"j1": {"nom": "S. Tsitsipas", "pays": "GRE", "tds": "7"}, "j2": {"nom": "A. Kovacevic", "pays": "USA", "tds": ""}, "score": "7-6 3-6 6-3", "vainqueur": 1}, {"j1": {"nom": "M. Kukushkin", "pays": "KAZ", "tds": "WC"}, "j2": {"nom": "S. Sakellaridis", "pays": "GRE", "tds": "Q"}, "score": "7-6 7-6", "vainqueur": 1}, {"j1": {"nom": "M. Kecmanovic", "pays": "SRB", "tds": ""}, "j2": {"nom": "J. Duckworth", "pays": "AUS", "tds": ""}, "score": "4-6 3-6", "vainqueur": 2}, {"j1": {"bye": true}, "j2": {"nom": "L. Darderi", "pays": "ITA", "tds": "2"}, "score": "", "vainqueur": 2}], [{"j1": {"nom": "D. Medvedev", "pays": "", "tds": "1"}, "j2": {"nom": "S. Shimabukuro", "pays": "JPN", "tds": ""}, "score": "6-2 6-1", "vainqueur": 1}, {"j1": {"nom": "T. Atmane", "pays": "FRA", "tds": ""}, "j2": {"nom": "M. Bellucci", "pays": "ITA", "tds": ""}, "score": "6-7 7-6 7-6", "vainqueur": 1}, {"j1": {"nom": "A. Bublik", "pays": "KAZ", "tds": "3"}, "j2": {"nom": "F. Marozsan", "pays": "HUN", "tds": ""}, "score": "forfait", "vainqueur": 1}, {"j1": {"nom": "T. Machac", "pays": "CZE", "tds": ""}, "j2": {"nom": "K. Khachanov", "pays": "", "tds": "5"}, "score": "2-6 6-4 6-7", "vainqueur": 2}, {"j1": {"nom": "F. Diaz Acosta", "pays": "ARG", "tds": ""}, "j2": {"nom": "N. Basilashvili", "pays": "GEO", "tds": "Q"}, "score": "2-6 4-6", "vainqueur": 2}, {"j1": {"nom": "A. Mannarino", "pays": "FRA", "tds": ""}, "j2": {"nom": "A. Rublev", "pays": "", "tds": "4"}, "score": "6-4 3-6 6-3", "vainqueur": 1}, {"j1": {"nom": "S. Tsitsipas", "pays": "GRE", "tds": "7"}, "j2": {"nom": "M. Kukushkin", "pays": "KAZ", "tds": "WC"}, "score": "6-1 6-2", "vainqueur": 1}, {"j1": {"nom": "J. Duckworth", "pays": "AUS", "tds": ""}, "j2": {"nom": "L. Darderi", "pays": "ITA", "tds": "2"}, "score": "7-5 7-6", "vainqueur": 1}], [{"j1": {"nom": "D. Medvedev", "pays": "", "tds": "1"}, "j2": {"nom": "T. Atmane", "pays": "FRA", "tds": ""}, "score": "6-4 6-4", "vainqueur": 1}, {"j1": {"nom": "A. Bublik", "pays": "KAZ", "tds": "3"}, "j2": {"nom": "K. Khachanov", "pays": "", "tds": "5"}, "score": "4-6 7-6 7-6", "vainqueur": 1}, {"j1": {"nom": "N. Basilashvili", "pays": "GEO", "tds": "Q"}, "j2": {"nom": "A. Mannarino", "pays": "FRA", "tds": ""}, "score": "6-3 6-1", "vainqueur": 1}, {"j1": {"nom": "S. Tsitsipas", "pays": "GRE", "tds": "7"}, "j2": {"nom": "J. Duckworth", "pays": "AUS", "tds": ""}, "score": "6-3 6-4", "vainqueur": 1}], [{"j1": {"nom": "D. Medvedev", "pays": "", "tds": "1"}, "j2": {"nom": "A. Bublik", "pays": "KAZ", "tds": "3"}, "score": "", "vainqueur": null}, {"j1": {"nom": "N. Basilashvili", "pays": "GEO", "tds": "Q"}, "j2": {"nom": "S. Tsitsipas", "pays": "GRE", "tds": "7"}, "score": "", "vainqueur": null}], [{"j1": null, "j2": null, "score": "", "vainqueur": null}]], "tours": ["1er tour", "8e de finale", "Quart de finale", "Demi-finale", "Finale"]}}, {"id": "2026-bale", "categorie": "ATP 500", "debut": "2026-10-26", "fin": "2026-11-01", "niveau": 500, "nom": "Bâle", "nomComplet": "Swiss Indoors Basel", "pays": "Suisse", "surface": "indoor"}, {"id": "2026-bruxelles", "categorie": "ATP 250", "debut": "2026-10-19", "diffuseur": "Eurosport 360 · Tennis TV", "fin": "2026-10-25", "niveau": 250, "nom": "Bruxelles", "nomComplet": "European Open", "pays": "Belgique", "surface": "indoor", "tableau": {"matchs": [[{"j1": {"nom": "A. Fils", "pays": "FRA", "tds": "1"}, "j2": {"bye": true}, "score": "", "vainqueur": 1}, {"j1": {"nom": "F. Cina", "pays": "ITA", "tds": "Q"}, "j2": {"nom": "J. Munar", "pays": "ESP", "tds": ""}, "score": "4-6 3-6", "vainqueur": 2}, {"j1": {"nom": "D. Goffin", "pays": "BEL", "tds": "WC"}, "j2": {"nom": "R. Bertola", "pays": "SUI", "tds": "LL"}, "score": "3-6 6-3 6-4", "vainqueur": 1}, {"j1": {"nom": "A. Guerrieri", "pays": "ITA", "tds": "Q"}, "j2": {"nom": "A. Michelsen", "pays": "USA", "tds": "5"}, "score": "1-6 2-6", "vainqueur": 2}, {"j1": {"nom": "G. Onclin", "pays": "BEL", "tds": "LL"}, "j2": {"bye": true}, "score": "", "vainqueur": 1}, {"j1": {"nom": "J. Struff", "pays": "GER", "tds": ""}, "j2": {"nom": "M. Giron", "pays": "USA", "tds": ""}, "score": "7-6 7-6", "vainqueur": 1}, {"j1": {"nom": "D. Prizmic", "pays": "CRO", "tds": ""}, "j2": {"nom": "D. Dzumhur", "pays": "BIH", "tds": ""}, "score": "6-7 6-2 2-6", "vainqueur": 2}, {"j1": {"nom": "T. Samuel", "pays": "GBR", "tds": ""}, "j2": {"nom": "Z. Bergs", "pays": "BEL", "tds": "6"}, "score": "3-6 6-7", "vainqueur": 2}, {"j1": {"nom": "B. van de Zandschulp", "pays": "NED", "tds": "7"}, "j2": {"nom": "C. Chidekh", "pays": "FRA", "tds": "Q"}, "score": "1-6 4-6", "vainqueur": 2}, {"j1": {"nom": "J. Fearnley", "pays": "GBR", "tds": ""}, "j2": {"nom": "H. Gaston", "pays": "FRA", "tds": ""}, "score": "6-3 6-0", "vainqueur": 1}, {"j1": {"nom": "Y. Hanfmann", "pays": "GER", "tds": ""}, "j2": {"nom": "M. Damm", "pays": "USA", "tds": "LL"}, "score": "5-7 3-6", "vainqueur": 2}, {"j1": {"bye": true}, "j2": {"nom": "F. Cerundolo", "pays": "ARG", "tds": "3"}, "score": "", "vainqueur": 2}, {"j1": {"nom": "M. Navone", "pays": "ARG", "tds": "8"}, "j2": {"nom": "J. Cerundolo", "pays": "ARG", "tds": ""}, "score": "7-6 6-2", "vainqueur": 1}, {"j1": {"nom": "T. Griekspoor", "pays": "NED", "tds": ""}, "j2": {"nom": "M. Schoenhaus", "pays": "GER", "tds": "WC"}, "score": "7-6 6-7 7-5", "vainqueur": 1}, {"j1": {"nom": "N. Basavareddy", "pays": "USA", "tds": "Q"}, "j2": {"nom": "R. Collignon", "pays": "BEL", "tds": ""}, "score": "6-3 3-6 4-6", "vainqueur": 2}, {"j1": {"bye": true}, "j2": {"nom": "J. Lehecka", "pays": "CZE", "tds": "2"}, "score": "", "vainqueur": 2}], [{"j1": {"nom": "A. Fils", "pays": "FRA", "tds": "1"}, "j2": {"nom": "J. Munar", "pays": "ESP", "tds": ""}, "score": "forfait", "vainqueur": 1}, {"j1": {"nom": "D. Goffin", "pays": "BEL", "tds": "WC"}, "j2": {"nom": "A. Michelsen", "pays": "USA", "tds": "5"}, "score": "3-6 4-6", "vainqueur": 2}, {"j1": {"nom": "G. Onclin", "pays": "BEL", "tds": "LL"}, "j2": {"nom": "J. Struff", "pays": "GER", "tds": ""}, "score": "4-6 2-6", "vainqueur": 2}, {"j1": {"nom": "D. Dzumhur", "pays": "BIH", "tds": ""}, "j2": {"nom": "Z. Bergs", "pays": "BEL", "tds": "6"}, "score": "2-6 4-6", "vainqueur": 2}, {"j1": {"nom": "C. Chidekh", "pays": "FRA", "tds": "Q"}, "j2": {"nom": "J. Fearnley", "pays": "GBR", "tds": ""}, "score": "7-6 6-2", "vainqueur": 1}, {"j1": {"nom": "M. Damm", "pays": "USA", "tds": "LL"}, "j2": {"nom": "F. Cerundolo", "pays": "ARG", "tds": "3"}, "score": "4-6 6-7", "vainqueur": 2}, {"j1": {"nom": "M. Navone", "pays": "ARG", "tds": "8"}, "j2": {"nom": "T. Griekspoor", "pays": "NED", "tds": ""}, "score": "6-7 5-7", "vainqueur": 2}, {"j1": {"nom": "R. Collignon", "pays": "BEL", "tds": ""}, "j2": {"nom": "J. Lehecka", "pays": "CZE", "tds": "2"}, "score": "4-6 2-6", "vainqueur": 2}], [{"j1": {"nom": "A. Fils", "pays": "FRA", "tds": "1"}, "j2": {"nom": "A. Michelsen", "pays": "USA", "tds": "5"}, "score": "6-4 7-6", "vainqueur": 1}, {"j1": {"nom": "J. Struff", "pays": "GER", "tds": ""}, "j2": {"nom": "Z. Bergs", "pays": "BEL", "tds": "6"}, "score": "6-3 7-6", "vainqueur": 1}, {"j1": {"nom": "C. Chidekh", "pays": "FRA", "tds": "Q"}, "j2": {"nom": "F. Cerundolo", "pays": "ARG", "tds": "3"}, "score": "2-6 4-6", "vainqueur": 2}, {"j1": {"nom": "T. Griekspoor", "pays": "NED", "tds": ""}, "j2": {"nom": "J. Lehecka", "pays": "CZE", "tds": "2"}, "score": "4-6 6-4 6-3", "vainqueur": 1}], [{"j1": {"nom": "A. Fils", "pays": "FRA", "tds": "1"}, "j2": {"nom": "J. Struff", "pays": "GER", "tds": ""}, "score": "", "vainqueur": null}, {"j1": {"nom": "F. Cerundolo", "pays": "ARG", "tds": "3"}, "j2": {"nom": "T. Griekspoor", "pays": "NED", "tds": ""}, "score": "", "vainqueur": null}], [{"j1": null, "j2": null, "score": "", "vainqueur": null}]], "tours": ["1er tour", "8e de finale", "Quart de finale", "Demi-finale", "Finale"]}}, {"id": "2026-lyon", "categorie": "ATP 250", "debut": "2026-10-19", "diffuseur": "beIN SPORTS · Tennis TV", "fin": "2026-10-25", "niveau": 250, "nom": "Lyon", "nomComplet": "Grand Prix Auvergne-Rhône-Alpes", "pays": "France", "surface": "indoor", "tableau": {"matchs": [[{"j1": {"nom": "F. Cobolli", "pays": "ITA", "tds": "1"}, "j2": {"bye": true}, "score": "", "vainqueur": 1}, {"j1": {"nom": "S. Wawrinka", "pays": "SUI", "tds": "WC"}, "j2": {"nom": "M. Landaluce", "pays": "ESP", "tds": ""}, "score": "6-3 6-7 7-6", "vainqueur": 1}, {"j1": {"nom": "K. Jacquet", "pays": "FRA", "tds": "Q"}, "j2": {"nom": "M. Berrettini", "pays": "ITA", "tds": ""}, "score": "7-6 7-5", "vainqueur": 1}, {"j1": {"nom": "B. Nakashima", "pays": "USA", "tds": "5"}, "j2": {"nom": "H. Medjedovic", "pays": "SRB", "tds": ""}, "score": "7-6 6-7 6-2", "vainqueur": 1}, {"j1": {"nom": "V. Vacherot", "pays": "MON", "tds": "3"}, "j2": {"bye": true}, "score": "", "vainqueur": 1}, {"j1": {"nom": "L. Van Assche", "pays": "FRA", "tds": ""}, "j2": {"nom": "C. Tabur", "pays": "FRA", "tds": "Q"}, "score": "7-6 6-3", "vainqueur": 1}, {"j1": {"nom": "M. Kouame", "pays": "FRA", "tds": "WC"}, "j2": {"nom": "L. Sonego", "pays": "ITA", "tds": ""}, "score": "7-6 6-4", "vainqueur": 1}, {"j1": {"nom": "L. Musetti", "pays": "ITA", "tds": "6"}, "j2": {"nom": "M. Arnaldi", "pays": "ITA", "tds": ""}, "score": "6-1 6-4", "vainqueur": 1}, {"j1": {"nom": "C. Moutet", "pays": "FRA", "tds": ""}, "j2": {"nom": "U. Humbert", "pays": "FRA", "tds": "7"}, "score": "6-2 6-7 7-6", "vainqueur": 1}, {"j1": {"nom": "F. Balshaw", "pays": "FRA", "tds": ""}, "j2": {"nom": "J. Faria", "pays": "POR", "tds": ""}, "score": "6-2 4-6 6-3", "vainqueur": 1}, {"j1": {"nom": "B. Bonzi", "pays": "FRA", "tds": ""}, "j2": {"nom": "C. Norrie", "pays": "GBR", "tds": ""}, "score": "6-3 3-6 6-3", "vainqueur": 1}, {"j1": {"nom": "T. Paul", "pays": "USA", "tds": "4"}, "j2": {"bye": true}, "score": "", "vainqueur": 1}, {"j1": {"nom": "B. Gojo", "pays": "CRO", "tds": "Q"}, "j2": {"nom": "A. Fery", "pays": "GBR", "tds": "8"}, "score": "6-3 7-6", "vainqueur": 1}, {"j1": {"nom": "D. Altmaier", "pays": "GER", "tds": ""}, "j2": {"nom": "T. Droguet", "pays": "FRA", "tds": ""}, "score": "5-7 7-6 7-6", "vainqueur": 1}, {"j1": {"nom": "P. Herbert", "pays": "FRA", "tds": "Q"}, "j2": {"nom": "S. Baez", "pays": "ARG", "tds": ""}, "score": "6-3 6-4", "vainqueur": 1}, {"j1": {"bye": true}, "j2": {"nom": "T. Fritz", "pays": "USA", "tds": "2"}, "score": "", "vainqueur": 2}], [{"j1": {"nom": "F. Cobolli", "pays": "ITA", "tds": "1"}, "j2": {"nom": "S. Wawrinka", "pays": "SUI", "tds": "WC"}, "score": "6-2 6-4", "vainqueur": 1}, {"j1": {"nom": "K. Jacquet", "pays": "FRA", "tds": "Q"}, "j2": {"nom": "B. Nakashima", "pays": "USA", "tds": "5"}, "score": "4-6 3-6", "vainqueur": 2}, {"j1": {"nom": "V. Vacherot", "pays": "MON", "tds": "3"}, "j2": {"nom": "L. Van Assche", "pays": "FRA", "tds": ""}, "score": "6-2 4-6 4-6", "vainqueur": 2}, {"j1": {"nom": "M. Kouame", "pays": "FRA", "tds": "WC"}, "j2": {"nom": "L. Musetti", "pays": "ITA", "tds": "6"}, "score": "4-6 4-6", "vainqueur": 2}, {"j1": {"nom": "C. Moutet", "pays": "FRA", "tds": ""}, "j2": {"nom": "F. Balshaw", "pays": "FRA", "tds": ""}, "score": "6-4 6-4", "vainqueur": 1}, {"j1": {"nom": "B. Bonzi", "pays": "FRA", "tds": ""}, "j2": {"nom": "T. Paul", "pays": "USA", "tds": "4"}, "score": "6-4 6-7 3-6", "vainqueur": 2}, {"j1": {"nom": "B. Gojo", "pays": "CRO", "tds": "Q"}, "j2": {"nom": "D. Altmaier", "pays": "GER", "tds": ""}, "score": "3-6 4-6", "vainqueur": 2}, {"j1": {"nom": "P. Herbert", "pays": "FRA", "tds": "Q"}, "j2": {"nom": "T. Fritz", "pays": "USA", "tds": "2"}, "score": "2-6 5-7", "vainqueur": 2}], [{"j1": {"nom": "F. Cobolli", "pays": "ITA", "tds": "1"}, "j2": {"nom": "B. Nakashima", "pays": "USA", "tds": "5"}, "score": "4-6 6-4 6-4", "vainqueur": 1}, {"j1": {"nom": "L. Van Assche", "pays": "FRA", "tds": ""}, "j2": {"nom": "L. Musetti", "pays": "ITA", "tds": "6"}, "score": "6-7 7-6 4-6", "vainqueur": 2}, {"j1": {"nom": "C. Moutet", "pays": "FRA", "tds": ""}, "j2": {"nom": "T. Paul", "pays": "USA", "tds": "4"}, "score": "4-6 6-3 3-6", "vainqueur": 2}, {"j1": {"nom": "D. Altmaier", "pays": "GER", "tds": ""}, "j2": {"nom": "T. Fritz", "pays": "USA", "tds": "2"}, "score": "6-7 2-6", "vainqueur": 2}], [{"j1": {"nom": "F. Cobolli", "pays": "ITA", "tds": "1"}, "j2": {"nom": "L. Musetti", "pays": "ITA", "tds": "6"}, "score": "", "vainqueur": null}, {"j1": {"nom": "T. Paul", "pays": "USA", "tds": "4"}, "j2": {"nom": "T. Fritz", "pays": "USA", "tds": "2"}, "score": "", "vainqueur": null}], [{"j1": null, "j2": null, "score": "", "vainqueur": null}]], "tours": ["1er tour", "8e de finale", "Quart de finale", "Demi-finale", "Finale"]}}, {"id": "2026-paris", "categorie": "Masters 1000", "debut": "2026-11-02", "fin": "2026-11-08", "niveau": 1000, "nom": "Paris", "nomComplet": "Rolex Paris Masters", "pays": "France", "surface": "indoor"}, {"id": "2026-vienne", "categorie": "ATP 500", "debut": "2026-10-26", "fin": "2026-11-01", "niveau": 500, "nom": "Vienne", "nomComplet": "Erste Bank Open", "pays": "Autriche", "surface": "indoor"}, {"id": "historique", "note": "Archive des analyses : ne jamais supprimer ce document.", "tournois": {}}], "meta": {"misAJour": "2026-10-24T01:40:00+02:00", "source": "ATP Tour"}, "fond": "fond.jpg", "classements": {"atp": {"date": "2026-10-19", "joueurs": [{"nom": "Jannik Sinner", "pays": "ITA", "points": 10950, "rang": 1}, {"nom": "Alexander Zverev", "pays": "GER", "points": 10070, "rang": 2}, {"nom": "Carlos Alcaraz", "pays": "ESP", "points": 5610, "rang": 3}, {"nom": "Ben Shelton", "pays": "USA", "points": 4720, "rang": 4}, {"nom": "Daniil Medvedev", "pays": "", "points": 3660, "rang": 5}, {"nom": "Flavio Cobolli", "pays": "ITA", "points": 3640, "rang": 6}, {"nom": "Felix Auger-Aliassime", "pays": "CAN", "points": 3590, "rang": 7}, {"nom": "Alex de Minaur", "pays": "AUS", "points": 3430, "rang": 8}, {"nom": "Frances Tiafoe", "pays": "USA", "points": 3380, "rang": 9}, {"nom": "Arthur Fils", "pays": "FRA", "points": 3325, "rang": 10}, {"nom": "Rafael Jodar", "pays": "ESP", "points": 3234, "rang": 11}, {"nom": "Novak Djokovic", "pays": "SRB", "points": 3090, "rang": 12}, {"nom": "Alejandro Davidovich Fokina", "pays": "ESP", "points": 2880, "rang": 13}, {"nom": "Taylor Fritz", "pays": "USA", "points": 2880, "rang": 14}, {"nom": "Tommy Paul", "pays": "USA", "points": 2575, "rang": 15}, {"nom": "Jakub Mensik", "pays": "CZE", "points": 2500, "rang": 16}, {"nom": "Brandon Nakashima", "pays": "USA", "points": 2375, "rang": 17}, {"nom": "Learner Tien", "pays": "USA", "points": 2345, "rang": 18}, {"nom": "Alexander Bublik", "pays": "KAZ", "points": 2275, "rang": 19}, {"nom": "Jiri Lehecka", "pays": "CZE", "points": 2235, "rang": 20}, {"nom": "Francisco Cerundolo", "pays": "ARG", "points": 2220, "rang": 21}, {"nom": "Andrey Rublev", "pays": "", "points": 2175, "rang": 22}, {"nom": "Luciano Darderi", "pays": "ITA", "points": 2160, "rang": 23}, {"nom": "Casper Ruud", "pays": "NOR", "points": 2095, "rang": 24}, {"nom": "Karen Khachanov", "pays": "", "points": 1990, "rang": 25}, {"nom": "Lorenzo Musetti", "pays": "ITA", "points": 1870, "rang": 26}, {"nom": "Alexander Blockx", "pays": "BEL", "points": 1790, "rang": 27}, {"nom": "Joao Fonseca", "pays": "BRA", "points": 1750, "rang": 28}, {"nom": "Tomas Martin Etcheverry", "pays": "ARG", "points": 1590, "rang": 29}, {"nom": "Hubert Hurkacz", "pays": "POL", "points": 1575, "rang": 30}, {"nom": "Alejandro Tabilo", "pays": "CHI", "points": 1565, "rang": 31}, {"nom": "Valentin Vacherot", "pays": "MON", "points": 1480, "rang": 32}, {"nom": "Ignacio Buse", "pays": "PER", "points": 1445, "rang": 33}, {"nom": "Arthur Fery", "pays": "GBR", "points": 1421, "rang": 34}, {"nom": "Ugo Humbert", "pays": "FRA", "points": 1420, "rang": 35}, {"nom": "Matteo Arnaldi", "pays": "ITA", "points": 1386, "rang": 36}, {"nom": "Alex Michelsen", "pays": "USA", "points": 1370, "rang": 37}, {"nom": "Botic van de Zandschulp", "pays": "NED", "points": 1333, "rang": 38}, {"nom": "Stefanos Tsitsipas", "pays": "GRE", "points": 1330, "rang": 39}, {"nom": "Cameron Norrie", "pays": "GBR", "points": 1235, "rang": 40}, {"nom": "Zizou Bergs", "pays": "BEL", "points": 1220, "rang": 41}, {"nom": "Daniel Merida", "pays": "ESP", "points": 1195, "rang": 42}, {"nom": "Matteo Berrettini", "pays": "ITA", "points": 1173, "rang": 43}, {"nom": "Arthur Gea", "pays": "FRA", "points": 1160, "rang": 44}, {"nom": "Mariano Navone", "pays": "ARG", "points": 1151, "rang": 45}, {"nom": "Quentin Halys", "pays": "FRA", "points": 1127, "rang": 46}, {"nom": "Denis Shapovalov", "pays": "CAN", "points": 1105, "rang": 47}, {"nom": "Luca Van Assche", "pays": "FRA", "points": 1065, "rang": 48}, {"nom": "Sebastian Baez", "pays": "ARG", "points": 1044, "rang": 49}, {"nom": "Thiago Agustin Tirante", "pays": "ARG", "points": 1032, "rang": 50}, {"nom": "Jaume Munar", "pays": "ESP", "points": 1010, "rang": 51}, {"nom": "Nuno Borges", "pays": "POR", "points": 1000, "rang": 52}, {"nom": "Juan Manuel Cerundolo", "pays": "ARG", "points": 1000, "rang": 53}, {"nom": "Adolfo Daniel Vallejo", "pays": "PAR", "points": 997, "rang": 54}, {"nom": "Raphael Collignon", "pays": "BEL", "points": 978, "rang": 55}, {"nom": "Jaime Faria", "pays": "POR", "points": 941, "rang": 56}, {"nom": "Miomir Kecmanovic", "pays": "SRB", "points": 930, "rang": 57}, {"nom": "Jan-Lennard Struff", "pays": "GER", "points": 929, "rang": 58}, {"nom": "Yannick Hanfmann", "pays": "GER", "points": 923, "rang": 59}, {"nom": "Tallon Griekspoor", "pays": "NED", "points": 885, "rang": 60}, {"nom": "Arthur Rinderknech", "pays": "FRA", "points": 870, "rang": 61}, {"nom": "Roman Andres Burruchaga", "pays": "ARG", "points": 869, "rang": 62}, {"nom": "Ethan Quinn", "pays": "USA", "points": 864, "rang": 63}, {"nom": "Fabian Marozsan", "pays": "HUN", "points": 860, "rang": 64}, {"nom": "Daniel Altmaier", "pays": "GER", "points": 849, "rang": 65}, {"nom": "Vit Kopriva", "pays": "CZE", "points": 844, "rang": 66}, {"nom": "Martin Landaluce", "pays": "ESP", "points": 822, "rang": 67}, {"nom": "Mattia Bellucci", "pays": "ITA", "points": 812, "rang": 68}, {"nom": "Titouan Droguet", "pays": "FRA", "points": 801, "rang": 69}, {"nom": "Roman Safiullin", "pays": "", "points": 794, "rang": 70}, {"nom": "Facundo Diaz Acosta", "pays": "ARG", "points": 790, "rang": 71}, {"nom": "Tomas Machac", "pays": "CZE", "points": 779, "rang": 72}, {"nom": "James Duckworth", "pays": "AUS", "points": 774, "rang": 73}, {"nom": "Pablo Carreno Busta", "pays": "ESP", "points": 773, "rang": 74}, {"nom": "Camilo Ugo Carabelli", "pays": "ARG", "points": 770, "rang": 75}, {"nom": "Hamad Medjedovic", "pays": "SRB", "points": 764, "rang": 76}, {"nom": "Zachary Svajda", "pays": "USA", "points": 759, "rang": 77}, {"nom": "Kamil Majchrzak", "pays": "POL", "points": 750, "rang": 78}, {"nom": "Adrian Mannarino", "pays": "FRA", "points": 743, "rang": 79}, {"nom": "Alex Molcan", "pays": "SVK", "points": 734, "rang": 80}, {"nom": "Sebastian Korda", "pays": "USA", "points": 730, "rang": 81}, {"nom": "Aleksandar Kovacevic", "pays": "USA", "points": 715, "rang": 82}, {"nom": "Damir Dzumhur", "pays": "BIH", "points": 712, "rang": 83}, {"nom": "Marin Cilic", "pays": "CRO", "points": 704, "rang": 84}, {"nom": "Kyrian Jacquet", "pays": "FRA", "points": 703, "rang": 85}, {"nom": "Rinky Hijikata", "pays": "AUS", "points": 689, "rang": 86}, {"nom": "Jacob Fearnley", "pays": "GBR", "points": 686, "rang": 87}, {"nom": "Marcos Giron", "pays": "USA", "points": 676, "rang": 88}, {"nom": "Lorenzo Sonego", "pays": "ITA", "points": 658, "rang": 89}, {"nom": "Marco Trungelliti", "pays": "ARG", "points": 657, "rang": 90}, {"nom": "Yunchaokete Bu", "pays": "CHN", "points": 652, "rang": 91}, {"nom": "Coleman Wong", "pays": "HKG", "points": 642, "rang": 92}, {"nom": "Hugo Gaston", "pays": "FRA", "points": 641, "rang": 93}, {"nom": "Corentin Moutet", "pays": "FRA", "points": 640, "rang": 94}, {"nom": "Dino Prizmic", "pays": "CRO", "points": 638, "rang": 95}, {"nom": "Toby Samuel", "pays": "GBR", "points": 625, "rang": 96}, {"nom": "Adam Walton", "pays": "AUS", "points": 619, "rang": 97}, {"nom": "Terence Atmane", "pays": "FRA", "points": 616, "rang": 98}, {"nom": "Jenson Brooksby", "pays": "USA", "points": 613, "rang": 99}, {"nom": "Benjamin Bonzi", "pays": "FRA", "points": 605, "rang": 100}], "source": "ATP Tour", "titre": "Classement ATP"}, "race": {"titre": "ATP Race to Turin", "date": "2026-10-24", "source": "ATP Tour", "live": true, "joueurs": [{"rang": 1, "nom": "Alexander Zverev", "pays": "GER", "points": 9150}, {"rang": 2, "nom": "Jannik Sinner", "pays": "ITA", "points": 7950}, {"rang": 3, "nom": "Carlos Alcaraz", "pays": "ESP", "points": 4600}, {"rang": 4, "nom": "Ben Shelton", "pays": "USA", "points": 4480}, {"rang": 5, "nom": "Flavio Cobolli", "pays": "ITA", "points": 3590}, {"rang": 6, "nom": "Daniil Medvedev", "pays": "", "points": 3520}, {"rang": 7, "nom": "Frances Tiafoe", "pays": "USA", "points": 3380}, {"rang": 8, "nom": "Arthur Fils", "pays": "FRA", "points": 3375}, {"rang": 9, "nom": "Rafael Jodar", "pays": "ESP", "points": 3159}, {"rang": 10, "nom": "Alex de Minaur", "pays": "AUS", "points": 2880}, {"rang": 11, "nom": "Novak Djokovic", "pays": "SRB", "points": 2840}, {"rang": 12, "nom": "Tommy Paul", "pays": "USA", "points": 2635}, {"rang": 13, "nom": "Taylor Fritz", "pays": "USA", "points": 2580}, {"rang": 14, "nom": "Jakub Mensik", "pays": "CZE", "points": 2495}, {"rang": 15, "nom": "Felix Auger-Aliassime", "pays": "CAN", "points": 2465}, {"rang": 16, "nom": "Alejandro Davidovich Fokina", "pays": "ESP", "points": 2450}, {"rang": 17, "nom": "Brandon Nakashima", "pays": "USA", "points": 2375}, {"rang": 18, "nom": "Jiri Lehecka", "pays": "CZE", "points": 2275}, {"rang": 19, "nom": "Francisco Cerundolo", "pays": "ARG", "points": 2170}, {"rang": 20, "nom": "Luciano Darderi", "pays": "ITA", "points": 2150}, {"rang": 21, "nom": "Andrey Rublev", "pays": "", "points": 2075}, {"rang": 22, "nom": "Learner Tien", "pays": "USA", "points": 2045}, {"rang": 23, "nom": "Casper Ruud", "pays": "NOR", "points": 1985}, {"rang": 24, "nom": "Karen Khachanov", "pays": "", "points": 1940}, {"rang": 25, "nom": "Alexander Bublik", "pays": "KAZ", "points": 1835}, {"rang": 26, "nom": "Alexander Blockx", "pays": "BEL", "points": 1640}, {"rang": 27, "nom": "Hubert Hurkacz", "pays": "POL", "points": 1575}, {"rang": 28, "nom": "Tomas Martin Etcheverry", "pays": "ARG", "points": 1525}, {"rang": 29, "nom": "Alejandro Tabilo", "pays": "CHI", "points": 1515}, {"rang": 30, "nom": "Stefanos Tsitsipas", "pays": "GRE", "points": 1440}, {"rang": 31, "nom": "Ignacio Buse", "pays": "PER", "points": 1420}, {"rang": 32, "nom": "Arthur Fery", "pays": "GBR", "points": 1403}, {"rang": 33, "nom": "Alex Michelsen", "pays": "USA", "points": 1395}, {"rang": 34, "nom": "Lorenzo Musetti", "pays": "ITA", "points": 1345}, {"rang": 35, "nom": "Matteo Arnaldi", "pays": "ITA", "points": 1311}, {"rang": 36, "nom": "Valentin Vacherot", "pays": "MON", "points": 1280}, {"rang": 37, "nom": "Botic van de Zandschulp", "pays": "NED", "points": 1270}, {"rang": 38, "nom": "Ugo Humbert", "pays": "FRA", "points": 1270}, {"rang": 39, "nom": "Zizou Bergs", "pays": "BEL", "points": 1220}, {"rang": 40, "nom": "Joao Fonseca", "pays": "BRA", "points": 1200}, {"rang": 41, "nom": "Daniel Merida", "pays": "ESP", "points": 1187}, {"rang": 42, "nom": "Arthur Gea", "pays": "FRA", "points": 1146}, {"rang": 43, "nom": "Quentin Halys", "pays": "FRA", "points": 1114}, {"rang": 44, "nom": "Luca Van Assche", "pays": "FRA", "points": 1102}, {"rang": 45, "nom": "Mariano Navone", "pays": "ARG", "points": 1099}, {"rang": 46, "nom": "Matteo Berrettini", "pays": "ITA", "points": 1033}, {"rang": 47, "nom": "Thiago Agustin Tirante", "pays": "ARG", "points": 1016}, {"rang": 48, "nom": "Sebastian Baez", "pays": "ARG", "points": 1014}, {"rang": 49, "nom": "Denis Shapovalov", "pays": "CAN", "points": 1005}, {"rang": 50, "nom": "Jan-Lennard Struff", "pays": "GER", "points": 966}, {"rang": 51, "nom": "Nuno Borges", "pays": "POR", "points": 950}, {"rang": 52, "nom": "Juan Manuel Cerundolo", "pays": "ARG", "points": 950}, {"rang": 53, "nom": "Raphael Collignon", "pays": "BEL", "points": 943}, {"rang": 54, "nom": "Cameron Norrie", "pays": "GBR", "points": 940}, {"rang": 55, "nom": "Adolfo Daniel Vallejo", "pays": "PAR", "points": 933}, {"rang": 56, "nom": "Jaime Faria", "pays": "POR", "points": 929}, {"rang": 57, "nom": "Fabian Marozsan", "pays": "HUN", "points": 875}, {"rang": 58, "nom": "Miomir Kecmanovic", "pays": "SRB", "points": 843}, {"rang": 59, "nom": "Jaume Munar", "pays": "ESP", "points": 825}, {"rang": 60, "nom": "Tallon Griekspoor", "pays": "NED", "points": 825}, {"rang": 61, "nom": "Mattia Bellucci", "pays": "ITA", "points": 824}, {"rang": 62, "nom": "Ethan Quinn", "pays": "USA", "points": 821}, {"rang": 63, "nom": "Arthur Rinderknech", "pays": "FRA", "points": 820}, {"rang": 64, "nom": "Martin Landaluce", "pays": "ESP", "points": 816}, {"rang": 65, "nom": "Vit Kopriva", "pays": "CZE", "points": 812}, {"rang": 66, "nom": "Yannick Hanfmann", "pays": "GER", "points": 810}, {"rang": 67, "nom": "Roman Safiullin", "pays": "", "points": 807}, {"rang": 68, "nom": "Facundo Diaz Acosta", "pays": "ARG", "points": 807}, {"rang": 69, "nom": "Tomas Machac", "pays": "CZE", "points": 794}, {"rang": 70, "nom": "Adrian Mannarino", "pays": "FRA", "points": 783}, {"rang": 71, "nom": "James Duckworth", "pays": "AUS", "points": 774}, {"rang": 72, "nom": "Daniel Altmaier", "pays": "GER", "points": 774}, {"rang": 73, "nom": "Pablo Carreno Busta", "pays": "ESP", "points": 760}, {"rang": 74, "nom": "Zachary Svajda", "pays": "USA", "points": 759}, {"rang": 75, "nom": "Hamad Medjedovic", "pays": "SRB", "points": 751}, {"rang": 76, "nom": "Roman Andres Burruchaga", "pays": "ARG", "points": 742}, {"rang": 77, "nom": "Titouan Droguet", "pays": "FRA", "points": 732}, {"rang": 78, "nom": "Alex Molcan", "pays": "SVK", "points": 727}, {"rang": 79, "nom": "Camilo Ugo Carabelli", "pays": "ARG", "points": 720}, {"rang": 80, "nom": "Kamil Majchrzak", "pays": "POL", "points": 715}, {"rang": 81, "nom": "Kyrian Jacquet", "pays": "FRA", "points": 684}, {"rang": 82, "nom": "Aleksandar Kovacevic", "pays": "USA", "points": 677}, {"rang": 83, "nom": "Rinky Hijikata", "pays": "AUS", "points": 673}, {"rang": 84, "nom": "Marco Trungelliti", "pays": "ARG", "points": 670}, {"rang": 85, "nom": "Terence Atmane", "pays": "FRA", "points": 666}, {"rang": 86, "nom": "Damir Dzumhur", "pays": "BIH", "points": 661}, {"rang": 87, "nom": "Jacob Fearnley", "pays": "GBR", "points": 653}, {"rang": 88, "nom": "Dino Prizmic", "pays": "CRO", "points": 638}, {"rang": 89, "nom": "Yunchaokete Bu", "pays": "CHN", "points": 638}, {"rang": 90, "nom": "Benjamin Bonzi", "pays": "FRA", "points": 630}, {"rang": 91, "nom": "Marcos Giron", "pays": "USA", "points": 626}, {"rang": 92, "nom": "Toby Samuel", "pays": "GBR", "points": 617}, {"rang": 93, "nom": "Marin Cilic", "pays": "CRO", "points": 613}, {"rang": 94, "nom": "Adam Walton", "pays": "AUS", "points": 612}, {"rang": 95, "nom": "Coleman Wong", "pays": "HKG", "points": 597}, {"rang": 96, "nom": "Michael Zheng", "pays": "USA", "points": 594}, {"rang": 97, "nom": "Sebastian Korda", "pays": "USA", "points": 590}, {"rang": 98, "nom": "Zsombor Piros", "pays": "HUN", "points": 590}, {"rang": 99, "nom": "Jesper de Jong", "pays": "NED", "points": 575}, {"rang": 100, "nom": "Jenson Brooksby", "pays": "USA", "points": 575}]}}}
+{
+ "matchs": [
+  {
+   "id": "2026-10-23-almaty-basilashvili-mannarino",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Mannarino vient d'éliminer Rublev et se plaît à Almaty. Basilashvili, qualifié, frappe très fort et n'a pas perdu de set depuis le tableau final : match ouvert.",
+    "choix": 2,
+    "confiance": 1
+   },
+   "date": "2026-10-23",
+   "heure": "08:30",
+   "j1": "Nikoloz Basilashvili",
+   "j1Pays": "GEO",
+   "j1Tds": "Q",
+   "j2": "Adrian Mannarino",
+   "j2Pays": "FRA",
+   "j2Tds": "",
+   "live": {
+    "fini": true,
+    "maj": "2026-10-23T10:21:00+02:00",
+    "sets": [
+     [
+      6,
+      3
+     ],
+     [
+      6,
+      1
+     ]
+    ],
+    "srId": "sr:sport_event:75620036",
+    "stats": {
+     "j1": {
+      "aces": 11,
+      "bpTot": 8,
+      "bpWon": 4,
+      "df": 2,
+      "maxPts": 7,
+      "pts": 60,
+      "s1in": 34,
+      "s1won": 27,
+      "s2won": 11,
+      "svGames": 8,
+      "svpts": 56
+     },
+     "j2": {
+      "aces": 6,
+      "bpTot": 3,
+      "bpWon": 0,
+      "df": 1,
+      "maxPts": 4,
+      "pts": 45,
+      "s1in": 30,
+      "s1won": 18,
+      "s2won": 9,
+      "svGames": 4,
+      "svpts": 49
+     }
+    }
+   },
+   "ordre": 1,
+   "score": "6-3 6-1",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": 1
+  },
+  {
+   "id": "2026-10-23-almaty-bublik-khachanov",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°3 et joueur local, Bublik arrive en quarts sans avoir joué au 2e tour (forfait de Marozsan). Khachanov, tête de série n°5, a dû batailler face à Machac (6-2, 4-6, 7-6) mais fait une meilleure saison 2026 (22e à la Race contre 24e) : match très ouvert.",
+    "choix": 1,
+    "confiance": 1,
+    "proba": [
+     52,
+     48
+    ]
+   },
+   "date": "2026-10-23",
+   "heure": "16:30",
+   "j1": "Alexander Bublik",
+   "j1Pays": "KAZ",
+   "j1Tds": "3",
+   "j2": "Karen Khachanov",
+   "j2Pays": "",
+   "j2Tds": "5",
+   "live": {
+    "fini": true,
+    "jeu": "40-A",
+    "maj": "2026-10-23T19:34:16+02:00",
+    "service": 2,
+    "sets": [
+     [
+      4,
+      6
+     ],
+     [
+      7,
+      6
+     ],
+     [
+      7,
+      6
+     ]
+    ],
+    "srId": "sr:sport_event:75620034",
+    "stats": {
+     "j1": {
+      "aces": 6,
+      "bpTot": 3,
+      "bpWon": 0,
+      "df": 2,
+      "maxPts": 5,
+      "pts": 33,
+      "s1in": 29,
+      "s1won": 22,
+      "s2won": 1,
+      "svGames": 5,
+      "svpts": 34
+     },
+     "j2": {
+      "aces": 2,
+      "bpTot": 5,
+      "bpWon": 1,
+      "df": 2,
+      "maxPts": 7,
+      "pts": 36,
+      "s1in": 26,
+      "s1won": 22,
+      "s2won": 3,
+      "svGames": 5,
+      "svpts": 35
+     }
+    }
+   },
+   "ordre": 4,
+   "score": "4-6 7-6 7-6",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": 1
+  },
+  {
+   "id": "2026-10-23-almaty-medvedev-atmane",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tenant du titre, tête de série n°1, il a écrasé Shimabukuro (6-2, 6-1). Atmane sort de trois tie-breaks : la fraîcheur penche du côté de Medvedev.",
+    "choix": 1,
+    "confiance": 3,
+    "proba": [
+     81,
+     19
+    ]
+   },
+   "date": "2026-10-23",
+   "heure": "11:30",
+   "j1": "Daniil Medvedev",
+   "j1Pays": "",
+   "j1Tds": "1",
+   "j2": "Terence Atmane",
+   "j2Pays": "FRA",
+   "j2Tds": "",
+   "live": {
+    "fini": true,
+    "maj": "2026-10-23T14:14:52+02:00",
+    "sets": [
+     [
+      6,
+      4
+     ],
+     [
+      6,
+      4
+     ]
+    ],
+    "srId": "sr:sport_event:75620048",
+    "stats": {
+     "j1": {
+      "aces": 5,
+      "bpTot": 8,
+      "bpWon": 2,
+      "df": 3,
+      "maxPts": 6,
+      "pts": 68,
+      "s1in": 34,
+      "s1won": 31,
+      "s2won": 10,
+      "svGames": 10,
+      "svpts": 50
+     },
+     "j2": {
+      "aces": 4,
+      "bpTot": 0,
+      "bpWon": 0,
+      "df": 1,
+      "maxPts": 4,
+      "pts": 49,
+      "s1in": 48,
+      "s1won": 31,
+      "s2won": 9,
+      "svGames": 8,
+      "svpts": 67
+     }
+    }
+   },
+   "ordre": 3,
+   "score": "6-4 6-4",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": 1
+  },
+  {
+   "id": "2026-10-23-almaty-tsitsipas-duckworth",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°7, expéditif contre Kukushkin (6-1, 6-2). Duckworth a sorti Darderi (tête de série n°2) et sert bien en indoor, il faut s'en méfier.",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     58,
+     42
+    ]
+   },
+   "date": "2026-10-23",
+   "heure": "10:00",
+   "j1": "Stefanos Tsitsipas",
+   "j1Pays": "GRE",
+   "j1Tds": "7",
+   "j2": "James Duckworth",
+   "j2Pays": "AUS",
+   "j2Tds": "",
+   "live": {
+    "fini": true,
+    "maj": "2026-10-23T11:21:00+02:00",
+    "sets": [
+     [
+      6,
+      3
+     ],
+     [
+      6,
+      4
+     ]
+    ],
+    "srId": "sr:sport_event:75620038",
+    "stats": {
+     "j1": {
+      "aces": 15,
+      "bpTot": 8,
+      "bpWon": 2,
+      "df": 0,
+      "maxPts": 7,
+      "pts": 71,
+      "s1in": 37,
+      "s1won": 34,
+      "s2won": 6,
+      "svGames": 10,
+      "svpts": 46
+     },
+     "j2": {
+      "aces": 5,
+      "bpTot": 0,
+      "bpWon": 0,
+      "df": 1,
+      "maxPts": 6,
+      "pts": 49,
+      "s1in": 42,
+      "s1won": 27,
+      "s2won": 16,
+      "svGames": 7,
+      "svpts": 74
+     }
+    }
+   },
+   "ordre": 2,
+   "score": "6-3 6-4",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": 1
+  },
+  {
+   "id": "2026-10-23-bruxelles-bergs-struff",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Bergs joue devant son public et a dominé Dzumhur (6-2, 6-4). Struff a l'expérience et un gros service : prono fragile.",
+    "choix": 1,
+    "confiance": 1,
+    "proba": [
+     56,
+     44
+    ]
+   },
+   "date": "2026-10-23",
+   "heure": "20:50",
+   "j1": "Zizou Bergs",
+   "j1Pays": "BEL",
+   "j1Tds": "6",
+   "j2": "Jan-Lennard Struff",
+   "j2Pays": "GER",
+   "j2Tds": "",
+   "live": {
+    "fini": true,
+    "maj": "2026-10-23T23:16:00+02:00",
+    "sets": [
+     [
+      3,
+      6
+     ],
+     [
+      6,
+      7
+     ]
+    ]
+   },
+   "ordre": 4,
+   "score": "3-6 6-7",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": 2
+  },
+  {
+   "id": "2026-10-23-bruxelles-chidekh-cerundolo",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°3, solide contre Damm (6-4, 7-6). Chidekh, sorti des qualifs, gagne tout en deux sets cette semaine, mais l'écart de niveau reste net.",
+    "choix": 2,
+    "confiance": 2,
+    "proba": [
+     24,
+     76
+    ]
+   },
+   "date": "2026-10-23",
+   "heure": "14:00",
+   "j1": "Clément Chidekh",
+   "j1Pays": "FRA",
+   "j1Tds": "Q",
+   "j2": "Francisco Cerundolo",
+   "j2Pays": "ARG",
+   "j2Tds": "3",
+   "live": {
+    "fini": true,
+    "jeu": "0-15",
+    "maj": "2026-10-23T15:52:00+02:00",
+    "service": 2,
+    "sets": [
+     [
+      2,
+      6
+     ],
+     [
+      4,
+      6
+     ]
+    ],
+    "srId": "sr:sport_event:75621158",
+    "stats": {
+     "j1": {
+      "aces": 0,
+      "bpTot": 0,
+      "bpWon": 0,
+      "df": 0,
+      "maxPts": 4,
+      "pts": 45,
+      "s1in": 44,
+      "s1won": 26,
+      "s2won": 6,
+      "svGames": 6,
+      "svpts": 59
+     },
+     "j2": {
+      "aces": 8,
+      "bpTot": 8,
+      "bpWon": 3,
+      "df": 2,
+      "maxPts": 8,
+      "pts": 64,
+      "s1in": 30,
+      "s1won": 28,
+      "s2won": 9,
+      "svGames": 9,
+      "svpts": 50
+     }
+    }
+   },
+   "ordre": 1,
+   "score": "2-6 4-6",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": 2
+  },
+  {
+   "id": "2026-10-23-bruxelles-fils-michelsen",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°1 et plus de puissance du fond. Petit doute : il passe par forfait (Munar) donc peu de rythme, alors que Michelsen vient de battre Goffin en deux sets.",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     64,
+     36
+    ]
+   },
+   "date": "2026-10-23",
+   "heure": "18:30",
+   "j1": "Arthur Fils",
+   "j1Pays": "FRA",
+   "j1Tds": "1",
+   "j2": "Alex Michelsen",
+   "j2Pays": "USA",
+   "j2Tds": "5",
+   "live": {
+    "fini": true,
+    "maj": "2026-10-23T20:39:50+02:00",
+    "sets": [
+     [
+      6,
+      4
+     ],
+     [
+      7,
+      6
+     ]
+    ]
+   },
+   "ordre": 3,
+   "score": "6-4 7-6",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": 1
+  },
+  {
+   "id": "2026-10-23-bruxelles-lehecka-griekspoor",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°2, propre contre Collignon (6-4, 6-2). Griekspoor est dangereux au service en indoor, match serré possible.",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     68,
+     32
+    ]
+   },
+   "date": "2026-10-23",
+   "heure": "16:00",
+   "j1": "Jiri Lehecka",
+   "j1Pays": "CZE",
+   "j1Tds": "2",
+   "j2": "Tallon Griekspoor",
+   "j2Pays": "NED",
+   "j2Tds": "",
+   "live": {
+    "fini": true,
+    "jeu": "40-30",
+    "maj": "2026-10-23T19:01:31+02:00",
+    "service": 1,
+    "sets": [
+     [
+      6,
+      4
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      3,
+      6
+     ]
+    ],
+    "srId": "sr:sport_event:75621144",
+    "stats": {
+     "j1": {
+      "aces": 8,
+      "bpTot": 3,
+      "bpWon": 2,
+      "df": 0,
+      "maxPts": 8,
+      "pts": 51,
+      "s1in": 33,
+      "s1won": 26,
+      "s2won": 8,
+      "svGames": 7,
+      "svpts": 49
+     },
+     "j2": {
+      "aces": 4,
+      "bpTot": 1,
+      "bpWon": 1,
+      "df": 2,
+      "maxPts": 4,
+      "pts": 46,
+      "s1in": 31,
+      "s1won": 23,
+      "s2won": 8,
+      "svGames": 7,
+      "svpts": 48
+     }
+    }
+   },
+   "ordre": 2,
+   "score": "6-4 4-6 3-6",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": 2
+  },
+  {
+   "id": "2026-10-23-lyon-cobolli-nakashima",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°1, expéditif contre Wawrinka (6-2, 6-4) et en course pour Turin. Nakashima sert bien en indoor, ça peut se jouer aux tie-breaks.",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     58,
+     42
+    ]
+   },
+   "date": "2026-10-23",
+   "heure": "19:00",
+   "j1": "Flavio Cobolli",
+   "j1Pays": "ITA",
+   "j1Tds": "1",
+   "j2": "Brandon Nakashima",
+   "j2Pays": "USA",
+   "j2Tds": "5",
+   "live": {
+    "fini": true,
+    "maj": "2026-10-23T22:15:00+02:00",
+    "service": 2,
+    "sets": [
+     [
+      4,
+      6
+     ],
+     [
+      6,
+      4
+     ],
+     [
+      6,
+      4
+     ]
+    ]
+   },
+   "ordre": 3,
+   "score": "4-6 6-4 6-4",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Lyon",
+   "tournoiId": "2026-lyon",
+   "vainqueur": 1
+  },
+  {
+   "id": "2026-10-23-lyon-fritz-altmaier",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°2, solide face à Herbert (6-2, 7-5). Son service et son jeu à plat sont taillés pour l'indoor rapide, Altmaier est plus à l'aise sur terre.",
+    "choix": 1,
+    "confiance": 3,
+    "proba": [
+     72,
+     28
+    ]
+   },
+   "date": "2026-10-23",
+   "heure": "17:15",
+   "j1": "Taylor Fritz",
+   "j1Pays": "USA",
+   "j1Tds": "2",
+   "j2": "Daniel Altmaier",
+   "j2Pays": "GER",
+   "j2Tds": "",
+   "live": {
+    "fini": true,
+    "maj": "2026-10-23T19:01:31+02:00",
+    "sets": [
+     [
+      7,
+      6
+     ],
+     [
+      6,
+      2
+     ]
+    ]
+   },
+   "ordre": 2,
+   "score": "7-6 6-2",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Lyon",
+   "tournoiId": "2026-lyon",
+   "vainqueur": 1
+  },
+  {
+   "id": "2026-10-23-lyon-moutet-paul",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°4, il a dû batailler contre Bonzi (4-6, 7-6, 6-3). Moutet est en confiance après avoir sorti Humbert et jouera avec le public, mais Paul a plus de régularité.",
+    "choix": 2,
+    "confiance": 2,
+    "proba": [
+     27,
+     73
+    ]
+   },
+   "date": "2026-10-23",
+   "diffuseur": "beIN SPORTS 1 · Tennis TV",
+   "heure": "14:00",
+   "j1": "Corentin Moutet",
+   "j1Pays": "FRA",
+   "j1Tds": "",
+   "j2": "Tommy Paul",
+   "j2Pays": "USA",
+   "j2Tds": "4",
+   "live": {
+    "fini": true,
+    "maj": "2026-10-23T17:09:39+02:00",
+    "sets": [
+     [
+      4,
+      6
+     ],
+     [
+      6,
+      3
+     ],
+     [
+      3,
+      6
+     ]
+    ],
+    "srId": "sr:sport_event:75620254",
+    "stats": {
+     "j1": {
+      "aces": 2,
+      "bpTot": 12,
+      "bpWon": 3,
+      "df": 0,
+      "maxPts": 6,
+      "pts": 84,
+      "s1in": 59,
+      "s1won": 38,
+      "s2won": 5,
+      "svGames": 8,
+      "svpts": 74
+     },
+     "j2": {
+      "aces": 3,
+      "bpTot": 7,
+      "bpWon": 3,
+      "df": 2,
+      "maxPts": 6,
+      "pts": 83,
+      "s1in": 57,
+      "s1won": 35,
+      "s2won": 17,
+      "svGames": 8,
+      "svpts": 93
+     }
+    }
+   },
+   "ordre": 1,
+   "score": "4-6 6-3 3-6",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Lyon",
+   "tournoiId": "2026-lyon",
+   "vainqueur": 2
+  },
+  {
+   "id": "2026-10-23-lyon-musetti-vanassche",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Écart de classement en faveur de Musetti (tête de série n°6), mais sa saison 2026 est en retrait (35e à la Race contre 26e à l'ATP). Van Assche joue à domicile et sort d'un match en trois sets contre Vacherot : il peut accrocher un set.",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     57,
+     43
+    ]
+   },
+   "date": "2026-10-23",
+   "diffuseur": "beIN SPORTS MAX 9 · Tennis TV",
+   "heure": "21:00",
+   "j1": "Lorenzo Musetti",
+   "j1Pays": "ITA",
+   "j1Tds": "6",
+   "j2": "Luca Van Assche",
+   "j2Pays": "FRA",
+   "j2Tds": "",
+   "ordre": 4,
+   "score": "7-6 6-7 6-4",
+   "statut": "termine",
+   "surface": "indoor",
+   "tour": "Quart de finale",
+   "tournoi": "Lyon",
+   "tournoiId": "2026-lyon",
+   "vainqueur": 1,
+   "live": {
+    "sets": [
+     [
+      7,
+      6
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      6,
+      4
+     ]
+    ],
+    "maj": "2026-10-24T01:10:13+02:00",
+    "service": 1,
+    "fini": true
+   }
+  },
+  {
+   "id": "2026-10-24-almaty-basilashvili-tsitsipas",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tsitsipas, mieux placé à la Race (30e) qu'à l'ATP (39e), monte en puissance après un premier tour en trois sets face à Kovacevic. Basilashvili, issu des qualifications et hors du top 100, est en grande forme : Cilic, Diaz Acosta et Mannarino battus sans perdre un set.",
+    "choix": 2,
+    "confiance": 1,
+    "proba": [
+     38,
+     62
+    ]
+   },
+   "date": "2026-10-24",
+   "heure": "12:00",
+   "j1": "Nikoloz Basilashvili",
+   "j1Pays": "GEO",
+   "j1Tds": "Q",
+   "j2": "Stefanos Tsitsipas",
+   "j2Pays": "GRE",
+   "j2Tds": "7",
+   "ordre": 1,
+   "score": "",
+   "statut": "a_venir",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": null
+  },
+  {
+   "id": "2026-10-24-almaty-medvedev-bublik",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°1 et 6e à la Race, Medvedev n'a cédé aucun set (Shimabukuro, Atmane). Bublik joue à domicile mais sort d'un combat en trois sets face à Khachanov et fait une saison en retrait (25e à la Race contre 19e à l'ATP).",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     64,
+     36
+    ]
+   },
+   "date": "2026-10-24",
+   "heure": "15:00",
+   "j1": "Daniil Medvedev",
+   "j1Pays": "",
+   "j1Tds": "1",
+   "j2": "Alexander Bublik",
+   "j2Pays": "KAZ",
+   "j2Tds": "3",
+   "ordre": 2,
+   "score": "",
+   "statut": "a_venir",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "tournoi": "Almaty",
+   "tournoiId": "2026-almaty",
+   "vainqueur": null
+  },
+  {
+   "id": "2026-10-24-bruxelles-cerundolo-griekspoor",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°3, Cerundolo n'a pas lâché un set (Damm, Chidekh). Griekspoor, 60e à l'ATP comme à la Race, a sorti Lehecka mais enchaîne trois matchs accrochés, dont deux en trois sets : avantage Cerundolo.",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     65,
+     35
+    ]
+   },
+   "date": "2026-10-24",
+   "heure": "16:00",
+   "j1": "Francisco Cerundolo",
+   "j1Pays": "ARG",
+   "j1Tds": "3",
+   "j2": "Tallon Griekspoor",
+   "j2Pays": "NED",
+   "j2Tds": "",
+   "ordre": 1,
+   "score": "",
+   "statut": "a_venir",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": null
+  },
+  {
+   "id": "2026-10-24-bruxelles-fils-struff",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Tête de série n°1, 10e à l'ATP et 8e à la Race, Fils a dû sauver deux balles de set dans le tie-break face à Michelsen après un forfait au tour précédent. Struff (58e, 36 ans) n'a pas perdu un set cette semaine (Giron, Onclin, Bergs) et dispute sa première demi-finale sur dur depuis 2023 ; Fils mène 1-0 dans les face-à-face (Paris 2024).",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     70,
+     30
+    ]
+   },
+   "date": "2026-10-24",
+   "heure": "18:30",
+   "j1": "Arthur Fils",
+   "j1Pays": "FRA",
+   "j1Tds": "1",
+   "j2": "Jan-Lennard Struff",
+   "j2Pays": "GER",
+   "j2Tds": "",
+   "ordre": 2,
+   "score": "",
+   "statut": "a_venir",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "tournoi": "Bruxelles",
+   "tournoiId": "2026-bruxelles",
+   "vainqueur": null
+  },
+  {
+   "id": "2026-10-24-lyon-paul-fritz",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Duel américain très équilibré au classement (Fritz 14e ATP, Paul 12e à la Race). Fritz n'a perdu aucun set cette semaine (Herbert, Altmaier) alors que Paul a dû passer par trois sets face à Bonzi puis Moutet : léger avantage Fritz.",
+    "choix": 2,
+    "confiance": 1,
+    "proba": [
+     45,
+     55
+    ]
+   },
+   "date": "2026-10-24",
+   "heure": "14:00",
+   "j1": "Tommy Paul",
+   "j1Pays": "USA",
+   "j1Tds": "4",
+   "j2": "Taylor Fritz",
+   "j2Pays": "USA",
+   "j2Tds": "2",
+   "ordre": 1,
+   "score": "",
+   "statut": "a_venir",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "tournoi": "Lyon",
+   "tournoiId": "2026-lyon",
+   "vainqueur": null
+  },
+  {
+   "id": "2026-10-24-lyon-cobolli-musetti",
+   "categorie": "ATP 250",
+   "claude": {
+    "analyse": "Derby italien : Cobolli, tête de série n°1, est 5e à la Race et lancé vers Turin, alors que Musetti (34e à la Race) vit une saison en retrait. Musetti a fini son quart contre Van Assche vers 1h15 après 3h33 de jeu (7-6, 6-7, 6-4) et dispose de très peu de récupération.",
+    "choix": 1,
+    "confiance": 2,
+    "proba": [
+     72,
+     28
+    ]
+   },
+   "date": "2026-10-24",
+   "heure": "16:00",
+   "j1": "Flavio Cobolli",
+   "j1Pays": "ITA",
+   "j1Tds": "1",
+   "j2": "Lorenzo Musetti",
+   "j2Pays": "ITA",
+   "j2Tds": "6",
+   "ordre": 2,
+   "score": "",
+   "statut": "a_venir",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "tournoi": "Lyon",
+   "tournoiId": "2026-lyon",
+   "vainqueur": null
+  }
+ ],
+ "tournois": [
+  {
+   "id": "2026-almaty",
+   "categorie": "ATP 250",
+   "debut": "2026-10-19",
+   "diffuseur": "Eurosport 360 · Tennis TV",
+   "fin": "2026-10-25",
+   "niveau": 250,
+   "nom": "Almaty",
+   "nomComplet": "Almaty Open",
+   "pays": "Kazakhstan",
+   "surface": "indoor",
+   "tableau": {
+    "matchs": [
+     [
+      {
+       "j1": {
+        "nom": "D. Medvedev",
+        "pays": "",
+        "tds": "1"
+       },
+       "j2": {
+        "bye": true
+       },
+       "score": "",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "S. Shimabukuro",
+        "pays": "JPN",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "R. Safiullin",
+        "pays": "",
+        "tds": "Q"
+       },
+       "score": "6-7 6-4 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "T. Atmane",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "R. Hijikata",
+        "pays": "AUS",
+        "tds": ""
+       },
+       "score": "7-6 6-2",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "M. Bellucci",
+        "pays": "ITA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "T. Etcheverry",
+        "pays": "ARG",
+        "tds": "6"
+       },
+       "score": "7-6 2-6 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "A. Bublik",
+        "pays": "KAZ",
+        "tds": "3"
+       },
+       "j2": {
+        "bye": true
+       },
+       "score": "",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "F. Marozsan",
+        "pays": "HUN",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "T. Skatov",
+        "pays": "KAZ",
+        "tds": "WC"
+       },
+       "score": "7-5 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "Z. Nurlanuly",
+        "pays": "KAZ",
+        "tds": "WC"
+       },
+       "j2": {
+        "nom": "T. Machac",
+        "pays": "CZE",
+        "tds": ""
+       },
+       "score": "2-6 0-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "R. Sakamoto",
+        "pays": "JPN",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "K. Khachanov",
+        "pays": "",
+        "tds": "5"
+       },
+       "score": "2-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "T. Tirante",
+        "pays": "ARG",
+        "tds": "8"
+       },
+       "j2": {
+        "nom": "F. Diaz Acosta",
+        "pays": "ARG",
+        "tds": ""
+       },
+       "score": "7-6 1-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "M. Cilic",
+        "pays": "CRO",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "N. Basilashvili",
+        "pays": "GEO",
+        "tds": "Q"
+       },
+       "score": "2-6 5-7",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "A. Mannarino",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "A. Vukic",
+        "pays": "AUS",
+        "tds": ""
+       },
+       "score": "7-6 4-6 6-3",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "A. Rublev",
+        "pays": "",
+        "tds": "4"
+       },
+       "j2": {
+        "bye": true
+       },
+       "score": "",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "S. Tsitsipas",
+        "pays": "GRE",
+        "tds": "7"
+       },
+       "j2": {
+        "nom": "A. Kovacevic",
+        "pays": "USA",
+        "tds": ""
+       },
+       "score": "7-6 3-6 6-3",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "M. Kukushkin",
+        "pays": "KAZ",
+        "tds": "WC"
+       },
+       "j2": {
+        "nom": "S. Sakellaridis",
+        "pays": "GRE",
+        "tds": "Q"
+       },
+       "score": "7-6 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "M. Kecmanovic",
+        "pays": "SRB",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "J. Duckworth",
+        "pays": "AUS",
+        "tds": ""
+       },
+       "score": "4-6 3-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "bye": true
+       },
+       "j2": {
+        "nom": "L. Darderi",
+        "pays": "ITA",
+        "tds": "2"
+       },
+       "score": "",
+       "vainqueur": 2
+      }
+     ],
+     [
+      {
+       "j1": {
+        "nom": "D. Medvedev",
+        "pays": "",
+        "tds": "1"
+       },
+       "j2": {
+        "nom": "S. Shimabukuro",
+        "pays": "JPN",
+        "tds": ""
+       },
+       "score": "6-2 6-1",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "T. Atmane",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "M. Bellucci",
+        "pays": "ITA",
+        "tds": ""
+       },
+       "score": "6-7 7-6 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "A. Bublik",
+        "pays": "KAZ",
+        "tds": "3"
+       },
+       "j2": {
+        "nom": "F. Marozsan",
+        "pays": "HUN",
+        "tds": ""
+       },
+       "score": "forfait",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "T. Machac",
+        "pays": "CZE",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "K. Khachanov",
+        "pays": "",
+        "tds": "5"
+       },
+       "score": "2-6 6-4 6-7",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "F. Diaz Acosta",
+        "pays": "ARG",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "N. Basilashvili",
+        "pays": "GEO",
+        "tds": "Q"
+       },
+       "score": "2-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "A. Mannarino",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "A. Rublev",
+        "pays": "",
+        "tds": "4"
+       },
+       "score": "6-4 3-6 6-3",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "S. Tsitsipas",
+        "pays": "GRE",
+        "tds": "7"
+       },
+       "j2": {
+        "nom": "M. Kukushkin",
+        "pays": "KAZ",
+        "tds": "WC"
+       },
+       "score": "6-1 6-2",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "J. Duckworth",
+        "pays": "AUS",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "L. Darderi",
+        "pays": "ITA",
+        "tds": "2"
+       },
+       "score": "7-5 7-6",
+       "vainqueur": 1
+      }
+     ],
+     [
+      {
+       "j1": {
+        "nom": "D. Medvedev",
+        "pays": "",
+        "tds": "1"
+       },
+       "j2": {
+        "nom": "T. Atmane",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "score": "6-4 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "A. Bublik",
+        "pays": "KAZ",
+        "tds": "3"
+       },
+       "j2": {
+        "nom": "K. Khachanov",
+        "pays": "",
+        "tds": "5"
+       },
+       "score": "4-6 7-6 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "N. Basilashvili",
+        "pays": "GEO",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "A. Mannarino",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "score": "6-3 6-1",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "S. Tsitsipas",
+        "pays": "GRE",
+        "tds": "7"
+       },
+       "j2": {
+        "nom": "J. Duckworth",
+        "pays": "AUS",
+        "tds": ""
+       },
+       "score": "6-3 6-4",
+       "vainqueur": 1
+      }
+     ],
+     [
+      {
+       "j1": {
+        "nom": "D. Medvedev",
+        "pays": "",
+        "tds": "1"
+       },
+       "j2": {
+        "nom": "A. Bublik",
+        "pays": "KAZ",
+        "tds": "3"
+       },
+       "score": "",
+       "vainqueur": null
+      },
+      {
+       "j1": {
+        "nom": "N. Basilashvili",
+        "pays": "GEO",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "S. Tsitsipas",
+        "pays": "GRE",
+        "tds": "7"
+       },
+       "score": "",
+       "vainqueur": null
+      }
+     ],
+     [
+      {
+       "j1": null,
+       "j2": null,
+       "score": "",
+       "vainqueur": null
+      }
+     ]
+    ],
+    "tours": [
+     "1er tour",
+     "8e de finale",
+     "Quart de finale",
+     "Demi-finale",
+     "Finale"
+    ]
+   }
+  },
+  {
+   "id": "2026-bale",
+   "categorie": "ATP 500",
+   "debut": "2026-10-26",
+   "fin": "2026-11-01",
+   "niveau": 500,
+   "nom": "Bâle",
+   "nomComplet": "Swiss Indoors Basel",
+   "pays": "Suisse",
+   "surface": "indoor"
+  },
+  {
+   "id": "2026-bruxelles",
+   "categorie": "ATP 250",
+   "debut": "2026-10-19",
+   "diffuseur": "Eurosport 360 · Tennis TV",
+   "fin": "2026-10-25",
+   "niveau": 250,
+   "nom": "Bruxelles",
+   "nomComplet": "European Open",
+   "pays": "Belgique",
+   "surface": "indoor",
+   "tableau": {
+    "matchs": [
+     [
+      {
+       "j1": {
+        "nom": "A. Fils",
+        "pays": "FRA",
+        "tds": "1"
+       },
+       "j2": {
+        "bye": true
+       },
+       "score": "",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "F. Cina",
+        "pays": "ITA",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "J. Munar",
+        "pays": "ESP",
+        "tds": ""
+       },
+       "score": "4-6 3-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "D. Goffin",
+        "pays": "BEL",
+        "tds": "WC"
+       },
+       "j2": {
+        "nom": "R. Bertola",
+        "pays": "SUI",
+        "tds": "LL"
+       },
+       "score": "3-6 6-3 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "A. Guerrieri",
+        "pays": "ITA",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "A. Michelsen",
+        "pays": "USA",
+        "tds": "5"
+       },
+       "score": "1-6 2-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "G. Onclin",
+        "pays": "BEL",
+        "tds": "LL"
+       },
+       "j2": {
+        "bye": true
+       },
+       "score": "",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "J. Struff",
+        "pays": "GER",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "M. Giron",
+        "pays": "USA",
+        "tds": ""
+       },
+       "score": "7-6 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "D. Prizmic",
+        "pays": "CRO",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "D. Dzumhur",
+        "pays": "BIH",
+        "tds": ""
+       },
+       "score": "6-7 6-2 2-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "T. Samuel",
+        "pays": "GBR",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "Z. Bergs",
+        "pays": "BEL",
+        "tds": "6"
+       },
+       "score": "3-6 6-7",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "B. van de Zandschulp",
+        "pays": "NED",
+        "tds": "7"
+       },
+       "j2": {
+        "nom": "C. Chidekh",
+        "pays": "FRA",
+        "tds": "Q"
+       },
+       "score": "1-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "J. Fearnley",
+        "pays": "GBR",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "H. Gaston",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "score": "6-3 6-0",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "Y. Hanfmann",
+        "pays": "GER",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "M. Damm",
+        "pays": "USA",
+        "tds": "LL"
+       },
+       "score": "5-7 3-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "bye": true
+       },
+       "j2": {
+        "nom": "F. Cerundolo",
+        "pays": "ARG",
+        "tds": "3"
+       },
+       "score": "",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "M. Navone",
+        "pays": "ARG",
+        "tds": "8"
+       },
+       "j2": {
+        "nom": "J. Cerundolo",
+        "pays": "ARG",
+        "tds": ""
+       },
+       "score": "7-6 6-2",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "T. Griekspoor",
+        "pays": "NED",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "M. Schoenhaus",
+        "pays": "GER",
+        "tds": "WC"
+       },
+       "score": "7-6 6-7 7-5",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "N. Basavareddy",
+        "pays": "USA",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "R. Collignon",
+        "pays": "BEL",
+        "tds": ""
+       },
+       "score": "6-3 3-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "bye": true
+       },
+       "j2": {
+        "nom": "J. Lehecka",
+        "pays": "CZE",
+        "tds": "2"
+       },
+       "score": "",
+       "vainqueur": 2
+      }
+     ],
+     [
+      {
+       "j1": {
+        "nom": "A. Fils",
+        "pays": "FRA",
+        "tds": "1"
+       },
+       "j2": {
+        "nom": "J. Munar",
+        "pays": "ESP",
+        "tds": ""
+       },
+       "score": "forfait",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "D. Goffin",
+        "pays": "BEL",
+        "tds": "WC"
+       },
+       "j2": {
+        "nom": "A. Michelsen",
+        "pays": "USA",
+        "tds": "5"
+       },
+       "score": "3-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "G. Onclin",
+        "pays": "BEL",
+        "tds": "LL"
+       },
+       "j2": {
+        "nom": "J. Struff",
+        "pays": "GER",
+        "tds": ""
+       },
+       "score": "4-6 2-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "D. Dzumhur",
+        "pays": "BIH",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "Z. Bergs",
+        "pays": "BEL",
+        "tds": "6"
+       },
+       "score": "2-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "C. Chidekh",
+        "pays": "FRA",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "J. Fearnley",
+        "pays": "GBR",
+        "tds": ""
+       },
+       "score": "7-6 6-2",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "M. Damm",
+        "pays": "USA",
+        "tds": "LL"
+       },
+       "j2": {
+        "nom": "F. Cerundolo",
+        "pays": "ARG",
+        "tds": "3"
+       },
+       "score": "4-6 6-7",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "M. Navone",
+        "pays": "ARG",
+        "tds": "8"
+       },
+       "j2": {
+        "nom": "T. Griekspoor",
+        "pays": "NED",
+        "tds": ""
+       },
+       "score": "6-7 5-7",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "R. Collignon",
+        "pays": "BEL",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "J. Lehecka",
+        "pays": "CZE",
+        "tds": "2"
+       },
+       "score": "4-6 2-6",
+       "vainqueur": 2
+      }
+     ],
+     [
+      {
+       "j1": {
+        "nom": "A. Fils",
+        "pays": "FRA",
+        "tds": "1"
+       },
+       "j2": {
+        "nom": "A. Michelsen",
+        "pays": "USA",
+        "tds": "5"
+       },
+       "score": "6-4 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "J. Struff",
+        "pays": "GER",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "Z. Bergs",
+        "pays": "BEL",
+        "tds": "6"
+       },
+       "score": "6-3 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "C. Chidekh",
+        "pays": "FRA",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "F. Cerundolo",
+        "pays": "ARG",
+        "tds": "3"
+       },
+       "score": "2-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "T. Griekspoor",
+        "pays": "NED",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "J. Lehecka",
+        "pays": "CZE",
+        "tds": "2"
+       },
+       "score": "4-6 6-4 6-3",
+       "vainqueur": 1
+      }
+     ],
+     [
+      {
+       "j1": {
+        "nom": "A. Fils",
+        "pays": "FRA",
+        "tds": "1"
+       },
+       "j2": {
+        "nom": "J. Struff",
+        "pays": "GER",
+        "tds": ""
+       },
+       "score": "",
+       "vainqueur": null
+      },
+      {
+       "j1": {
+        "nom": "F. Cerundolo",
+        "pays": "ARG",
+        "tds": "3"
+       },
+       "j2": {
+        "nom": "T. Griekspoor",
+        "pays": "NED",
+        "tds": ""
+       },
+       "score": "",
+       "vainqueur": null
+      }
+     ],
+     [
+      {
+       "j1": null,
+       "j2": null,
+       "score": "",
+       "vainqueur": null
+      }
+     ]
+    ],
+    "tours": [
+     "1er tour",
+     "8e de finale",
+     "Quart de finale",
+     "Demi-finale",
+     "Finale"
+    ]
+   }
+  },
+  {
+   "id": "2026-lyon",
+   "categorie": "ATP 250",
+   "debut": "2026-10-19",
+   "diffuseur": "beIN SPORTS · Tennis TV",
+   "fin": "2026-10-25",
+   "niveau": 250,
+   "nom": "Lyon",
+   "nomComplet": "Grand Prix Auvergne-Rhône-Alpes",
+   "pays": "France",
+   "surface": "indoor",
+   "tableau": {
+    "matchs": [
+     [
+      {
+       "j1": {
+        "nom": "F. Cobolli",
+        "pays": "ITA",
+        "tds": "1"
+       },
+       "j2": {
+        "bye": true
+       },
+       "score": "",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "S. Wawrinka",
+        "pays": "SUI",
+        "tds": "WC"
+       },
+       "j2": {
+        "nom": "M. Landaluce",
+        "pays": "ESP",
+        "tds": ""
+       },
+       "score": "6-3 6-7 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "K. Jacquet",
+        "pays": "FRA",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "M. Berrettini",
+        "pays": "ITA",
+        "tds": ""
+       },
+       "score": "7-6 7-5",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "B. Nakashima",
+        "pays": "USA",
+        "tds": "5"
+       },
+       "j2": {
+        "nom": "H. Medjedovic",
+        "pays": "SRB",
+        "tds": ""
+       },
+       "score": "7-6 6-7 6-2",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "V. Vacherot",
+        "pays": "MON",
+        "tds": "3"
+       },
+       "j2": {
+        "bye": true
+       },
+       "score": "",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "L. Van Assche",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "C. Tabur",
+        "pays": "FRA",
+        "tds": "Q"
+       },
+       "score": "7-6 6-3",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "M. Kouame",
+        "pays": "FRA",
+        "tds": "WC"
+       },
+       "j2": {
+        "nom": "L. Sonego",
+        "pays": "ITA",
+        "tds": ""
+       },
+       "score": "7-6 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "L. Musetti",
+        "pays": "ITA",
+        "tds": "6"
+       },
+       "j2": {
+        "nom": "M. Arnaldi",
+        "pays": "ITA",
+        "tds": ""
+       },
+       "score": "6-1 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "C. Moutet",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "U. Humbert",
+        "pays": "FRA",
+        "tds": "7"
+       },
+       "score": "6-2 6-7 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "F. Balshaw",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "J. Faria",
+        "pays": "POR",
+        "tds": ""
+       },
+       "score": "6-2 4-6 6-3",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "B. Bonzi",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "C. Norrie",
+        "pays": "GBR",
+        "tds": ""
+       },
+       "score": "6-3 3-6 6-3",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "T. Paul",
+        "pays": "USA",
+        "tds": "4"
+       },
+       "j2": {
+        "bye": true
+       },
+       "score": "",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "B. Gojo",
+        "pays": "CRO",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "A. Fery",
+        "pays": "GBR",
+        "tds": "8"
+       },
+       "score": "6-3 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "D. Altmaier",
+        "pays": "GER",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "T. Droguet",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "score": "5-7 7-6 7-6",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "P. Herbert",
+        "pays": "FRA",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "S. Baez",
+        "pays": "ARG",
+        "tds": ""
+       },
+       "score": "6-3 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "bye": true
+       },
+       "j2": {
+        "nom": "T. Fritz",
+        "pays": "USA",
+        "tds": "2"
+       },
+       "score": "",
+       "vainqueur": 2
+      }
+     ],
+     [
+      {
+       "j1": {
+        "nom": "F. Cobolli",
+        "pays": "ITA",
+        "tds": "1"
+       },
+       "j2": {
+        "nom": "S. Wawrinka",
+        "pays": "SUI",
+        "tds": "WC"
+       },
+       "score": "6-2 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "K. Jacquet",
+        "pays": "FRA",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "B. Nakashima",
+        "pays": "USA",
+        "tds": "5"
+       },
+       "score": "4-6 3-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "V. Vacherot",
+        "pays": "MON",
+        "tds": "3"
+       },
+       "j2": {
+        "nom": "L. Van Assche",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "score": "6-2 4-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "M. Kouame",
+        "pays": "FRA",
+        "tds": "WC"
+       },
+       "j2": {
+        "nom": "L. Musetti",
+        "pays": "ITA",
+        "tds": "6"
+       },
+       "score": "4-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "C. Moutet",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "F. Balshaw",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "score": "6-4 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "B. Bonzi",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "T. Paul",
+        "pays": "USA",
+        "tds": "4"
+       },
+       "score": "6-4 6-7 3-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "B. Gojo",
+        "pays": "CRO",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "D. Altmaier",
+        "pays": "GER",
+        "tds": ""
+       },
+       "score": "3-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "P. Herbert",
+        "pays": "FRA",
+        "tds": "Q"
+       },
+       "j2": {
+        "nom": "T. Fritz",
+        "pays": "USA",
+        "tds": "2"
+       },
+       "score": "2-6 5-7",
+       "vainqueur": 2
+      }
+     ],
+     [
+      {
+       "j1": {
+        "nom": "F. Cobolli",
+        "pays": "ITA",
+        "tds": "1"
+       },
+       "j2": {
+        "nom": "B. Nakashima",
+        "pays": "USA",
+        "tds": "5"
+       },
+       "score": "4-6 6-4 6-4",
+       "vainqueur": 1
+      },
+      {
+       "j1": {
+        "nom": "L. Van Assche",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "L. Musetti",
+        "pays": "ITA",
+        "tds": "6"
+       },
+       "score": "6-7 7-6 4-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "C. Moutet",
+        "pays": "FRA",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "T. Paul",
+        "pays": "USA",
+        "tds": "4"
+       },
+       "score": "4-6 6-3 3-6",
+       "vainqueur": 2
+      },
+      {
+       "j1": {
+        "nom": "D. Altmaier",
+        "pays": "GER",
+        "tds": ""
+       },
+       "j2": {
+        "nom": "T. Fritz",
+        "pays": "USA",
+        "tds": "2"
+       },
+       "score": "6-7 2-6",
+       "vainqueur": 2
+      }
+     ],
+     [
+      {
+       "j1": {
+        "nom": "F. Cobolli",
+        "pays": "ITA",
+        "tds": "1"
+       },
+       "j2": {
+        "nom": "L. Musetti",
+        "pays": "ITA",
+        "tds": "6"
+       },
+       "score": "",
+       "vainqueur": null
+      },
+      {
+       "j1": {
+        "nom": "T. Paul",
+        "pays": "USA",
+        "tds": "4"
+       },
+       "j2": {
+        "nom": "T. Fritz",
+        "pays": "USA",
+        "tds": "2"
+       },
+       "score": "",
+       "vainqueur": null
+      }
+     ],
+     [
+      {
+       "j1": null,
+       "j2": null,
+       "score": "",
+       "vainqueur": null
+      }
+     ]
+    ],
+    "tours": [
+     "1er tour",
+     "8e de finale",
+     "Quart de finale",
+     "Demi-finale",
+     "Finale"
+    ]
+   }
+  },
+  {
+   "id": "2026-paris",
+   "categorie": "Masters 1000",
+   "debut": "2026-11-02",
+   "fin": "2026-11-08",
+   "niveau": 1000,
+   "nom": "Paris",
+   "nomComplet": "Rolex Paris Masters",
+   "pays": "France",
+   "surface": "indoor"
+  },
+  {
+   "id": "2026-vienne",
+   "categorie": "ATP 500",
+   "debut": "2026-10-26",
+   "fin": "2026-11-01",
+   "niveau": 500,
+   "nom": "Vienne",
+   "nomComplet": "Erste Bank Open",
+   "pays": "Autriche",
+   "surface": "indoor"
+  },
+  {
+   "id": "historique",
+   "note": "Archive des analyses : ne jamais supprimer ce document.",
+   "tournois": {}
+  }
+ ],
+ "meta": {
+  "misAJour": "2026-10-24T01:44:00+02:00",
+  "source": "ATP Tour"
+ },
+ "fond": "fond.jpg",
+ "classements": {
+  "atp": {
+   "date": "2026-10-19",
+   "joueurs": [
+    {
+     "nom": "Jannik Sinner",
+     "pays": "ITA",
+     "points": 10950,
+     "rang": 1
+    },
+    {
+     "nom": "Alexander Zverev",
+     "pays": "GER",
+     "points": 10070,
+     "rang": 2
+    },
+    {
+     "nom": "Carlos Alcaraz",
+     "pays": "ESP",
+     "points": 5610,
+     "rang": 3
+    },
+    {
+     "nom": "Ben Shelton",
+     "pays": "USA",
+     "points": 4720,
+     "rang": 4
+    },
+    {
+     "nom": "Daniil Medvedev",
+     "pays": "",
+     "points": 3660,
+     "rang": 5
+    },
+    {
+     "nom": "Flavio Cobolli",
+     "pays": "ITA",
+     "points": 3640,
+     "rang": 6
+    },
+    {
+     "nom": "Felix Auger-Aliassime",
+     "pays": "CAN",
+     "points": 3590,
+     "rang": 7
+    },
+    {
+     "nom": "Alex de Minaur",
+     "pays": "AUS",
+     "points": 3430,
+     "rang": 8
+    },
+    {
+     "nom": "Frances Tiafoe",
+     "pays": "USA",
+     "points": 3380,
+     "rang": 9
+    },
+    {
+     "nom": "Arthur Fils",
+     "pays": "FRA",
+     "points": 3325,
+     "rang": 10
+    },
+    {
+     "nom": "Rafael Jodar",
+     "pays": "ESP",
+     "points": 3234,
+     "rang": 11
+    },
+    {
+     "nom": "Novak Djokovic",
+     "pays": "SRB",
+     "points": 3090,
+     "rang": 12
+    },
+    {
+     "nom": "Alejandro Davidovich Fokina",
+     "pays": "ESP",
+     "points": 2880,
+     "rang": 13
+    },
+    {
+     "nom": "Taylor Fritz",
+     "pays": "USA",
+     "points": 2880,
+     "rang": 14
+    },
+    {
+     "nom": "Tommy Paul",
+     "pays": "USA",
+     "points": 2575,
+     "rang": 15
+    },
+    {
+     "nom": "Jakub Mensik",
+     "pays": "CZE",
+     "points": 2500,
+     "rang": 16
+    },
+    {
+     "nom": "Brandon Nakashima",
+     "pays": "USA",
+     "points": 2375,
+     "rang": 17
+    },
+    {
+     "nom": "Learner Tien",
+     "pays": "USA",
+     "points": 2345,
+     "rang": 18
+    },
+    {
+     "nom": "Alexander Bublik",
+     "pays": "KAZ",
+     "points": 2275,
+     "rang": 19
+    },
+    {
+     "nom": "Jiri Lehecka",
+     "pays": "CZE",
+     "points": 2235,
+     "rang": 20
+    },
+    {
+     "nom": "Francisco Cerundolo",
+     "pays": "ARG",
+     "points": 2220,
+     "rang": 21
+    },
+    {
+     "nom": "Andrey Rublev",
+     "pays": "",
+     "points": 2175,
+     "rang": 22
+    },
+    {
+     "nom": "Luciano Darderi",
+     "pays": "ITA",
+     "points": 2160,
+     "rang": 23
+    },
+    {
+     "nom": "Casper Ruud",
+     "pays": "NOR",
+     "points": 2095,
+     "rang": 24
+    },
+    {
+     "nom": "Karen Khachanov",
+     "pays": "",
+     "points": 1990,
+     "rang": 25
+    },
+    {
+     "nom": "Lorenzo Musetti",
+     "pays": "ITA",
+     "points": 1870,
+     "rang": 26
+    },
+    {
+     "nom": "Alexander Blockx",
+     "pays": "BEL",
+     "points": 1790,
+     "rang": 27
+    },
+    {
+     "nom": "Joao Fonseca",
+     "pays": "BRA",
+     "points": 1750,
+     "rang": 28
+    },
+    {
+     "nom": "Tomas Martin Etcheverry",
+     "pays": "ARG",
+     "points": 1590,
+     "rang": 29
+    },
+    {
+     "nom": "Hubert Hurkacz",
+     "pays": "POL",
+     "points": 1575,
+     "rang": 30
+    },
+    {
+     "nom": "Alejandro Tabilo",
+     "pays": "CHI",
+     "points": 1565,
+     "rang": 31
+    },
+    {
+     "nom": "Valentin Vacherot",
+     "pays": "MON",
+     "points": 1480,
+     "rang": 32
+    },
+    {
+     "nom": "Ignacio Buse",
+     "pays": "PER",
+     "points": 1445,
+     "rang": 33
+    },
+    {
+     "nom": "Arthur Fery",
+     "pays": "GBR",
+     "points": 1421,
+     "rang": 34
+    },
+    {
+     "nom": "Ugo Humbert",
+     "pays": "FRA",
+     "points": 1420,
+     "rang": 35
+    },
+    {
+     "nom": "Matteo Arnaldi",
+     "pays": "ITA",
+     "points": 1386,
+     "rang": 36
+    },
+    {
+     "nom": "Alex Michelsen",
+     "pays": "USA",
+     "points": 1370,
+     "rang": 37
+    },
+    {
+     "nom": "Botic van de Zandschulp",
+     "pays": "NED",
+     "points": 1333,
+     "rang": 38
+    },
+    {
+     "nom": "Stefanos Tsitsipas",
+     "pays": "GRE",
+     "points": 1330,
+     "rang": 39
+    },
+    {
+     "nom": "Cameron Norrie",
+     "pays": "GBR",
+     "points": 1235,
+     "rang": 40
+    },
+    {
+     "nom": "Zizou Bergs",
+     "pays": "BEL",
+     "points": 1220,
+     "rang": 41
+    },
+    {
+     "nom": "Daniel Merida",
+     "pays": "ESP",
+     "points": 1195,
+     "rang": 42
+    },
+    {
+     "nom": "Matteo Berrettini",
+     "pays": "ITA",
+     "points": 1173,
+     "rang": 43
+    },
+    {
+     "nom": "Arthur Gea",
+     "pays": "FRA",
+     "points": 1160,
+     "rang": 44
+    },
+    {
+     "nom": "Mariano Navone",
+     "pays": "ARG",
+     "points": 1151,
+     "rang": 45
+    },
+    {
+     "nom": "Quentin Halys",
+     "pays": "FRA",
+     "points": 1127,
+     "rang": 46
+    },
+    {
+     "nom": "Denis Shapovalov",
+     "pays": "CAN",
+     "points": 1105,
+     "rang": 47
+    },
+    {
+     "nom": "Luca Van Assche",
+     "pays": "FRA",
+     "points": 1065,
+     "rang": 48
+    },
+    {
+     "nom": "Sebastian Baez",
+     "pays": "ARG",
+     "points": 1044,
+     "rang": 49
+    },
+    {
+     "nom": "Thiago Agustin Tirante",
+     "pays": "ARG",
+     "points": 1032,
+     "rang": 50
+    },
+    {
+     "nom": "Jaume Munar",
+     "pays": "ESP",
+     "points": 1010,
+     "rang": 51
+    },
+    {
+     "nom": "Nuno Borges",
+     "pays": "POR",
+     "points": 1000,
+     "rang": 52
+    },
+    {
+     "nom": "Juan Manuel Cerundolo",
+     "pays": "ARG",
+     "points": 1000,
+     "rang": 53
+    },
+    {
+     "nom": "Adolfo Daniel Vallejo",
+     "pays": "PAR",
+     "points": 997,
+     "rang": 54
+    },
+    {
+     "nom": "Raphael Collignon",
+     "pays": "BEL",
+     "points": 978,
+     "rang": 55
+    },
+    {
+     "nom": "Jaime Faria",
+     "pays": "POR",
+     "points": 941,
+     "rang": 56
+    },
+    {
+     "nom": "Miomir Kecmanovic",
+     "pays": "SRB",
+     "points": 930,
+     "rang": 57
+    },
+    {
+     "nom": "Jan-Lennard Struff",
+     "pays": "GER",
+     "points": 929,
+     "rang": 58
+    },
+    {
+     "nom": "Yannick Hanfmann",
+     "pays": "GER",
+     "points": 923,
+     "rang": 59
+    },
+    {
+     "nom": "Tallon Griekspoor",
+     "pays": "NED",
+     "points": 885,
+     "rang": 60
+    },
+    {
+     "nom": "Arthur Rinderknech",
+     "pays": "FRA",
+     "points": 870,
+     "rang": 61
+    },
+    {
+     "nom": "Roman Andres Burruchaga",
+     "pays": "ARG",
+     "points": 869,
+     "rang": 62
+    },
+    {
+     "nom": "Ethan Quinn",
+     "pays": "USA",
+     "points": 864,
+     "rang": 63
+    },
+    {
+     "nom": "Fabian Marozsan",
+     "pays": "HUN",
+     "points": 860,
+     "rang": 64
+    },
+    {
+     "nom": "Daniel Altmaier",
+     "pays": "GER",
+     "points": 849,
+     "rang": 65
+    },
+    {
+     "nom": "Vit Kopriva",
+     "pays": "CZE",
+     "points": 844,
+     "rang": 66
+    },
+    {
+     "nom": "Martin Landaluce",
+     "pays": "ESP",
+     "points": 822,
+     "rang": 67
+    },
+    {
+     "nom": "Mattia Bellucci",
+     "pays": "ITA",
+     "points": 812,
+     "rang": 68
+    },
+    {
+     "nom": "Titouan Droguet",
+     "pays": "FRA",
+     "points": 801,
+     "rang": 69
+    },
+    {
+     "nom": "Roman Safiullin",
+     "pays": "",
+     "points": 794,
+     "rang": 70
+    },
+    {
+     "nom": "Facundo Diaz Acosta",
+     "pays": "ARG",
+     "points": 790,
+     "rang": 71
+    },
+    {
+     "nom": "Tomas Machac",
+     "pays": "CZE",
+     "points": 779,
+     "rang": 72
+    },
+    {
+     "nom": "James Duckworth",
+     "pays": "AUS",
+     "points": 774,
+     "rang": 73
+    },
+    {
+     "nom": "Pablo Carreno Busta",
+     "pays": "ESP",
+     "points": 773,
+     "rang": 74
+    },
+    {
+     "nom": "Camilo Ugo Carabelli",
+     "pays": "ARG",
+     "points": 770,
+     "rang": 75
+    },
+    {
+     "nom": "Hamad Medjedovic",
+     "pays": "SRB",
+     "points": 764,
+     "rang": 76
+    },
+    {
+     "nom": "Zachary Svajda",
+     "pays": "USA",
+     "points": 759,
+     "rang": 77
+    },
+    {
+     "nom": "Kamil Majchrzak",
+     "pays": "POL",
+     "points": 750,
+     "rang": 78
+    },
+    {
+     "nom": "Adrian Mannarino",
+     "pays": "FRA",
+     "points": 743,
+     "rang": 79
+    },
+    {
+     "nom": "Alex Molcan",
+     "pays": "SVK",
+     "points": 734,
+     "rang": 80
+    },
+    {
+     "nom": "Sebastian Korda",
+     "pays": "USA",
+     "points": 730,
+     "rang": 81
+    },
+    {
+     "nom": "Aleksandar Kovacevic",
+     "pays": "USA",
+     "points": 715,
+     "rang": 82
+    },
+    {
+     "nom": "Damir Dzumhur",
+     "pays": "BIH",
+     "points": 712,
+     "rang": 83
+    },
+    {
+     "nom": "Marin Cilic",
+     "pays": "CRO",
+     "points": 704,
+     "rang": 84
+    },
+    {
+     "nom": "Kyrian Jacquet",
+     "pays": "FRA",
+     "points": 703,
+     "rang": 85
+    },
+    {
+     "nom": "Rinky Hijikata",
+     "pays": "AUS",
+     "points": 689,
+     "rang": 86
+    },
+    {
+     "nom": "Jacob Fearnley",
+     "pays": "GBR",
+     "points": 686,
+     "rang": 87
+    },
+    {
+     "nom": "Marcos Giron",
+     "pays": "USA",
+     "points": 676,
+     "rang": 88
+    },
+    {
+     "nom": "Lorenzo Sonego",
+     "pays": "ITA",
+     "points": 658,
+     "rang": 89
+    },
+    {
+     "nom": "Marco Trungelliti",
+     "pays": "ARG",
+     "points": 657,
+     "rang": 90
+    },
+    {
+     "nom": "Yunchaokete Bu",
+     "pays": "CHN",
+     "points": 652,
+     "rang": 91
+    },
+    {
+     "nom": "Coleman Wong",
+     "pays": "HKG",
+     "points": 642,
+     "rang": 92
+    },
+    {
+     "nom": "Hugo Gaston",
+     "pays": "FRA",
+     "points": 641,
+     "rang": 93
+    },
+    {
+     "nom": "Corentin Moutet",
+     "pays": "FRA",
+     "points": 640,
+     "rang": 94
+    },
+    {
+     "nom": "Dino Prizmic",
+     "pays": "CRO",
+     "points": 638,
+     "rang": 95
+    },
+    {
+     "nom": "Toby Samuel",
+     "pays": "GBR",
+     "points": 625,
+     "rang": 96
+    },
+    {
+     "nom": "Adam Walton",
+     "pays": "AUS",
+     "points": 619,
+     "rang": 97
+    },
+    {
+     "nom": "Terence Atmane",
+     "pays": "FRA",
+     "points": 616,
+     "rang": 98
+    },
+    {
+     "nom": "Jenson Brooksby",
+     "pays": "USA",
+     "points": 613,
+     "rang": 99
+    },
+    {
+     "nom": "Benjamin Bonzi",
+     "pays": "FRA",
+     "points": 605,
+     "rang": 100
+    }
+   ],
+   "source": "ATP Tour",
+   "titre": "Classement ATP"
+  },
+  "race": {
+   "titre": "ATP Race to Turin",
+   "date": "2026-10-24",
+   "source": "ATP Tour",
+   "live": true,
+   "joueurs": [
+    {
+     "rang": 1,
+     "nom": "Alexander Zverev",
+     "pays": "GER",
+     "points": 9150
+    },
+    {
+     "rang": 2,
+     "nom": "Jannik Sinner",
+     "pays": "ITA",
+     "points": 7950
+    },
+    {
+     "rang": 3,
+     "nom": "Carlos Alcaraz",
+     "pays": "ESP",
+     "points": 4600
+    },
+    {
+     "rang": 4,
+     "nom": "Ben Shelton",
+     "pays": "USA",
+     "points": 4480
+    },
+    {
+     "rang": 5,
+     "nom": "Flavio Cobolli",
+     "pays": "ITA",
+     "points": 3590
+    },
+    {
+     "rang": 6,
+     "nom": "Daniil Medvedev",
+     "pays": "",
+     "points": 3520
+    },
+    {
+     "rang": 7,
+     "nom": "Frances Tiafoe",
+     "pays": "USA",
+     "points": 3380
+    },
+    {
+     "rang": 8,
+     "nom": "Arthur Fils",
+     "pays": "FRA",
+     "points": 3375
+    },
+    {
+     "rang": 9,
+     "nom": "Rafael Jodar",
+     "pays": "ESP",
+     "points": 3159
+    },
+    {
+     "rang": 10,
+     "nom": "Alex de Minaur",
+     "pays": "AUS",
+     "points": 2880
+    },
+    {
+     "rang": 11,
+     "nom": "Novak Djokovic",
+     "pays": "SRB",
+     "points": 2840
+    },
+    {
+     "rang": 12,
+     "nom": "Tommy Paul",
+     "pays": "USA",
+     "points": 2635
+    },
+    {
+     "rang": 13,
+     "nom": "Taylor Fritz",
+     "pays": "USA",
+     "points": 2580
+    },
+    {
+     "rang": 14,
+     "nom": "Jakub Mensik",
+     "pays": "CZE",
+     "points": 2495
+    },
+    {
+     "rang": 15,
+     "nom": "Felix Auger-Aliassime",
+     "pays": "CAN",
+     "points": 2465
+    },
+    {
+     "rang": 16,
+     "nom": "Alejandro Davidovich Fokina",
+     "pays": "ESP",
+     "points": 2450
+    },
+    {
+     "rang": 17,
+     "nom": "Brandon Nakashima",
+     "pays": "USA",
+     "points": 2375
+    },
+    {
+     "rang": 18,
+     "nom": "Jiri Lehecka",
+     "pays": "CZE",
+     "points": 2275
+    },
+    {
+     "rang": 19,
+     "nom": "Francisco Cerundolo",
+     "pays": "ARG",
+     "points": 2170
+    },
+    {
+     "rang": 20,
+     "nom": "Luciano Darderi",
+     "pays": "ITA",
+     "points": 2150
+    },
+    {
+     "rang": 21,
+     "nom": "Andrey Rublev",
+     "pays": "",
+     "points": 2075
+    },
+    {
+     "rang": 22,
+     "nom": "Learner Tien",
+     "pays": "USA",
+     "points": 2045
+    },
+    {
+     "rang": 23,
+     "nom": "Casper Ruud",
+     "pays": "NOR",
+     "points": 1985
+    },
+    {
+     "rang": 24,
+     "nom": "Karen Khachanov",
+     "pays": "",
+     "points": 1940
+    },
+    {
+     "rang": 25,
+     "nom": "Alexander Bublik",
+     "pays": "KAZ",
+     "points": 1835
+    },
+    {
+     "rang": 26,
+     "nom": "Alexander Blockx",
+     "pays": "BEL",
+     "points": 1640
+    },
+    {
+     "rang": 27,
+     "nom": "Hubert Hurkacz",
+     "pays": "POL",
+     "points": 1575
+    },
+    {
+     "rang": 28,
+     "nom": "Tomas Martin Etcheverry",
+     "pays": "ARG",
+     "points": 1525
+    },
+    {
+     "rang": 29,
+     "nom": "Alejandro Tabilo",
+     "pays": "CHI",
+     "points": 1515
+    },
+    {
+     "rang": 30,
+     "nom": "Stefanos Tsitsipas",
+     "pays": "GRE",
+     "points": 1440
+    },
+    {
+     "rang": 31,
+     "nom": "Ignacio Buse",
+     "pays": "PER",
+     "points": 1420
+    },
+    {
+     "rang": 32,
+     "nom": "Arthur Fery",
+     "pays": "GBR",
+     "points": 1403
+    },
+    {
+     "rang": 33,
+     "nom": "Alex Michelsen",
+     "pays": "USA",
+     "points": 1395
+    },
+    {
+     "rang": 34,
+     "nom": "Lorenzo Musetti",
+     "pays": "ITA",
+     "points": 1345
+    },
+    {
+     "rang": 35,
+     "nom": "Matteo Arnaldi",
+     "pays": "ITA",
+     "points": 1311
+    },
+    {
+     "rang": 36,
+     "nom": "Valentin Vacherot",
+     "pays": "MON",
+     "points": 1280
+    },
+    {
+     "rang": 37,
+     "nom": "Botic van de Zandschulp",
+     "pays": "NED",
+     "points": 1270
+    },
+    {
+     "rang": 38,
+     "nom": "Ugo Humbert",
+     "pays": "FRA",
+     "points": 1270
+    },
+    {
+     "rang": 39,
+     "nom": "Zizou Bergs",
+     "pays": "BEL",
+     "points": 1220
+    },
+    {
+     "rang": 40,
+     "nom": "Joao Fonseca",
+     "pays": "BRA",
+     "points": 1200
+    },
+    {
+     "rang": 41,
+     "nom": "Daniel Merida",
+     "pays": "ESP",
+     "points": 1187
+    },
+    {
+     "rang": 42,
+     "nom": "Arthur Gea",
+     "pays": "FRA",
+     "points": 1146
+    },
+    {
+     "rang": 43,
+     "nom": "Quentin Halys",
+     "pays": "FRA",
+     "points": 1114
+    },
+    {
+     "rang": 44,
+     "nom": "Luca Van Assche",
+     "pays": "FRA",
+     "points": 1102
+    },
+    {
+     "rang": 45,
+     "nom": "Mariano Navone",
+     "pays": "ARG",
+     "points": 1099
+    },
+    {
+     "rang": 46,
+     "nom": "Matteo Berrettini",
+     "pays": "ITA",
+     "points": 1033
+    },
+    {
+     "rang": 47,
+     "nom": "Thiago Agustin Tirante",
+     "pays": "ARG",
+     "points": 1016
+    },
+    {
+     "rang": 48,
+     "nom": "Sebastian Baez",
+     "pays": "ARG",
+     "points": 1014
+    },
+    {
+     "rang": 49,
+     "nom": "Denis Shapovalov",
+     "pays": "CAN",
+     "points": 1005
+    },
+    {
+     "rang": 50,
+     "nom": "Jan-Lennard Struff",
+     "pays": "GER",
+     "points": 966
+    },
+    {
+     "rang": 51,
+     "nom": "Nuno Borges",
+     "pays": "POR",
+     "points": 950
+    },
+    {
+     "rang": 52,
+     "nom": "Juan Manuel Cerundolo",
+     "pays": "ARG",
+     "points": 950
+    },
+    {
+     "rang": 53,
+     "nom": "Raphael Collignon",
+     "pays": "BEL",
+     "points": 943
+    },
+    {
+     "rang": 54,
+     "nom": "Cameron Norrie",
+     "pays": "GBR",
+     "points": 940
+    },
+    {
+     "rang": 55,
+     "nom": "Adolfo Daniel Vallejo",
+     "pays": "PAR",
+     "points": 933
+    },
+    {
+     "rang": 56,
+     "nom": "Jaime Faria",
+     "pays": "POR",
+     "points": 929
+    },
+    {
+     "rang": 57,
+     "nom": "Fabian Marozsan",
+     "pays": "HUN",
+     "points": 875
+    },
+    {
+     "rang": 58,
+     "nom": "Miomir Kecmanovic",
+     "pays": "SRB",
+     "points": 843
+    },
+    {
+     "rang": 59,
+     "nom": "Jaume Munar",
+     "pays": "ESP",
+     "points": 825
+    },
+    {
+     "rang": 60,
+     "nom": "Tallon Griekspoor",
+     "pays": "NED",
+     "points": 825
+    },
+    {
+     "rang": 61,
+     "nom": "Mattia Bellucci",
+     "pays": "ITA",
+     "points": 824
+    },
+    {
+     "rang": 62,
+     "nom": "Ethan Quinn",
+     "pays": "USA",
+     "points": 821
+    },
+    {
+     "rang": 63,
+     "nom": "Arthur Rinderknech",
+     "pays": "FRA",
+     "points": 820
+    },
+    {
+     "rang": 64,
+     "nom": "Martin Landaluce",
+     "pays": "ESP",
+     "points": 816
+    },
+    {
+     "rang": 65,
+     "nom": "Vit Kopriva",
+     "pays": "CZE",
+     "points": 812
+    },
+    {
+     "rang": 66,
+     "nom": "Yannick Hanfmann",
+     "pays": "GER",
+     "points": 810
+    },
+    {
+     "rang": 67,
+     "nom": "Roman Safiullin",
+     "pays": "",
+     "points": 807
+    },
+    {
+     "rang": 68,
+     "nom": "Facundo Diaz Acosta",
+     "pays": "ARG",
+     "points": 807
+    },
+    {
+     "rang": 69,
+     "nom": "Tomas Machac",
+     "pays": "CZE",
+     "points": 794
+    },
+    {
+     "rang": 70,
+     "nom": "Adrian Mannarino",
+     "pays": "FRA",
+     "points": 783
+    },
+    {
+     "rang": 71,
+     "nom": "James Duckworth",
+     "pays": "AUS",
+     "points": 774
+    },
+    {
+     "rang": 72,
+     "nom": "Daniel Altmaier",
+     "pays": "GER",
+     "points": 774
+    },
+    {
+     "rang": 73,
+     "nom": "Pablo Carreno Busta",
+     "pays": "ESP",
+     "points": 760
+    },
+    {
+     "rang": 74,
+     "nom": "Zachary Svajda",
+     "pays": "USA",
+     "points": 759
+    },
+    {
+     "rang": 75,
+     "nom": "Hamad Medjedovic",
+     "pays": "SRB",
+     "points": 751
+    },
+    {
+     "rang": 76,
+     "nom": "Roman Andres Burruchaga",
+     "pays": "ARG",
+     "points": 742
+    },
+    {
+     "rang": 77,
+     "nom": "Titouan Droguet",
+     "pays": "FRA",
+     "points": 732
+    },
+    {
+     "rang": 78,
+     "nom": "Alex Molcan",
+     "pays": "SVK",
+     "points": 727
+    },
+    {
+     "rang": 79,
+     "nom": "Camilo Ugo Carabelli",
+     "pays": "ARG",
+     "points": 720
+    },
+    {
+     "rang": 80,
+     "nom": "Kamil Majchrzak",
+     "pays": "POL",
+     "points": 715
+    },
+    {
+     "rang": 81,
+     "nom": "Kyrian Jacquet",
+     "pays": "FRA",
+     "points": 684
+    },
+    {
+     "rang": 82,
+     "nom": "Aleksandar Kovacevic",
+     "pays": "USA",
+     "points": 677
+    },
+    {
+     "rang": 83,
+     "nom": "Rinky Hijikata",
+     "pays": "AUS",
+     "points": 673
+    },
+    {
+     "rang": 84,
+     "nom": "Marco Trungelliti",
+     "pays": "ARG",
+     "points": 670
+    },
+    {
+     "rang": 85,
+     "nom": "Terence Atmane",
+     "pays": "FRA",
+     "points": 666
+    },
+    {
+     "rang": 86,
+     "nom": "Damir Dzumhur",
+     "pays": "BIH",
+     "points": 661
+    },
+    {
+     "rang": 87,
+     "nom": "Jacob Fearnley",
+     "pays": "GBR",
+     "points": 653
+    },
+    {
+     "rang": 88,
+     "nom": "Dino Prizmic",
+     "pays": "CRO",
+     "points": 638
+    },
+    {
+     "rang": 89,
+     "nom": "Yunchaokete Bu",
+     "pays": "CHN",
+     "points": 638
+    },
+    {
+     "rang": 90,
+     "nom": "Benjamin Bonzi",
+     "pays": "FRA",
+     "points": 630
+    },
+    {
+     "rang": 91,
+     "nom": "Marcos Giron",
+     "pays": "USA",
+     "points": 626
+    },
+    {
+     "rang": 92,
+     "nom": "Toby Samuel",
+     "pays": "GBR",
+     "points": 617
+    },
+    {
+     "rang": 93,
+     "nom": "Marin Cilic",
+     "pays": "CRO",
+     "points": 613
+    },
+    {
+     "rang": 94,
+     "nom": "Adam Walton",
+     "pays": "AUS",
+     "points": 612
+    },
+    {
+     "rang": 95,
+     "nom": "Coleman Wong",
+     "pays": "HKG",
+     "points": 597
+    },
+    {
+     "rang": 96,
+     "nom": "Michael Zheng",
+     "pays": "USA",
+     "points": 594
+    },
+    {
+     "rang": 97,
+     "nom": "Sebastian Korda",
+     "pays": "USA",
+     "points": 590
+    },
+    {
+     "rang": 98,
+     "nom": "Zsombor Piros",
+     "pays": "HUN",
+     "points": 590
+    },
+    {
+     "rang": 99,
+     "nom": "Jesper de Jong",
+     "pays": "NED",
+     "points": 575
+    },
+    {
+     "rang": 100,
+     "nom": "Jenson Brooksby",
+     "pays": "USA",
+     "points": 575
+    }
+   ]
+  }
+ }
+}
