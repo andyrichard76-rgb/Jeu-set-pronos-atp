@@ -537,7 +537,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T11:32:00+02:00",note:"texte des chances de victoire"};
+const SITE_VERSION={date:"2026-10-23T11:45:00+02:00",note:"matchs commencés affichés en direct"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -784,7 +784,7 @@ function statRows(s1,s2){
 function renderSheet(){
   const m=openMatch&&matchById(openMatch);if(!m){$("sheetBg").hidden=true;return}
   const L=m.live||{};const sets=L.sets&&L.sets.length?L.sets:(m.score||"").split(" ").filter(s=>/^\d+-\d+$/.test(s)).map(s=>s.split("-").map(Number));
-  const live=m.statut==="en_cours",done=m.statut==="termine";
+  const live=m.statut==="en_cours"||hasStarted(m),done=m.statut==="termine";
   const row=n=>{const name=n===1?m.j1:m.j2,pays=n===1?m.j1Pays:m.j2Pays;
     const cells=sets.map(s=>`<span class="st ${s[n-1]>s[2-n]?"win":""}">${s[n-1]}</span>`).join("");
     const gm=live&&L.jeu?`<span class="gm">${esc(L.jeu.split("-")[n-1]||"")}</span>`:`<span></span>`;
@@ -808,12 +808,14 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&openMatch)closeShee
 
 
 /* ---------- Accueil : En direct + Match à suivre ---------- */
-function setsFor(m){const L=m.live||{};return L.sets&&L.sets.length?L.sets:(m.score||"").split(" ").filter(s=>/^\d+-\d+$/.test(s)).map(s=>s.split("-").map(Number))}
+function hasStarted(m){if(m.statut!=="a_venir"||!m.heure||m.date!==today())return false;const hm=h=>{const [H,M]=h.split(":").map(Number);return H*60+M};const n=hm(new Date().toTimeString().slice(0,5)),d=n-hm(m.heure);return d>=0&&d<240}
+function setsFor(m){const L=m.live||{};if(m.statut==="a_venir"&&!(L.sets&&L.sets.length))return [[0,0]];return L.sets&&L.sets.length?L.sets:(m.score||"").split(" ").filter(s=>/^\d+-\d+$/.test(s)).map(s=>s.split("-").map(Number))}
 function renderHome(){
   const t=today(),now=new Date().toTimeString().slice(0,5);
   const key=m=>(m.heure||"99:99")+"|"+m.tournoi+"|"+String(m.ordre||0).padStart(2,"0");
   const day=matchs.filter(m=>m.date===t).sort((a,b)=>key(a).localeCompare(key(b)));
-  const lives=day.filter(m=>m.statut==="en_cours");
+    /* un match dont l'heure de début est passée est affiché en direct sans attendre la mise à jour */
+  const lives=day.filter(m=>m.statut==="en_cours"||hasStarted(m));
   $("liveBlk").hidden=!lives.length;
   $("liveList").innerHTML=lives.map(m=>{const L=m.live||{},sets=setsFor(m);const g=L.jeu?L.jeu.split("-"):null;
     const won=n=>sets.filter(s=>s[n-1]>s[2-n]&&(Math.max(...s)>=6)).length;
@@ -824,7 +826,7 @@ function renderHome(){
     return `<div class="lvcard"><button class="lvhit" data-stats="${m.id}" aria-label="Score et stats ${esc(m.j1)} contre ${esc(m.j2)}"><span class="tt"><span>${esc(m.tournoi)} · ${esc(m.tour)}</span><span class="lv">● En cours</span></span><span class="lvgrid">${p(1)}${p(2)}</span></button><a class="livelink lvlink" href="https://www.atptour.com/en/scores/current" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Point par point</a></div>`}).join("");
   const toMin=h=>{const [H,M]=h.split(":").map(Number);return H*60+M};
   const nowMin=toMin(now);
-  const soon=day.filter(m=>m.statut==="a_venir"&&m.heure&&toMin(m.heure)>=nowMin-15&&toMin(m.heure)<=nowMin+120);
+  const soon=day.filter(m=>m.statut==="a_venir"&&m.heure&&toMin(m.heure)>nowMin&&toMin(m.heure)<=nowMin+120);
   let list=soon,title="Dans les 2 prochaines heures";
   if(!soon.length){const nx=day.find(m=>m.statut==="a_venir"&&m.heure&&toMin(m.heure)>nowMin);if(nx){list=[nx];title="Prochain match"}}
   $("nextBlk").hidden=!list.length;$("nextTitle").textContent=title;
