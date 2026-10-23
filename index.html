@@ -29,6 +29,9 @@
 
 *{box-sizing:border-box}
 .legal{margin-top:8px;padding:14px 16px;border-radius:12px;background:rgba(0,0,0,.35);color:var(--on-bg-muted);font-size:.78rem;line-height:1.5;backdrop-filter:blur(6px)}
+.fresh{display:flex;align-items:center;gap:10px;align-self:flex-start;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.18);color:var(--on-bg);border-radius:999px;padding:8px 14px;font-size:.88rem;backdrop-filter:blur(6px);font-variant-numeric:tabular-nums}
+.fresh b{color:var(--ball)}
+.fdot{width:9px;height:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.25);flex:none}
 .legal p{margin:0}.legal p+p{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.15);font-variant-numeric:tabular-nums}.legal b{color:var(--on-bg)}
 .court-bg canvas{width:100%;height:100%;display:block}
 .photo-bg{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center}
@@ -304,6 +307,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
       <input type="file" id="bgFile" accept="image/jpeg,image/png,image/webp" hidden>
     </div>
   </header>
+  <div class="fresh" id="fresh" role="status"><span class="fdot" aria-hidden="true"></span><span id="freshTxt">Vérification de la mise à jour…</span></div>
 
   <section class="board" aria-label="Duel de réussite">
     <div class="duel"><span class="who">Moi</span><div class="big" id="pctMe">–<small>%</small></div><span class="det" id="detMe">0 gagné · 0 perdu</span></div>
@@ -385,7 +389,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-23T02:36:00+02:00",note:"date des mises à jour affichée en bas de page"};
+const SITE_VERSION={date:"2026-10-23T02:37:00+02:00",note:"date de mise à jour affichée en haut de page"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -422,6 +426,10 @@ const pl=n=>`${n} ${n>1?"s":""}`;
 
 function renderMaj(){
   const f=d=>{const x=new Date(d);return x.toLocaleDateString("fr-FR",{day:"numeric",month:"long"})+" à "+x.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})};
+  const last=[meta&&meta.misAJour,SITE_VERSION.date].filter(Boolean).map(d=>new Date(d)).sort((a,b)=>b-a)[0];
+  if(last&&$("freshTxt")){const min=Math.round((Date.now()-last)/60000);
+    const ago=min<1?"à l'instant":min<60?`il y a ${min} min`:min<1440?`il y a ${Math.floor(min/60)} h`:`il y a ${Math.floor(min/1440)} j`;
+    $("freshTxt").innerHTML=`À jour au <b>${esc(f(last.toISOString()))}</b> · ${ago}`;}
   const el=$("majLine");if(!el)return;
   el.innerHTML=(meta&&meta.misAJour?`Matchs et scores mis à jour le <b>${esc(f(meta.misAJour))}</b><br>`:"")+`Dernière modification du site : <b>${esc(f(SITE_VERSION.date))}</b> (${esc(SITE_VERSION.note)})`;
 }
