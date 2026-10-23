@@ -89,16 +89,16 @@
    "j2Pays": "",
    "j2Tds": "5",
    "ordre": 4,
-   "score": "4-6 7-6 6-6",
-   "statut": "en_cours",
+   "score": "4-6 7-6 7-6",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null,
+   "vainqueur": 1,
    "live": {
     "srId": "sr:sport_event:75620034",
-    "maj": "2026-10-23T19:01:31+02:00",
+    "maj": "2026-10-23T19:34:16+02:00",
     "sets": [
      [
       4,
@@ -109,11 +109,10 @@
       6
      ],
      [
-      6,
+      7,
       6
      ]
     ],
-    "service": 2,
     "stats": {
      "j1": {
       "aces": 6,
@@ -141,7 +140,8 @@
       "pts": 36,
       "maxPts": 7
      }
-    }
+    },
+    "fini": true
    }
   },
   {
@@ -412,7 +412,7 @@
    "j2Pays": "USA",
    "j2Tds": "5",
    "ordre": 3,
-   "score": "1-2",
+   "score": "6-4 0-0",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
@@ -422,12 +422,16 @@
    "live": {
     "sets": [
      [
-      1,
-      2
+      6,
+      4
+     ],
+     [
+      0,
+      0
      ]
     ],
-    "service": 1,
-    "maj": "2026-10-23T19:01:31+02:00"
+    "service": 2,
+    "maj": "2026-10-23T19:34:16+02:00"
    }
   },
   {
@@ -527,13 +531,22 @@
    "j2Pays": "USA",
    "j2Tds": "5",
    "ordre": 3,
-   "score": "",
-   "statut": "a_venir",
+   "score": "3-3",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Quart de finale",
    "tournoi": "Lyon",
    "tournoiId": "2026-lyon",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "sets": [
+     [
+      3,
+      3
+     ]
+    ],
+    "maj": "2026-10-23T19:34:16+02:00"
+   }
   },
   {
    "id": "2026-10-23-lyon-fritz-altmaier",
@@ -744,6 +757,26 @@
    "score": "",
    "vainqueur": null,
    "id": "2026-10-24-lyon-paul-fritz"
+  },
+  {
+   "tournoiId": "2026-almaty",
+   "tournoi": "Almaty",
+   "categorie": "ATP 250",
+   "surface": "indoor",
+   "tour": "Demi-finale",
+   "date": "2026-10-24",
+   "heure": "15:00",
+   "ordre": 2,
+   "j1": "Daniil Medvedev",
+   "j1Pays": "",
+   "j1Tds": "1",
+   "j2": "Alexander Bublik",
+   "j2Pays": "KAZ",
+   "j2Tds": "3",
+   "statut": "a_venir",
+   "score": "",
+   "vainqueur": null,
+   "id": "2026-10-24-almaty-medvedev-bublik"
   }
  ],
  "tournois": [
@@ -1118,8 +1151,8 @@
         "pays": "",
         "tds": "5"
        },
-       "score": "",
-       "vainqueur": null
+       "score": "4-6 7-6 7-6",
+       "vainqueur": 1
       },
       {
        "j1": {
@@ -1157,7 +1190,11 @@
         "pays": "",
         "tds": "1"
        },
-       "j2": null,
+       "j2": {
+        "nom": "A. Bublik",
+        "pays": "KAZ",
+        "tds": "3"
+       },
        "score": "",
        "vainqueur": null
       },
@@ -2115,7 +2152,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-23T19:01:31+02:00",
+  "misAJour": "2026-10-23T19:34:16+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
