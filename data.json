@@ -842,22 +842,22 @@
    "j2Pays": "KAZ",
    "j2Tds": "3",
    "ordre": 2,
-   "score": "5-3",
-   "statut": "en_cours",
+   "score": "6-3 ab.",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null,
+   "vainqueur": 1,
    "live": {
     "sets": [
      [
-      5,
+      6,
       3
      ]
     ],
-    "service": 1,
-    "maj": "2026-10-24T15:45:07+02:00"
+    "maj": "2026-10-24T15:47:09+02:00",
+    "fini": true
    }
   },
   {
@@ -958,7 +958,7 @@
      ]
     ],
     "service": 1,
-    "maj": "2026-10-24T15:45:07+02:00"
+    "maj": "2026-10-24T15:47:09+02:00"
    }
   },
   {
@@ -989,6 +989,26 @@
    "tournoi": "Lyon",
    "tournoiId": "2026-lyon",
    "vainqueur": null
+  },
+  {
+   "tournoiId": "2026-almaty",
+   "tournoi": "Almaty",
+   "categorie": "ATP 250",
+   "surface": "indoor",
+   "tour": "Finale",
+   "date": "2026-10-25",
+   "heure": "12:00",
+   "ordre": 1,
+   "j1": "Daniil Medvedev",
+   "j1Pays": "",
+   "j1Tds": "1",
+   "j2": "Nikoloz Basilashvili",
+   "j2Pays": "GEO",
+   "j2Tds": "Q",
+   "statut": "a_venir",
+   "score": "",
+   "vainqueur": null,
+   "id": "2026-10-25-almaty-medvedev-basilashvili"
   }
  ],
  "tournois": [
@@ -1407,8 +1427,8 @@
         "pays": "KAZ",
         "tds": "3"
        },
-       "score": "",
-       "vainqueur": null
+       "score": "6-3 ab.",
+       "vainqueur": 1
       },
       {
        "j1": {
@@ -1427,7 +1447,11 @@
      ],
      [
       {
-       "j1": null,
+       "j1": {
+        "nom": "D. Medvedev",
+        "pays": "",
+        "tds": "1"
+       },
        "j2": {
         "nom": "N. Basilashvili",
         "pays": "GEO",
@@ -2389,7 +2413,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T15:45:07+02:00",
+  "misAJour": "2026-10-24T15:47:09+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
