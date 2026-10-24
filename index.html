@@ -364,7 +364,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 .fill{height:100%}
 .bar .n{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
 .catnote{margin:0;font-size:.76rem;color:var(--muted)}
-#tourBars{display:flex;flex-direction:column;gap:14px}
+#tourBars,#roundTable{display:flex;flex-direction:column;gap:14px}
 .rtwrap{overflow-x:auto}.rt{width:100%;border-collapse:collapse;font-size:.8rem}.rt th,.rt td{padding:7px 6px;text-align:center;border-bottom:1px solid var(--line,rgba(127,127,127,.2));white-space:nowrap}.rt th{font-size:.7rem;color:var(--muted);font-weight:600}.rt td:first-child,.rt th:first-child{text-align:left}.rt td b{display:block;font-size:.9rem}.rt td small{color:var(--muted);font-size:.68rem}.rt tr.tot td{font-weight:600;border-bottom:0}.rt .na{color:var(--muted)}.rt td.x{background:rgba(127,127,127,.08)}
 .tgrp{display:flex;flex-direction:column;gap:9px}
 .tgrp+.tgrp{border-top:1px solid var(--line);padding-top:14px}
@@ -566,7 +566,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
     <div class="panel"><h2>Réussite par surface</h2><div class="bars" id="bars"></div></div>
     <div class="panel"><h2>Réussite par catégorie</h2><div class="bars" id="catBars"></div><p class="catnote">Les ATP Finals sont comptées avec les Masters 1000.</p></div>
     <div class="panel"><h2>Réussite par tournoi</h2><div id="tourBars"></div></div>
-    <div class="panel"><h2>Réussite par tour</h2><div class="rtwrap" id="roundTable"></div><p class="catnote">Réussite et matchs gagnés / terminés, selon le format de chaque tournoi : dans un ATP 250 ou 500 à 32 joueurs, le 2e tour est un huitième de finale ; en Grand Chelem et en Masters 1000, il y a jusqu'à trois tours avant les huitièmes. Les cases grisées n'existent pas dans cette catégorie.</p></div>
+    <div class="panel"><h2>Réussite par tour</h2><div id="roundTable"></div><p class="catnote">Les tours suivent le format de chaque catégorie : en ATP 250 et 500, le 2e tour n'existe que dans les tableaux à 48 joueurs.</p></div>
   </section>
 
   <!-- Classements -->
@@ -593,7 +593,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-24T15:25:00+02:00",note:"réussite par tournoi avant réussite par tour"};
+const SITE_VERSION={date:"2026-10-24T15:30:00+02:00",note:"réussite par tour en barres"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -787,12 +787,13 @@ function renderBilan(){
       if(tr){const i=tr.findIndex(x=>String(x).toLowerCase().trim()===t);if(i>=0)return fromBack(tr.length-i,i+1)}
       const mm=t.match(/(\d)/)||(/premier/.test(t)?[0,"1"]:/deuxi|second/.test(t)?[0,"2"]:/troisi/.test(t)?[0,"3"]:/quatri/.test(t)?[0,"4"]:null);
       if(!mm)return null;const n=Number(mm[1]),tot=tr?tr.length:DEFN[CATKEY(m.categorie)];return fromBack(tot-n+1,n)};
-    const cell=(l,ok)=>{if(!ok)return`<td class="x"></td>`;const s=tally(l,aiStatus),d=s.won+s.lost;return d?`<td><b>${s.pct} %</b><small>${s.won}/${d}</small></td>`:`<td class="na">—</td>`};
     const done=an.filter(m=>m.vainqueur).map(m=>({m,k:stage(m),c:CATKEY(m.categorie)}));
-    const cols=["gc","m","5","2"];
-    const rows=ROUNDS.filter(([k])=>k!=="rr"||done.some(x=>x.k==="rr")).map(([k,lab])=>{const l=done.filter(x=>x.k===k);
-      return`<tr><td>${lab}</td>${cols.map(c=>cell(l.filter(x=>x.c===c).map(x=>x.m),OK[c].includes(k))).join("")}${cell(l.map(x=>x.m),true)}</tr>`}).join("");
-    rtEl.innerHTML=`<table class="rt"><thead><tr><th>Tour</th><th>Grand Chelem</th><th>1000</th><th>500</th><th>250</th><th>Total</th></tr></thead><tbody>${rows}<tr class="tot"><td>Total</td>${cols.map(c=>cell(done.filter(x=>x.c===c).map(x=>x.m),true)).join("")}${cell(done.map(x=>x.m),true)}</tr></tbody></table>`}
+    const GRP=[["ATP 250","2","grass"],["ATP 500","5","steel"],["Masters 1000","m","ai"],["Grand Chelem","gc","court"]];
+    const LAB=Object.fromEntries(ROUNDS);
+    rtEl.innerHTML=GRP.map(([lab,c,col])=>{const l=done.filter(x=>x.c===c),s=tally(l.map(x=>x.m),aiStatus),d=s.won+s.lost;
+      const rows=OK[c].filter(k=>k!=="rr"||l.some(x=>x.k==="rr")).map(k=>{const r=tally(l.filter(x=>x.k===k).map(x=>x.m),aiStatus),n=r.won+r.lost;
+        return `<div class="bar"><span class="tn">${LAB[k]}</span><div class="track" role="img" aria-label="${lab}, ${LAB[k]} : ${n?r.pct+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${n?r.pct:0}%;background:var(--${col})"></div></div><span class="n">${n?r.pct+" % · "+r.won+"/"+n:"—"}</span></div>`}).join("");
+      return `<div class="tgrp"><h3><span class="cl"><i style="background:var(--${col})"></i>${lab}</span><small>${d?s.pct+" % · "+s.won+"/"+d:""}</small></h3>${rows}</div>`}).join("")}
   const tb=$("tourBars");if(tb){const T={};
     const add=(id,o)=>{const t=T[id]||(T[id]={nom:o.nom,categorie:o.categorie,annee:o.annee,date:"",won:0,lost:0,wait:0});t.won+=o.won||0;t.lost+=o.lost||0;t.wait+=o.wait||0;if((o.date||"")>t.date)t.date=o.date||""};
     const H=(historique&&historique.tournois)||{};
