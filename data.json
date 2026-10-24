@@ -928,13 +928,22 @@
    "j2Pays": "GER",
    "j2Tds": "",
    "ordre": 2,
-   "score": "",
-   "statut": "a_venir",
+   "score": "1-2",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Bruxelles",
    "tournoiId": "2026-bruxelles",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "sets": [
+     [
+      1,
+      2
+     ]
+    ],
+    "maj": "2026-10-24T18:51:25+02:00"
+   }
   },
   {
    "id": "2026-10-24-lyon-paul-fritz",
@@ -1000,13 +1009,13 @@
    "j2Pays": "ITA",
    "j2Tds": "6",
    "ordre": 2,
-   "score": "6-4 2-6 5-4",
-   "statut": "en_cours",
+   "score": "6-4 2-6 5-7",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Lyon",
    "tournoiId": "2026-lyon",
-   "vainqueur": null,
+   "vainqueur": 2,
    "live": {
     "sets": [
      [
@@ -1019,11 +1028,11 @@
      ],
      [
       5,
-      4
+      7
      ]
     ],
-    "service": 2,
-    "maj": "2026-10-24T18:30:19+02:00"
+    "maj": "2026-10-24T18:51:25+02:00",
+    "fini": true
    }
   },
   {
@@ -1045,6 +1054,26 @@
    "score": "",
    "vainqueur": null,
    "id": "2026-10-25-almaty-medvedev-basilashvili"
+  },
+  {
+   "tournoiId": "2026-lyon",
+   "tournoi": "Lyon",
+   "categorie": "ATP 250",
+   "surface": "indoor",
+   "tour": "Finale",
+   "date": "2026-10-25",
+   "heure": "15:30",
+   "ordre": 1,
+   "j1": "Lorenzo Musetti",
+   "j1Pays": "ITA",
+   "j1Tds": "6",
+   "j2": "Taylor Fritz",
+   "j2Pays": "USA",
+   "j2Tds": "2",
+   "statut": "a_venir",
+   "score": "",
+   "vainqueur": null,
+   "id": "2026-10-25-lyon-musetti-fritz"
   }
  ],
  "tournois": [
@@ -2388,8 +2417,8 @@
         "pays": "ITA",
         "tds": "6"
        },
-       "score": "",
-       "vainqueur": null
+       "score": "6-4 2-6 5-7",
+       "vainqueur": 2
       },
       {
        "j1": {
@@ -2408,7 +2437,11 @@
      ],
      [
       {
-       "j1": null,
+       "j1": {
+        "nom": "L. Musetti",
+        "pays": "ITA",
+        "tds": "6"
+       },
        "j2": {
         "nom": "T. Fritz",
         "pays": "USA",
@@ -2457,7 +2490,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T18:30:19+02:00",
+  "misAJour": "2026-10-24T18:51:25+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
