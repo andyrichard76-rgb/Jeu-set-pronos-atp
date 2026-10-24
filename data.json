@@ -939,7 +939,7 @@
    "j2Pays": "USA",
    "j2Tds": "2",
    "ordre": 1,
-   "score": "3-6 5-5",
+   "score": "3-6 5-6",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -954,11 +954,11 @@
      ],
      [
       5,
-      5
+      6
      ]
     ],
-    "service": 1,
-    "maj": "2026-10-24T15:49:11+02:00"
+    "service": 2,
+    "maj": "2026-10-24T15:51:13+02:00"
    }
   },
   {
@@ -2413,7 +2413,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T15:49:11+02:00",
+  "misAJour": "2026-10-24T15:51:13+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
