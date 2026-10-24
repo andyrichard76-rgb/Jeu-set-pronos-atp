@@ -766,7 +766,7 @@
    "j2Pays": "GRE",
    "j2Tds": "7",
    "ordre": 1,
-   "score": "6-4 4-5",
+   "score": "6-4 6-6",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -780,12 +780,12 @@
       4
      ],
      [
-      4,
-      5
+      6,
+      6
      ]
     ],
     "service": 1,
-    "maj": "2026-10-24T13:26:00+02:00",
+    "maj": "2026-10-24T13:49:05+02:00",
     "srId": "sr:sport_event:75620028",
     "stats": {
      "j1": {
@@ -2357,7 +2357,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T13:26:00+02:00",
+  "misAJour": "2026-10-24T13:49:05+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
