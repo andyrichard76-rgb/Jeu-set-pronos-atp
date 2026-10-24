@@ -842,13 +842,23 @@
    "j2Pays": "KAZ",
    "j2Tds": "3",
    "ordre": 2,
-   "score": "",
-   "statut": "a_venir",
+   "score": "1-1",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "sets": [
+     [
+      1,
+      1
+     ]
+    ],
+    "service": 1,
+    "maj": "2026-10-24T15:28:50+02:00"
+   }
   },
   {
    "id": "2026-10-24-bruxelles-cerundolo-griekspoor",
@@ -929,7 +939,7 @@
    "j2Pays": "USA",
    "j2Tds": "2",
    "ordre": 1,
-   "score": "3-6 2-1",
+   "score": "3-6 4-3",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -943,12 +953,12 @@
       6
      ],
      [
-      2,
-      1
+      4,
+      3
      ]
     ],
     "service": 1,
-    "maj": "2026-10-24T15:10:44+02:00"
+    "maj": "2026-10-24T15:28:50+02:00"
    }
   },
   {
@@ -2379,7 +2389,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T15:10:44+02:00",
+  "misAJour": "2026-10-24T15:28:50+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
