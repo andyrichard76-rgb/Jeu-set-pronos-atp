@@ -881,7 +881,7 @@
    "j2Pays": "NED",
    "j2Tds": "",
    "ordre": 1,
-   "score": "6-2 3-6 4-3",
+   "score": "6-2 3-6 6-5",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -899,12 +899,12 @@
       6
      ],
      [
-      4,
-      3
+      6,
+      5
      ]
     ],
     "service": 1,
-    "maj": "2026-10-24T17:47:58+02:00"
+    "maj": "2026-10-24T18:05:57+02:00"
    }
   },
   {
@@ -1000,7 +1000,7 @@
    "j2Pays": "ITA",
    "j2Tds": "6",
    "ordre": 2,
-   "score": "6-4 2-6",
+   "score": "6-4 2-6 3-2",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -1016,10 +1016,14 @@
      [
       2,
       6
+     ],
+     [
+      3,
+      2
      ]
     ],
     "service": 2,
-    "maj": "2026-10-24T17:47:58+02:00"
+    "maj": "2026-10-24T18:05:57+02:00"
    }
   },
   {
@@ -2449,7 +2453,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T17:47:58+02:00",
+  "misAJour": "2026-10-24T18:05:57+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
