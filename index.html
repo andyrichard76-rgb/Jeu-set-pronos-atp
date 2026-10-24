@@ -591,7 +591,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-24T10:15:00+02:00",note:"programme du tournoi limité aux matchs du jour"};
+const SITE_VERSION={date:"2026-10-24T10:16:00+02:00",note:"programme du tournoi limité aux matchs du jour"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -688,8 +688,8 @@ function renderTournoi(){
   renderProgramme(t,ms);renderTableau(t);
 }
 function renderProgramme(t,ms){
-  const d=today();ms=ms.filter(m=>m.date>=d||m.statut==="en_cours");
-  if(!ms.length){$("sub-programme").innerHTML=`<div class="empty">Pas encore de matchs programmés.<br>Le programme est publié la veille au soir.</div>`;return}
+  const d=today();ms=ms.filter(m=>m.date===d||(m.date<d&&m.statut==="en_cours"));
+  if(!ms.length){$("sub-programme").innerHTML=`<div class="empty">Pas de match aujourd'hui dans ce tournoi.</div>`;return}
   const byDay={};for(const m of ms)(byDay[m.date]=byDay[m.date]||[]).push(m);
   const days=Object.keys(byDay).sort();const fut=days.filter(x=>x>=d),past=days.filter(x=>x<d).reverse();
   $("sub-programme").innerHTML=`<p class="note">Touche un joueur pour faire ta prédiction. Notre analyse est en violet.</p>`+
