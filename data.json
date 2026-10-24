@@ -1000,7 +1000,7 @@
    "j2Pays": "ITA",
    "j2Tds": "6",
    "ordre": 2,
-   "score": "6-4 2-6 4-4",
+   "score": "6-4 2-6 5-4",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -1018,12 +1018,12 @@
       6
      ],
      [
-      4,
+      5,
       4
      ]
     ],
     "service": 1,
-    "maj": "2026-10-24T18:20:10+02:00"
+    "maj": "2026-10-24T18:22:12+02:00"
    }
   },
   {
@@ -2457,7 +2457,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T18:20:10+02:00",
+  "misAJour": "2026-10-24T18:22:12+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
