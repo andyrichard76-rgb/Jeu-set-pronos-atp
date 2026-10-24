@@ -928,13 +928,13 @@
    "j2Pays": "GER",
    "j2Tds": "",
    "ordre": 2,
-   "score": "4-6 7-6 6-6",
-   "statut": "en_cours",
+   "score": "4-6 7-6 6-7",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Bruxelles",
    "tournoiId": "2026-bruxelles",
-   "vainqueur": null,
+   "vainqueur": 2,
    "live": {
     "sets": [
      [
@@ -947,11 +947,11 @@
      ],
      [
       6,
-      6
+      7
      ]
     ],
-    "maj": "2026-10-24T20:59:49+02:00",
-    "service": 1
+    "maj": "2026-10-24T21:01:50+02:00",
+    "fini": true
    }
   },
   {
@@ -1083,6 +1083,26 @@
    "score": "",
    "vainqueur": null,
    "id": "2026-10-25-lyon-musetti-fritz"
+  },
+  {
+   "tournoiId": "2026-bruxelles",
+   "tournoi": "Bruxelles",
+   "categorie": "ATP 250",
+   "surface": "indoor",
+   "tour": "Finale",
+   "date": "2026-10-25",
+   "heure": "",
+   "ordre": 1,
+   "j1": "Jan-Lennard Struff",
+   "j1Pays": "GER",
+   "j1Tds": "",
+   "j2": "Tallon Griekspoor",
+   "j2Pays": "NED",
+   "j2Tds": "",
+   "statut": "a_venir",
+   "score": "",
+   "vainqueur": null,
+   "id": "2026-10-25-bruxelles-struff-griekspoor"
   }
  ],
  "tournois": [
@@ -1971,8 +1991,8 @@
         "pays": "GER",
         "tds": ""
        },
-       "score": "",
-       "vainqueur": null
+       "score": "4-6 7-6 6-7",
+       "vainqueur": 2
       },
       {
        "j1": {
@@ -1991,7 +2011,11 @@
      ],
      [
       {
-       "j1": null,
+       "j1": {
+        "nom": "J. Struff",
+        "pays": "GER",
+        "tds": ""
+       },
        "j2": {
         "nom": "T. Griekspoor",
         "pays": "NED",
@@ -2499,7 +2523,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T20:59:49+02:00",
+  "misAJour": "2026-10-24T21:01:50+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
