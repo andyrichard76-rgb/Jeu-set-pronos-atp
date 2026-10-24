@@ -939,13 +939,13 @@
    "j2Pays": "USA",
    "j2Tds": "2",
    "ordre": 1,
-   "score": "3-6 5-6",
-   "statut": "en_cours",
+   "score": "3-6 5-7",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Lyon",
    "tournoiId": "2026-lyon",
-   "vainqueur": null,
+   "vainqueur": 2,
    "live": {
     "sets": [
      [
@@ -954,11 +954,11 @@
      ],
      [
       5,
-      6
+      7
      ]
     ],
-    "service": 2,
-    "maj": "2026-10-24T15:51:13+02:00"
+    "maj": "2026-10-24T15:53:15+02:00",
+    "fini": true
    }
   },
   {
@@ -974,7 +974,7 @@
     ]
    },
    "date": "2026-10-24",
-   "heure": "16:00",
+   "heure": "16:05",
    "j1": "Flavio Cobolli",
    "j1Pays": "ITA",
    "j1Tds": "1",
@@ -2362,14 +2362,18 @@
         "pays": "USA",
         "tds": "2"
        },
-       "score": "",
-       "vainqueur": null
+       "score": "3-6 5-7",
+       "vainqueur": 2
       }
      ],
      [
       {
        "j1": null,
-       "j2": null,
+       "j2": {
+        "nom": "T. Fritz",
+        "pays": "USA",
+        "tds": "2"
+       },
        "score": "",
        "vainqueur": null
       }
@@ -2413,7 +2417,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T15:51:13+02:00",
+  "misAJour": "2026-10-24T15:53:15+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
