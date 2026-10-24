@@ -766,7 +766,7 @@
    "j2Pays": "GRE",
    "j2Tds": "7",
    "ordre": 1,
-   "score": "6-4 6-6",
+   "score": "6-4 6-7 2-2",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -781,11 +781,15 @@
      ],
      [
       6,
-      6
+      7
+     ],
+     [
+      2,
+      2
      ]
     ],
     "service": 1,
-    "maj": "2026-10-24T13:49:05+02:00",
+    "maj": "2026-10-24T14:11:13+02:00",
     "srId": "sr:sport_event:75620028",
     "stats": {
      "j1": {
@@ -925,13 +929,23 @@
    "j2Pays": "USA",
    "j2Tds": "2",
    "ordre": 1,
-   "score": "",
-   "statut": "a_venir",
+   "score": "0-0",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Lyon",
    "tournoiId": "2026-lyon",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "sets": [
+     [
+      0,
+      0
+     ]
+    ],
+    "service": 2,
+    "maj": "2026-10-24T14:11:13+02:00"
+   }
   },
   {
    "id": "2026-10-24-lyon-cobolli-musetti",
@@ -2357,7 +2371,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T13:49:05+02:00",
+  "misAJour": "2026-10-24T14:11:13+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
