@@ -365,6 +365,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
 .bar .n{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
 .catnote{margin:0;font-size:.76rem;color:var(--muted)}
 #tourBars{display:flex;flex-direction:column;gap:14px}
+.rtwrap{overflow-x:auto}.rt{width:100%;border-collapse:collapse;font-size:.8rem}.rt th,.rt td{padding:7px 6px;text-align:center;border-bottom:1px solid var(--line,rgba(127,127,127,.2));white-space:nowrap}.rt th{font-size:.7rem;color:var(--muted);font-weight:600}.rt td:first-child,.rt th:first-child{text-align:left}.rt td b{display:block;font-size:.9rem}.rt td small{color:var(--muted);font-size:.68rem}.rt tr.tot td{font-weight:600;border-bottom:0}.rt .na{color:var(--muted)}
 .tgrp{display:flex;flex-direction:column;gap:9px}
 .tgrp+.tgrp{border-top:1px solid var(--line);padding-top:14px}
 .tgrp h3{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:1.05rem;text-transform:uppercase;letter-spacing:.06em}
@@ -564,6 +565,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
     <div class="panel"><h2>Bilan de nos analyses</h2><div class="kv" id="kv"></div></div>
     <div class="panel"><h2>Réussite par surface</h2><div class="bars" id="bars"></div></div>
     <div class="panel"><h2>Réussite par catégorie</h2><div class="bars" id="catBars"></div><p class="catnote">Les ATP Finals sont comptées avec les Masters 1000.</p></div>
+    <div class="panel"><h2>Réussite par tour</h2><div class="rtwrap" id="roundTable"></div><p class="catnote">Pourcentage de réussite et matchs gagnés / terminés, par tour et par catégorie.</p></div>
     <div class="panel"><h2>Réussite par tournoi</h2><div id="tourBars"></div></div>
   </section>
 
@@ -591,7 +593,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-24T15:00:00+02:00",note:"prédiction automatique"};
+const SITE_VERSION={date:"2026-10-24T15:10:00+02:00",note:"réussite par tour"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -773,6 +775,12 @@ function renderBilan(){
     return `<div class="bar"><span class="surf s-${k}"><i></i>${SURF[k]}</span><div class="track" role="img" aria-label="${SURF[k]} : ${done?s.pct+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${done?s.pct:0}%;background:var(--${SURFVAR[k]})"></div></div><span class="n">${done?s.pct+" % · "+s.won+"/"+done:"—"}</span></div>`}).join("");
   const el=$("catBars");if(el)el.innerHTML=CATS.map(([lab,list,col])=>{const s=tally(an.filter(m=>list.includes(m.categorie)),aiStatus);const done=s.won+s.lost;
     return `<div class="bar"><span class="surf"><i style="background:var(--${col})"></i>${lab}</span><div class="track" role="img" aria-label="${lab} : ${done?s.pct+" % de réussite":"aucun résultat"}"><div class="fill" style="width:${done?s.pct:0}%;background:var(--${col})"></div></div><span class="n">${done?s.pct+" % · "+s.won+"/"+done:"—"}</span></div>`}).join("");
+  const rtEl=$("roundTable");if(rtEl){const ROUNDS=[["r1","1er tour"],["r2","2e tour"],["r3","3e tour"],["r16","Huitièmes"],["qf","Quarts"],["sf","Demies"],["f","Finale"]];
+    const rk=t=>{t=String(t||"").toLowerCase();if(/demi/.test(t))return"sf";if(/quart/.test(t))return"qf";if(/huiti|8e|1\/8/.test(t))return"r16";if(/^finale|^final$/.test(t))return"f";if(/(^|\D)1(er|re)?\b|premier/.test(t))return"r1";if(/(^|\D)2(e|ème|nd)?\b|deuxi|second/.test(t))return"r2";if(/(^|\D)3(e|ème)?\b|troisi/.test(t))return"r3";return null};
+    const cell=l=>{const s=tally(l,aiStatus),d=s.won+s.lost;return d?`<td><b>${s.pct} %</b><small>${s.won}/${d}</small></td>`:`<td class="na">—</td>`};
+    const done=an.filter(m=>m.vainqueur);
+    const rows=ROUNDS.map(([k,lab])=>{const l=done.filter(m=>rk(m.tour)===k);return`<tr><td>${lab}</td>${CATS.map(c=>cell(l.filter(m=>c[1].includes(m.categorie)))).join("")}${cell(l)}</tr>`}).join("");
+    rtEl.innerHTML=`<table class="rt"><thead><tr><th>Tour</th><th>Grand Chelem</th><th>1000</th><th>500</th><th>250</th><th>Total</th></tr></thead><tbody>${rows}<tr class="tot"><td>Total</td>${CATS.map(c=>cell(done.filter(m=>c[1].includes(m.categorie)))).join("")}${cell(done)}</tr></tbody></table>`}
   const tb=$("tourBars");if(tb){const T={};
     const add=(id,o)=>{const t=T[id]||(T[id]={nom:o.nom,categorie:o.categorie,annee:o.annee,date:"",won:0,lost:0,wait:0});t.won+=o.won||0;t.lost+=o.lost||0;t.wait+=o.wait||0;if((o.date||"")>t.date)t.date=o.date||""};
     const H=(historique&&historique.tournois)||{};
