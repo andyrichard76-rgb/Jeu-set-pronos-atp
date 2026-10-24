@@ -881,13 +881,23 @@
    "j2Pays": "NED",
    "j2Tds": "",
    "ordre": 1,
-   "score": "",
-   "statut": "a_venir",
+   "score": "0-0",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Bruxelles",
    "tournoiId": "2026-bruxelles",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "sets": [
+     [
+      0,
+      0
+     ]
+    ],
+    "service": 2,
+    "maj": "2026-10-24T16:12:21+02:00"
+   }
   },
   {
    "id": "2026-10-24-bruxelles-fils-struff",
@@ -982,13 +992,23 @@
    "j2Pays": "ITA",
    "j2Tds": "6",
    "ordre": 2,
-   "score": "",
-   "statut": "a_venir",
+   "score": "0-0",
+   "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Lyon",
    "tournoiId": "2026-lyon",
-   "vainqueur": null
+   "vainqueur": null,
+   "live": {
+    "sets": [
+     [
+      0,
+      0
+     ]
+    ],
+    "service": 1,
+    "maj": "2026-10-24T16:12:21+02:00"
+   }
   },
   {
    "tournoiId": "2026-almaty",
@@ -2417,7 +2437,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T16:08:18+02:00",
+  "misAJour": "2026-10-24T16:12:21+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
