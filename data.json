@@ -842,7 +842,7 @@
    "j2Pays": "KAZ",
    "j2Tds": "3",
    "ordre": 2,
-   "score": "4-1",
+   "score": "4-2",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -853,11 +853,11 @@
     "sets": [
      [
       4,
-      1
+      2
      ]
     ],
     "service": 2,
-    "maj": "2026-10-24T15:36:58+02:00"
+    "maj": "2026-10-24T15:39:01+02:00"
    }
   },
   {
@@ -939,7 +939,7 @@
    "j2Pays": "USA",
    "j2Tds": "2",
    "ordre": 1,
-   "score": "3-6 4-4",
+   "score": "3-6 5-4",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -953,12 +953,12 @@
       6
      ],
      [
-      4,
+      5,
       4
      ]
     ],
     "service": 1,
-    "maj": "2026-10-24T15:36:58+02:00"
+    "maj": "2026-10-24T15:39:01+02:00"
    }
   },
   {
@@ -2389,7 +2389,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T15:36:58+02:00",
+  "misAJour": "2026-10-24T15:39:01+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
