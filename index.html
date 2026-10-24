@@ -591,7 +591,7 @@ input[type=text],input[type=date]{width:100%;padding:10px 12px;border:1px solid 
   <div class="sheet-bg" id="sheetBg" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Score et statistiques"></div></div>
 <script>
 /* À mettre à jour à chaque modification du site */
-const SITE_VERSION={date:"2026-10-24T14:52:00+02:00",note:"résultats rechargés toutes les 2 minutes"};
+const SITE_VERSION={date:"2026-10-24T15:00:00+02:00",note:"prédiction automatique"};
 const SURF={dur:"Dur",terre:"Terre battue",gazon:"Gazon",indoor:"Dur indoor"};
 const SURFVAR={dur:"hard",terre:"clay",gazon:"grass",indoor:"indoor"};
 const $=id=>document.getElementById(id);
@@ -759,7 +759,7 @@ function renderList(){
     const aiPick=m&&m.claude&&m.claude.choix?`<span>Notre choix : ${esc(m.claude.choix==1?m.j1:m.j2)}</span>`:"";
     return `<article class="card match ${s}"><div class="chead"><span class="round" style="color:var(--fg)">${esc(p.tournoi||"Tournoi")}${m&&m.tour?" · "+esc(m.tour):""}</span><span class="surf s-${p.surface}"><i></i>${SURF[p.surface]||""}</span></div>
       ${row(1)}${row(2)}
-      <div class="mfoot"><span class="badge ${s}">${label}</span><span class="meta"><span>${fmtDate(p.date)}${m&&m.heure?" · "+esc(m.heure):""}</span>${aiPick}</span></div>
+      <div class="mfoot"><span class="badge ${s}">${label}</span>${p.auto?'<span class="badge wait" title="Choix fait automatiquement d\'après notre analyse. Tu peux le changer avant le match.">Auto</span>':""}<span class="meta"><span>${fmtDate(p.date)}${m&&m.heure?" · "+esc(m.heure):""}</span>${aiPick}</span></div>
       <div class="mfoot" style="border-top:1px solid var(--line)"><div class="actions">${actions}</div><div class="actions">${del}</div></div></article>`}).join("");
 }
 
@@ -939,7 +939,7 @@ $("v-suivre").addEventListener("click",async e=>{
   const sb=e.target.closest("[data-stats]");if(sb){openSheet(sb.dataset.stats);return}
   const pb=e.target.closest("[data-pickm]");if(!pb)return;const m=matchById(pb.dataset.pickm);if(!m)return;
   const choix=Number(pb.dataset.v),ex=pronos.find(p=>p.matchId===m.id);
-  try{if(ex){if(side(ex)!==choix||ex.j1!==m.j1)await store.update(ex.id,{choix,j1:m.j1,j2:m.j2})}
+  try{if(ex){if(side(ex)!==choix||ex.j1!==m.j1)await store.update(ex.id,{choix,j1:m.j1,j2:m.j2,auto:false})}
     else await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()})}
   catch{$("storeNote").textContent="Ta prédiction n'a pas pu être enregistrée. Réessaie."}
 });
@@ -963,7 +963,7 @@ $("sub-programme").addEventListener("click",async e=>{
   if(del){try{await store.remove(del.dataset.id)}catch{$("storeNote").textContent="Impossible de retirer la prédiction. Réessaie."}return}
   const b=e.target.closest("button.pbtn");if(!b||b.disabled)return;const m=matchById(b.dataset.match);if(!m)return;
   const choix=Number(b.dataset.v),existing=pronos.find(p=>p.matchId===m.id);
-  try{if(existing){if(side(existing)!==choix||existing.j1!==m.j1)await store.update(existing.id,{choix,j1:m.j1,j2:m.j2})}
+  try{if(existing){if(side(existing)!==choix||existing.j1!==m.j1)await store.update(existing.id,{choix,j1:m.j1,j2:m.j2,auto:false})}
     else await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()})}
   catch{$("storeNote").textContent="Ta prédiction n'a pas pu être enregistrée. Réessaie."}
 });
@@ -998,7 +998,7 @@ async function importPronos(code){
   let added=0,updated=0,missing=0;
   for(const [mid,c] of pairs){const choix=Number(c);const m=matchById(mid);
     const ex=pronos.find(p=>p.matchId===mid);
-    if(ex){if(m&&(side(ex)!==choix||ex.j1!==m.j1)){await store.update(ex.id,{choix,j1:m.j1,j2:m.j2});updated++}continue}
+    if(ex){if(m&&(side(ex)!==choix||ex.j1!==m.j1)){await store.update(ex.id,{choix,j1:m.j1,j2:m.j2,auto:false});updated++}continue}
     if(!m){missing++;continue}
     await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix,tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,createdAt:Date.now()});added++}
   return{added,updated,missing};
@@ -1063,6 +1063,13 @@ async function espnFetch(){if(document.hidden)return;try{const r=await fetch("ht
   if(!r.ok)return;ESPN=await r.json();if(espnApply())renderAll()}catch{}}
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)espnFetch()});
 setInterval(espnFetch,60000);
+
+/* ---------- Prédiction automatique : si aucun choix n'est fait, on reprend notre choix ---------- */
+const AUTO_FROM="2026-10-24";const autoBusy=new Set();
+async function autoPick(){if(!store||!matchs.length)return;
+  for(const m of matchs){const c=m.claude||{};if(!c.choix||!m.date||m.date<AUTO_FROM||autoBusy.has(m.id))continue;
+    if(pronos.some(p=>p.matchId===m.id))continue;autoBusy.add(m.id);
+    try{await store.add({matchId:m.id,j1:m.j1,j2:m.j2,choix:Number(c.choix),tournoi:m.tournoi,surface:m.surface,date:m.date,resultat:null,auto:true,createdAt:Date.now()})}catch{}}}
 async function init(){
   renderBoard();
   let db=null;try{db=window.claude&&window.claude.use?await window.claude.use("db"):null}catch{db=null}
@@ -1070,14 +1077,14 @@ async function init(){
     const load=async()=>{try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});const S=await r.json();
       matchs=S.matchs||[];tournois=(S.tournois||[]).filter(t=>t.id!=="historique");meta=S.meta||null;classements=S.classements||{};historique=(S.tournois||[]).find(t=>t.id==="historique")||S.historique||null;espnApply();
       if(S.fond){$("photoBg").style.backgroundImage=`url("${S.fond}")`;$("photoBg").hidden=false}
-      renderAll();$("storeNote").textContent="Tes prédictions sont gardées dans ce navigateur.";}
+      renderAll();autoPick();$("storeNote").textContent="Tes prédictions sont gardées dans ce navigateur.";}
       catch(e){console.error(e);$("storeNote").textContent="Chargement en cours… nouvel essai dans quelques secondes.";setTimeout(load,5000)}};
     warnStorage();await load();espnFetch();await importFromHash();setInterval(load,2*60*1000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});return}
   const col=db.collection("pronos");
   store={add:p=>col.add(p),update:(id,patch)=>col.doc(id).update(patch),remove:id=>col.doc(id).delete()};
   const onErr=()=>{$("storeNote").textContent="Connexion perdue. Recharge la page."};
-  col.onSnapshot(s=>{pronos=s.docs.map(d=>({id:d.id,...d.data()}));renderAll()},onErr);
-  db.collection("matchs").onSnapshot(s=>{matchs=s.docs.map(d=>({id:d.id,...d.data()}));espnApply();renderAll()},onErr);espnFetch();
+  let pronosReady=false;col.onSnapshot(s=>{pronos=s.docs.map(d=>({id:d.id,...d.data()}));pronosReady=true;renderAll();autoPick()},onErr);
+  db.collection("matchs").onSnapshot(s=>{matchs=s.docs.map(d=>({id:d.id,...d.data()}));espnApply();renderAll();if(pronosReady)autoPick()},onErr);espnFetch();
   db.collection("tournois").onSnapshot(s=>{const all=s.docs.map(d=>({id:d.id,...d.data()}));tournois=all.filter(t=>t.id!=="historique");historique=all.find(t=>t.id==="historique")||null;renderAll()},onErr);
   db.collection("classements").onSnapshot(s=>{classements={};s.docs.forEach(d=>classements[d.id]=d.data());renderClassements()},onErr);
   db.doc("meta/maj").onSnapshot(s=>{meta=s.exists?s.data():null;renderBoard()},onErr);
