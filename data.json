@@ -928,7 +928,7 @@
    "j2Pays": "GER",
    "j2Tds": "",
    "ordre": 2,
-   "score": "4-6 3-2",
+   "score": "4-6 3-3",
    "statut": "en_cours",
    "surface": "indoor",
    "tour": "Demi-finale",
@@ -943,11 +943,11 @@
      ],
      [
       3,
-      2
+      3
      ]
     ],
-    "maj": "2026-10-24T19:44:30+02:00",
-    "service": 2
+    "maj": "2026-10-24T19:46:32+02:00",
+    "service": 1
    }
   },
   {
@@ -2495,7 +2495,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T19:44:30+02:00",
+  "misAJour": "2026-10-24T19:46:32+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
