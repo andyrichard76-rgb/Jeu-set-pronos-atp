@@ -881,13 +881,13 @@
    "j2Pays": "NED",
    "j2Tds": "",
    "ordre": 1,
-   "score": "6-2 3-6 6-6",
-   "statut": "en_cours",
+   "score": "6-2 3-6 6-7",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Bruxelles",
    "tournoiId": "2026-bruxelles",
-   "vainqueur": null,
+   "vainqueur": 2,
    "live": {
     "sets": [
      [
@@ -900,11 +900,11 @@
      ],
      [
       6,
-      6
+      7
      ]
     ],
-    "service": 2,
-    "maj": "2026-10-24T18:18:08+02:00"
+    "maj": "2026-10-24T18:20:10+02:00",
+    "fini": true
    }
   },
   {
@@ -1023,7 +1023,7 @@
      ]
     ],
     "service": 1,
-    "maj": "2026-10-24T18:18:08+02:00"
+    "maj": "2026-10-24T18:20:10+02:00"
    }
   },
   {
@@ -1947,14 +1947,18 @@
         "pays": "NED",
         "tds": ""
        },
-       "score": "",
-       "vainqueur": null
+       "score": "6-2 3-6 6-7",
+       "vainqueur": 2
       }
      ],
      [
       {
        "j1": null,
-       "j2": null,
+       "j2": {
+        "nom": "T. Griekspoor",
+        "pays": "NED",
+        "tds": ""
+       },
        "score": "",
        "vainqueur": null
       }
@@ -2453,7 +2457,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T18:18:08+02:00",
+  "misAJour": "2026-10-24T18:20:10+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
