@@ -766,13 +766,13 @@
    "j2Pays": "GRE",
    "j2Tds": "7",
    "ordre": 1,
-   "score": "6-4 6-7 2-2",
-   "statut": "en_cours",
+   "score": "6-4 6-7 6-3",
+   "statut": "termine",
    "surface": "indoor",
    "tour": "Demi-finale",
    "tournoi": "Almaty",
    "tournoiId": "2026-almaty",
-   "vainqueur": null,
+   "vainqueur": 1,
    "live": {
     "sets": [
      [
@@ -784,41 +784,41 @@
       7
      ],
      [
-      2,
-      2
+      6,
+      3
      ]
     ],
-    "service": 1,
-    "maj": "2026-10-24T14:11:13+02:00",
+    "maj": "2026-10-24T14:46:00+02:00",
     "srId": "sr:sport_event:75620028",
     "stats": {
      "j1": {
-      "aces": 5,
-      "df": 2,
-      "s1in": 26,
-      "s1won": 25,
-      "s2won": 12,
-      "svpts": 49,
-      "bpWon": 1,
-      "bpTot": 4,
-      "svGames": 9,
-      "pts": 53,
+      "aces": 7,
+      "df": 4,
+      "s1in": 49,
+      "s1won": 45,
+      "s2won": 25,
+      "svpts": 93,
+      "bpWon": 2,
+      "bpTot": 8,
+      "svGames": 16,
+      "pts": 103,
       "maxPts": 8
      },
      "j2": {
-      "aces": 4,
+      "aces": 11,
       "df": 0,
-      "s1in": 34,
-      "s1won": 26,
-      "s2won": 13,
-      "svpts": 55,
+      "s1in": 66,
+      "s1won": 50,
+      "s2won": 16,
+      "svpts": 99,
       "bpWon": 0,
-      "bpTot": 0,
-      "svGames": 9,
-      "pts": 51,
+      "bpTot": 3,
+      "svGames": 13,
+      "pts": 89,
       "maxPts": 5
      }
-    }
+    },
+    "fini": true
    }
   },
   {
@@ -1407,14 +1407,18 @@
         "pays": "GRE",
         "tds": "7"
        },
-       "score": "",
-       "vainqueur": null
+       "score": "6-4 6-7 6-3",
+       "vainqueur": 1
       }
      ],
      [
       {
        "j1": null,
-       "j2": null,
+       "j2": {
+        "nom": "N. Basilashvili",
+        "pays": "GEO",
+        "tds": "Q"
+       },
        "score": "",
        "vainqueur": null
       }
@@ -2371,7 +2375,7 @@
   }
  ],
  "meta": {
-  "misAJour": "2026-10-24T14:11:13+02:00",
+  "misAJour": "2026-10-24T14:46:00+02:00",
   "source": "ATP Tour"
  },
  "fond": "fond.jpg",
